@@ -9,8 +9,10 @@ main:
   - title: "Tags"
     url: /tags/
   - title: "Pages"
-    url: /page-archive/
+    url: /_pages/
   - title: "Collections"
     url: /collection-archive/
   - title: "External Link"
     url: https://google.com
+  - title: "About"
+    url: /about.md
