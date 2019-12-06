@@ -114,7 +114,7 @@ Aún así, creo que ha sido muy interesante investigar esto.
 ```
 alter user USRPRACTICA1 quota 1M on USERS; 
 ```
-Ahora SÍ podremos mostrar la cuota asignada para ese usuario, en el tablespace dicho:
+Ahora SÍ podremos mostrar la cuota asignada para ese usuario, en el tablespace dicho:  
 ```
 SQL> select tablespace_name, username, max_bytes
   2     from dba_ts_quotas
