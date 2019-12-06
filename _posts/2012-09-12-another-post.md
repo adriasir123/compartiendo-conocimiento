@@ -109,6 +109,7 @@ Por lo tanto, en cuanto le asignemos una quota sobre un tablespace, ya aparecer�
 La respuesta en resumen fue que pude crear tablas debido al "**deferred_segment_creation**".
 Indagando un poco más sobre esto vi los conceptos de segmento, partición...etc. Pero creo que esto se escapa del ámbito de este tema, y seguramente es lo que vayamos a dar en el tema del almacenamiento. 
 Aún así, creo que ha sido muy interesante investigar esto.
+
 * Cambiarle la cuota asignada
 ```
 alter user USRPRACTICA1 quota 1M on USERS; 
