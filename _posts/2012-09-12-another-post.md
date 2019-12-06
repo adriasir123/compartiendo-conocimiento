@@ -1,5 +1,6 @@
 ---
 title:  "Another post!"
+layout: single
 ---
 
 # Welcome
