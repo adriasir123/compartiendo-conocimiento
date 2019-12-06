@@ -124,6 +124,13 @@ TABLE USERNAME      MAX_BYTES
 USERS USRPRACTICA1    1048576
 ```
 
+```
+papafrita
+
+
+
+papafrita
+```
 
 
 ## Ejercicio 3 :heavy_check_mark:
