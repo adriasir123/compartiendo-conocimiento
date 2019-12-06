@@ -119,18 +119,9 @@ Ahora SÍ podremos mostrar la cuota asignada para ese usuario, en el tablespace 
 SQL> select tablespace_name, username, max_bytes
   2     from dba_ts_quotas
   3     where username = 'USRPRACTICA1' and TABLESPACE_NAME = 'USERS';
-
 TABLE USERNAME      MAX_BYTES
 ----- ------------ ----------
 USERS USRPRACTICA1    1048576
-```
-
-```
-papafrita
-
-
-
-papafrita
 ```
 
 
