@@ -1,6 +1,7 @@
 ---
 title:  "Welcome to Jekyll!"
 layout: single
+author_profile: true
 ---
 
 # Welcome
