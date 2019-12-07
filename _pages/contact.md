@@ -1,7 +1,7 @@
 ---
-title: This is the about webpage
+title: Esta es la página de contacto
 layout: single
 permalink: /contact/
 ---
 
-Esta es la págian de contacto
+
