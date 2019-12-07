@@ -4,4 +4,4 @@ layout: single
 permalink: /about/
 ---
 
-hey hey
+Esta es la página de about
