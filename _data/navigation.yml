@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "About"
-    url: https://adriasir123.github.io/compartiendo-conocimiento/about/
+    url: /about/
   - title: "Contact"
     url: /contact/
 
