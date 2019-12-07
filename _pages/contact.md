@@ -4,4 +4,4 @@ layout: single
 permalink: /contact/
 ---
 
-contact hey hey
+Esta es la págian de contacto
