@@ -1,7 +1,6 @@
 ---
-title: This is the about webpage
+title: Esta es la página de about
 layout: single
 permalink: /about/
 ---
 
-Esta es la página de about
