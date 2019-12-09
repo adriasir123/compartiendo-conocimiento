@@ -6,9 +6,8 @@ En este post no voy a escribir aquí la práctica, ya que la tengo documentada e
 El único ejercicio que no está hecho es el 24, que era un procedimiento. Pero no pasa nada, me lo apunto en Trello, y algún día que esté aburrido y no tenga nada que hacer, lo haré y actualizaré github para añadir el ejercicio.
 
 :arrow_down_small: Bueno, dejo por aquí el enlace al repositorio :arrow_down_small:
-
 https://github.com/adriasir123/individual_p3_bd1920
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDk3MDE4MDQsLTEyNTk3ODIzMzRdfQ
+eyJoaXN0b3J5IjpbLTEyNTk3ODIzMzQsLTEyNTk3ODIzMzRdfQ
 ==
 -->
