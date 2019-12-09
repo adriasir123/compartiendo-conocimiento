@@ -7,13 +7,13 @@ El único ejercicio que no está hecho es el 24, que era un procedimiento. Pero 
 
 Bueno, haced click [aquí](https://github.com/adriasir123/individual_p3_bd1920) para entrar al repositorio
 
-Nos vemos! :eyes:
+¡Nos vemos! :eyes:
 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM4MTkwNTk1LC0xMjU5NzgyMzM0LC0xMj
-U5NzgyMzM0XX0=
+eyJoaXN0b3J5IjpbLTIxMTU2Njg3MDgsLTEyNTk3ODIzMzQsLT
+EyNTk3ODIzMzRdfQ==
 -->
