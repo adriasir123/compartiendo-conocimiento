@@ -1,6 +1,7 @@
 ---
-title: "EJ 1: Firewall"
+title: "Ejercicio 1: Firewall"
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU2NjY4MDQsLTEwMzkwMDE2MzZdfQ==
+eyJoaXN0b3J5IjpbLTE0MDM4MjE5MjYsLTEwMzkwMDE2MzZdfQ
+==
 -->
