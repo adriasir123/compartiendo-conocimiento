@@ -6,6 +6,9 @@ title: "Tarea 7 Cloud: Hosting"
 ## Instalar/configurar proftpd
 
 
+```
+rpm -iUvh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
+
 
 
 
@@ -34,6 +37,6 @@ title: "Tarea 7 Cloud: Hosting"
 
 # Paso 4: Crear usuario BD y la BD
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjM4MzE5OSwxOTI4OTUxMzgxLC0xNT
-E0NDI2NjIwLC0xMTE1NDA4OTY1XX0=
+eyJoaXN0b3J5IjpbMjA2NzQ2NzA2NSwtMTQ2MzgzMTk5LDE5Mj
+g5NTEzODEsLTE1MTQ0MjY2MjAsLTExMTU0MDg5NjVdfQ==
 -->
