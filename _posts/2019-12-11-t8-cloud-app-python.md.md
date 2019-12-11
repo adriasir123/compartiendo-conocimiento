@@ -32,7 +32,7 @@ cd my_mezzanine
 ```
 python manage.py createdb
 ```
-> Durante la creación nos pide un usuario y contraseña
+> Durante la creación nos pide un usuario y contraseña. En mi caso, ha sido 
 ## Permitimos la conexión a la app web
 En el fichero `local_settings.py`, tenemos que modificar la siguiente línea
 ```
@@ -90,10 +90,11 @@ python manage.py runserver 0.0.0.0:8000
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Mjc0NjcsLTg1NTIxNzUzOCwtMTY2NT
-Y4NTc3LDY5OTMxNDU1NywtOTQxMjEyNzY3LDE2ODY0ODczMDUs
-MTEyMTk2ODEyLC03NTQxNzY4OTMsLTczODIxNjI5NiwtMTY0Nz
-EyNDY5NSwtNjAyNTcxOTgxLC0xOTkxMDIzNTM1LC0yMDY0OTE3
-NDM0LDc2MzgxNjU0MCwxNzY0NjExNzM4LC0zMDgzOTM3MzksLT
-E3MjgwNDc4MzAsMjExNDIxMTYxOSwxOTExMDE4NTQxXX0=
+eyJoaXN0b3J5IjpbLTExODUwNTM2ODAsLTE0Mjc0NjcsLTg1NT
+IxNzUzOCwtMTY2NTY4NTc3LDY5OTMxNDU1NywtOTQxMjEyNzY3
+LDE2ODY0ODczMDUsMTEyMTk2ODEyLC03NTQxNzY4OTMsLTczOD
+IxNjI5NiwtMTY0NzEyNDY5NSwtNjAyNTcxOTgxLC0xOTkxMDIz
+NTM1LC0yMDY0OTE3NDM0LDc2MzgxNjU0MCwxNzY0NjExNzM4LC
+0zMDgzOTM3MzksLTE3MjgwNDc4MzAsMjExNDIxMTYxOSwxOTEx
+MDE4NTQxXX0=
 -->
