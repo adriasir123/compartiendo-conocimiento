@@ -78,7 +78,7 @@ Dentro de la zona de administración, tendremos que irnos a "Site -> Settings ->
 Cuando guardemos, y volvamos a la web principal, veremos que el nombre de la web se cambió correctamente
 ![](https://i.imgur.com/xDdXVKc.png)
 ## Añadir artículo + imagen
-Dentro de la zona de administración, tendremos que irnos a "Content -> Blog posts -> Add blog post". Una vez aquí, podremos cambiar el nombre de la web al que queramos:
+Dentro de la zona de administración, tendremos que irnos a "Content -> Blog posts -> Add blog post". Una vez aquí, simplemente rellenaremos los campos 
 
 
 
@@ -118,7 +118,7 @@ Dentro de la zona de administración, tendremos que irnos a "Content -> Blog pos
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDk1NzIzNDEsLTg0OTk3OTAxLDM0NT
+eyJoaXN0b3J5IjpbLTE3Nzg4NTY5ODEsLTg0OTk3OTAxLDM0NT
 kzNjAwLC0xNDI3NDY3LC04NTUyMTc1MzgsLTE2NjU2ODU3Nyw2
 OTkzMTQ1NTcsLTk0MTIxMjc2NywxNjg2NDg3MzA1LDExMjE5Nj
 gxMiwtNzU0MTc2ODkzLC03MzgyMTYyOTYsLTE2NDcxMjQ2OTUs
