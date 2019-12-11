@@ -48,7 +48,7 @@ Lo que estamos haciendo con esto, es permitir el acceso a la aplicación python,
 python manage.py runserver 0.0.0.0:8000
 ```
 ## Mostramos la web
-https://i.imgur.com/x5DsdvA.png
+![](https://i.imgur.com/x5DsdvA.png)
 
 
 
@@ -78,7 +78,7 @@ https://i.imgur.com/x5DsdvA.png
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4MzY2Njg5NywxNjg2NDg3MzA1LDExMj
+eyJoaXN0b3J5IjpbLTk0MTIxMjc2NywxNjg2NDg3MzA1LDExMj
 E5NjgxMiwtNzU0MTc2ODkzLC03MzgyMTYyOTYsLTE2NDcxMjQ2
 OTUsLTYwMjU3MTk4MSwtMTk5MTAyMzUzNSwtMjA2NDkxNzQzNC
 w3NjM4MTY1NDAsMTc2NDYxMTczOCwtMzA4MzkzNzM5LC0xNzI4
