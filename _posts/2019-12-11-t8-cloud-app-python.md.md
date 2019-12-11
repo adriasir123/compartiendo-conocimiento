@@ -80,7 +80,7 @@ Cuando guardemos, y volvamos a la web principal, veremos que el nombre de la web
 ## Añadir post con imagen
 * Dentro de la zona de administración, tendremos que irnos a "Content -> Blog posts -> Add blog post". Una vez aquí, simplemente rellenaremos los campos necesarios, y crearemos el post.
 * Cuando lo tengamos creado, nos aparecerá el nuevo post en la lista general de posts
-![](https://i.imgur.com/2LI2L2u.png)*
+![](https://i.imgur.com/2LI2L2u.png)* Y si nos dirigimos a la web principal
 
 
 
@@ -119,11 +119,11 @@ Cuando guardemos, y volvamos a la web principal, veremos que el nombre de la web
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0Mjg5NzAxNywtMTI2MjA5Mzg4NiwzNz
-IxMzIwMTAsLTg0OTk3OTAxLDM0NTkzNjAwLC0xNDI3NDY3LC04
-NTUyMTc1MzgsLTE2NjU2ODU3Nyw2OTkzMTQ1NTcsLTk0MTIxMj
-c2NywxNjg2NDg3MzA1LDExMjE5NjgxMiwtNzU0MTc2ODkzLC03
-MzgyMTYyOTYsLTE2NDcxMjQ2OTUsLTYwMjU3MTk4MSwtMTk5MT
-AyMzUzNSwtMjA2NDkxNzQzNCw3NjM4MTY1NDAsMTc2NDYxMTcz
-OF19
+eyJoaXN0b3J5IjpbODE3NTA5NDAzLC0xMjYyMDkzODg2LDM3Mj
+EzMjAxMCwtODQ5OTc5MDEsMzQ1OTM2MDAsLTE0Mjc0NjcsLTg1
+NTIxNzUzOCwtMTY2NTY4NTc3LDY5OTMxNDU1NywtOTQxMjEyNz
+Y3LDE2ODY0ODczMDUsMTEyMTk2ODEyLC03NTQxNzY4OTMsLTcz
+ODIxNjI5NiwtMTY0NzEyNDY5NSwtNjAyNTcxOTgxLC0xOTkxMD
+IzNTM1LC0yMDY0OTE3NDM0LDc2MzgxNjU0MCwxNzY0NjExNzM4
+XX0=
 -->
