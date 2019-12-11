@@ -96,6 +96,10 @@ sqlite3 dev.db
 > Con SQLite, para conectarnos a una base de datos, necesitamos especificar el fichero donde se encuentre almacenada, como podemos ver en el comando que hemos hecho.
 > En mi caso, mi base de datos se llama `dev.db`
 
+* Hacemos la copia de seguridad
+```
+.backup backup_mezzanine.sq3
+```
 
 
 
@@ -107,11 +111,11 @@ sqlite3 dev.db
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5NDMyMzc2LDE3MTQyNzY2MTEsOTc2MT
-YxOTE0LC0xMTU2Njk3MTQ4LDgxNzUwOTQwMywtMTI2MjA5Mzg4
-NiwzNzIxMzIwMTAsLTg0OTk3OTAxLDM0NTkzNjAwLC0xNDI3ND
-Y3LC04NTUyMTc1MzgsLTE2NjU2ODU3Nyw2OTkzMTQ1NTcsLTk0
-MTIxMjc2NywxNjg2NDg3MzA1LDExMjE5NjgxMiwtNzU0MTc2OD
-kzLC03MzgyMTYyOTYsLTE2NDcxMjQ2OTUsLTYwMjU3MTk4MV19
-
+eyJoaXN0b3J5IjpbLTE5ODM3OTg5MTEsMTcxNDI3NjYxMSw5Nz
+YxNjE5MTQsLTExNTY2OTcxNDgsODE3NTA5NDAzLC0xMjYyMDkz
+ODg2LDM3MjEzMjAxMCwtODQ5OTc5MDEsMzQ1OTM2MDAsLTE0Mj
+c0NjcsLTg1NTIxNzUzOCwtMTY2NTY4NTc3LDY5OTMxNDU1Nywt
+OTQxMjEyNzY3LDE2ODY0ODczMDUsMTEyMTk2ODEyLC03NTQxNz
+Y4OTMsLTczODIxNjI5NiwtMTY0NzEyNDY5NSwtNjAyNTcxOTgx
+XX0=
 -->
