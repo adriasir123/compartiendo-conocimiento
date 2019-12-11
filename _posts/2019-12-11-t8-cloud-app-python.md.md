@@ -10,8 +10,9 @@ sudo apt install python3 python3-venv python3-virtualenv virtualenv
 ```
 ## Creamos el entorno virtual
 
-
-
+```
+python3 -m venv mezzanine-pyenv
+```
 
 
 
@@ -43,7 +44,7 @@ sudo apt install python3 python3-venv python3-virtualenv virtualenv
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA0MzQxMTQzLDc2MzgxNjU0MCwxNzY0Nj
+eyJoaXN0b3J5IjpbODE3NzA5ODk1LDc2MzgxNjU0MCwxNzY0Nj
 ExNzM4LC0zMDgzOTM3MzksLTE3MjgwNDc4MzAsMjExNDIxMTYx
 OSwxOTExMDE4NTQxXX0=
 -->
