@@ -20,10 +20,10 @@ source mezzanine-pyenv/bin/activate
 ```
 pip install mezzanine
 ```
-## 
-
-
-
+## Creamos el proyecto
+```
+mezzanine-project my_mezzanine
+```
 
 
 
@@ -53,7 +53,7 @@ pip install mezzanine
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3MDQ4OTQyNywtMjA2NDkxNzQzNCw3Nj
+eyJoaXN0b3J5IjpbMTQwODk2OTExMiwtMjA2NDkxNzQzNCw3Nj
 M4MTY1NDAsMTc2NDYxMTczOCwtMzA4MzkzNzM5LC0xNzI4MDQ3
 ODMwLDIxMTQyMTE2MTksMTkxMTAxODU0MV19
 -->
