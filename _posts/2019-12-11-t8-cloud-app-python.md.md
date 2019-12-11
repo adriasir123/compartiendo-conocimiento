@@ -93,7 +93,8 @@ Cuando guardemos, y volvamos a la web principal, veremos que el nombre de la web
 ```
 sqlite3 dev.db
 ```
-
+> Con SQLite, para conectarnos a una base de datos, necesitamos especificar el fichero donde se encuentre almacenada, como podemos ver en el comando que hemos hecho.
+> En mi caso, mi 
 
 
 
@@ -106,7 +107,7 @@ sqlite3 dev.db
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyMjQ3ODE0LDE3MTQyNzY2MTEsOTc2MT
+eyJoaXN0b3J5IjpbMjE0MjMwNjQ3LDE3MTQyNzY2MTEsOTc2MT
 YxOTE0LC0xMTU2Njk3MTQ4LDgxNzUwOTQwMywtMTI2MjA5Mzg4
 NiwzNzIxMzIwMTAsLTg0OTk3OTAxLDM0NTkzNjAwLC0xNDI3ND
 Y3LC04NTUyMTc1MzgsLTE2NjU2ODU3Nyw2OTkzMTQ1NTcsLTk0
