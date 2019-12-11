@@ -49,7 +49,10 @@ python manage.py runserver 0.0.0.0:8000
 ```
 ## Mostramos la web
 ![](https://i.imgur.com/x5DsdvA.png)
-## Accediendo a los 
+## Accediendo a la parte de administración
+
+
+
 
 
 
@@ -86,7 +89,7 @@ python manage.py runserver 0.0.0.0:8000
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1NjA1NDQ3MSwtMTY2NTY4NTc3LDY5OT
+eyJoaXN0b3J5IjpbLTg1NTIxNzUzOCwtMTY2NTY4NTc3LDY5OT
 MxNDU1NywtOTQxMjEyNzY3LDE2ODY0ODczMDUsMTEyMTk2ODEy
 LC03NTQxNzY4OTMsLTczODIxNjI5NiwtMTY0NzEyNDY5NSwtNj
 AyNTcxOTgxLC0xOTkxMDIzNTM1LC0yMDY0OTE3NDM0LDc2Mzgx
