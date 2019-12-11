@@ -32,7 +32,7 @@ cd my_mezzanine
 ```
 python manage.py createdb
 ```
-## Permitimos la conexión 
+## Permitimos la conexión a la app web
 
 
 
@@ -72,9 +72,9 @@ python manage.py runserver 0.0.0.0:8000
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1NDE3Njg5MywtNzM4MjE2Mjk2LC0xNj
-Q3MTI0Njk1LC02MDI1NzE5ODEsLTE5OTEwMjM1MzUsLTIwNjQ5
-MTc0MzQsNzYzODE2NTQwLDE3NjQ2MTE3MzgsLTMwODM5MzczOS
-wtMTcyODA0NzgzMCwyMTE0MjExNjE5LDE5MTEwMTg1NDFdfQ==
-
+eyJoaXN0b3J5IjpbMTEyMTk2ODEyLC03NTQxNzY4OTMsLTczOD
+IxNjI5NiwtMTY0NzEyNDY5NSwtNjAyNTcxOTgxLC0xOTkxMDIz
+NTM1LC0yMDY0OTE3NDM0LDc2MzgxNjU0MCwxNzY0NjExNzM4LC
+0zMDgzOTM3MzksLTE3MjgwNDc4MzAsMjExNDIxMTYxOSwxOTEx
+MDE4NTQxXX0=
 -->
