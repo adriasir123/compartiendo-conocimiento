@@ -32,7 +32,9 @@ cd my_mezzanine
 ```
 python manage.py createdb
 ```
-> Durante la creación nos pide un usuario y contraseña. En mi caso, ha sido 
+> Durante la creación nos pide un usuario y contraseña. En mi caso, ha sido "Usuario: vagrant" "Contraseña: 1234".
+> Pero, ¿qué es esta cuenta que hemos configurado?
+> Pues es simplemente 
 ## Permitimos la conexión a la app web
 En el fichero `local_settings.py`, tenemos que modificar la siguiente línea
 ```
@@ -90,11 +92,11 @@ python manage.py runserver 0.0.0.0:8000
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODUwNTM2ODAsLTE0Mjc0NjcsLTg1NT
-IxNzUzOCwtMTY2NTY4NTc3LDY5OTMxNDU1NywtOTQxMjEyNzY3
-LDE2ODY0ODczMDUsMTEyMTk2ODEyLC03NTQxNzY4OTMsLTczOD
-IxNjI5NiwtMTY0NzEyNDY5NSwtNjAyNTcxOTgxLC0xOTkxMDIz
-NTM1LC0yMDY0OTE3NDM0LDc2MzgxNjU0MCwxNzY0NjExNzM4LC
-0zMDgzOTM3MzksLTE3MjgwNDc4MzAsMjExNDIxMTYxOSwxOTEx
-MDE4NTQxXX0=
+eyJoaXN0b3J5IjpbMzUyNTMxMjQyLC0xNDI3NDY3LC04NTUyMT
+c1MzgsLTE2NjU2ODU3Nyw2OTkzMTQ1NTcsLTk0MTIxMjc2Nywx
+Njg2NDg3MzA1LDExMjE5NjgxMiwtNzU0MTc2ODkzLC03MzgyMT
+YyOTYsLTE2NDcxMjQ2OTUsLTYwMjU3MTk4MSwtMTk5MTAyMzUz
+NSwtMjA2NDkxNzQzNCw3NjM4MTY1NDAsMTc2NDYxMTczOCwtMz
+A4MzkzNzM5LC0xNzI4MDQ3ODMwLDIxMTQyMTE2MTksMTkxMTAx
+ODU0MV19
 -->
