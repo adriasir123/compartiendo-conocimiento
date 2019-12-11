@@ -16,11 +16,11 @@ sudo yum install proftpd
 ```
 * Añadimos las reglas de firewall para permitir la comunicación FTP
 ```
-firewall-cmd --permanent --add-port=21/tcp
+sudo firewall-cmd --permanent --add-port=21/tcp
 ```
 * Reiniciamos el servicio firewalld
 ```
-firewall-cmd --reload
+sudo firewall-cmd --reload
 ```
 
 
@@ -52,7 +52,7 @@ firewall-cmd --reload
 
 # Paso 4: Crear usuario BD y la BD
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzUyMTM1MTUsLTE4MjQ3NTQ2NDIsMT
-YzNzkyMDQ2MSwtMTQ2MzgzMTk5LDE5Mjg5NTEzODEsLTE1MTQ0
-MjY2MjAsLTExMTU0MDg5NjVdfQ==
+eyJoaXN0b3J5IjpbLTQ2MjQyNTI1MywtMTc3NTIxMzUxNSwtMT
+gyNDc1NDY0MiwxNjM3OTIwNDYxLC0xNDYzODMxOTksMTkyODk1
+MTM4MSwtMTUxNDQyNjYyMCwtMTExNTQwODk2NV19
 -->
