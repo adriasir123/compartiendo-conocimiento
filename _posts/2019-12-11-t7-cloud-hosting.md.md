@@ -10,7 +10,7 @@ No lo hago, porque ya lo tengo
 ```
 sudo yum update
 ```
-* 
+* Instalamos el ser
 ```
 sudo yum install proftpd
 ```
@@ -51,7 +51,7 @@ sudo yum install proftpd
 
 # Paso 4: Crear usuario BD y la BD
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxMDExOTQyLC0xODI0NzU0NjQyLDE2Mz
-c5MjA0NjEsLTE0NjM4MzE5OSwxOTI4OTUxMzgxLC0xNTE0NDI2
-NjIwLC0xMTE1NDA4OTY1XX0=
+eyJoaXN0b3J5IjpbLTE4MTE4ODIyOTIsLTE4MjQ3NTQ2NDIsMT
+YzNzkyMDQ2MSwtMTQ2MzgzMTk5LDE5Mjg5NTEzODEsLTE1MTQ0
+MjY2MjAsLTExMTU0MDg5NjVdfQ==
 -->
