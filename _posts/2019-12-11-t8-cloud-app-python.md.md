@@ -5,6 +5,11 @@ title: "Tarea 8 Cloud:  Instalación de app python (Mezzanine)"
 # Paso 1: instalación en desarrollo con entorno virtual
 
 
+
+
+
+
+
 # Paso 2: personalización de la web
 ## Cambiar tema
 
@@ -12,7 +17,12 @@ title: "Tarea 8 Cloud:  Instalación de app python (Mezzanine)"
 
 
 
-# Paso 3: guardar en un repo los ficheros del CMS y la backup de la BD
+
+
+
+# Paso 3: guardado en Github
+
+
 
 
 
@@ -22,6 +32,6 @@ title: "Tarea 8 Cloud:  Instalación de app python (Mezzanine)"
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY1MTkzOTEsLTE3MjgwNDc4MzAsMjExND
-IxMTYxOSwxOTExMDE4NTQxXX0=
+eyJoaXN0b3J5IjpbLTMwODM5MzczOSwtMTcyODA0NzgzMCwyMT
+E0MjExNjE5LDE5MTEwMTg1NDFdfQ==
 -->
