@@ -16,13 +16,12 @@ title: "Tarea 8 Cloud:  Instalación de app python (Mezzanine)"
 
 
 
-# Paso 4: 
+# Paso 4: despliegue en producción
 
 
 
 
--   Realiza el despliegue de la aplicación en tu entorno de producción (servidor web y servidor de base de datos en el cloud). Utiliza un entorno virtual. Como servidor de aplicación puedes usar gunicorn o uwsgi (crea una unidad systemd para gestionar este servicio). La aplicación será accesible en la url `python.tunombre.gonzalonazareno.org`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyMDc1ODk1MywtMTcyODA0NzgzMCwyMT
-E0MjExNjE5LDE5MTEwMTg1NDFdfQ==
+eyJoaXN0b3J5IjpbNjY1MTkzOTEsLTE3MjgwNDc4MzAsMjExND
+IxMTYxOSwxOTExMDE4NTQxXX0=
 -->
