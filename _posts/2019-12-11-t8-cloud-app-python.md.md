@@ -8,7 +8,7 @@ Instalamos todos los paquetes necesarios
 ```
 sudo apt install python3 python3-venv python3-virtualenv virtualenv
 ```
-
+## Creamos el entorno virtual
 
 
 
@@ -43,7 +43,7 @@ sudo apt install python3 python3-venv python3-virtualenv virtualenv
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYzODE2NTQwLDE3NjQ2MTE3MzgsLTMwOD
-M5MzczOSwtMTcyODA0NzgzMCwyMTE0MjExNjE5LDE5MTEwMTg1
-NDFdfQ==
+eyJoaXN0b3J5IjpbNjA0MzQxMTQzLDc2MzgxNjU0MCwxNzY0Nj
+ExNzM4LC0zMDgzOTM3MzksLTE3MjgwNDc4MzAsMjExNDIxMTYx
+OSwxOTExMDE4NTQxXX0=
 -->
