@@ -14,7 +14,7 @@ python3 -m venv mezzanine-pyenv
 ```
 ## Lo activamos
 ```
-
+source mezzanine-pyenv/bin/activate
 ```
 
 
@@ -51,7 +51,7 @@ python3 -m venv mezzanine-pyenv
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwMDQ1OTQzMyw3NjM4MTY1NDAsMTc2ND
-YxMTczOCwtMzA4MzkzNzM5LC0xNzI4MDQ3ODMwLDIxMTQyMTE2
-MTksMTkxMTAxODU0MV19
+eyJoaXN0b3J5IjpbOTczOTIwNDAyLDc2MzgxNjU0MCwxNzY0Nj
+ExNzM4LC0zMDgzOTM3MzksLTE3MjgwNDc4MzAsMjExNDIxMTYx
+OSwxOTExMDE4NTQxXX0=
 -->
