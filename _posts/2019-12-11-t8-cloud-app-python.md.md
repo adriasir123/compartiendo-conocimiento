@@ -33,7 +33,11 @@ cd my_mezzanine
 python manage.py createdb
 ```
 ## Permitimos la conexión a la app web
-En el fichero `local_settings.py` 
+En el fichero `local_settings.py`, tenemos que modificar la siguiente línea
+```
+
+```
+
 
 
 ## Ejecutamos el server web local
@@ -72,9 +76,9 @@ python manage.py runserver 0.0.0.0:8000
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMzUzMDMxNiwxMTIxOTY4MTIsLTc1ND
-E3Njg5MywtNzM4MjE2Mjk2LC0xNjQ3MTI0Njk1LC02MDI1NzE5
-ODEsLTE5OTEwMjM1MzUsLTIwNjQ5MTc0MzQsNzYzODE2NTQwLD
-E3NjQ2MTE3MzgsLTMwODM5MzczOSwtMTcyODA0NzgzMCwyMTE0
-MjExNjE5LDE5MTEwMTg1NDFdfQ==
+eyJoaXN0b3J5IjpbNDk5NTk0MTUxLDExMjE5NjgxMiwtNzU0MT
+c2ODkzLC03MzgyMTYyOTYsLTE2NDcxMjQ2OTUsLTYwMjU3MTk4
+MSwtMTk5MTAyMzUzNSwtMjA2NDkxNzQzNCw3NjM4MTY1NDAsMT
+c2NDYxMTczOCwtMzA4MzkzNzM5LC0xNzI4MDQ3ODMwLDIxMTQy
+MTE2MTksMTkxMTAxODU0MV19
 -->
