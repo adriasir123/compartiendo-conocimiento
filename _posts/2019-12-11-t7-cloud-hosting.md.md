@@ -14,10 +14,10 @@ sudo yum update
 ```
 sudo yum install proftpd
 ```
-* Añadimos las reglas de firewall
-
-
-
+* Añadimos las reglas de firewall para permitir la comunicación
+```
+firewall-cmd --permanent --add-port=21/tcp
+```
 
 
 
@@ -51,7 +51,7 @@ sudo yum install proftpd
 
 # Paso 4: Crear usuario BD y la BD
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2NzA0ODY0MCwtMTgyNDc1NDY0MiwxNj
-M3OTIwNDYxLC0xNDYzODMxOTksMTkyODk1MTM4MSwtMTUxNDQy
-NjYyMCwtMTExNTQwODk2NV19
+eyJoaXN0b3J5IjpbLTE0NTYxOTk4NDcsLTE4MjQ3NTQ2NDIsMT
+YzNzkyMDQ2MSwtMTQ2MzgzMTk5LDE5Mjg5NTEzODEsLTE1MTQ0
+MjY2MjAsLTExMTU0MDg5NjVdfQ==
 -->
