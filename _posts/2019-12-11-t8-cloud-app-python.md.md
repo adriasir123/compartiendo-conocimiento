@@ -4,9 +4,10 @@ title: "Tarea 8 Cloud:  Instalación de app python (Mezzanine)"
 
 # Paso 1: instalación en desarrollo con entorno virtual
 ## Instalar python...etc
-
-
-
+Instalamos todos los paquetes necesarios
+```
+sudo apt install python3 python3-venv python3-virtualenv virtualenv
+```
 
 
 
@@ -42,7 +43,7 @@ title: "Tarea 8 Cloud:  Instalación de app python (Mezzanine)"
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3MDMxMDkyOSwxNzY0NjExNzM4LC0zMD
-gzOTM3MzksLTE3MjgwNDc4MzAsMjExNDIxMTYxOSwxOTExMDE4
-NTQxXX0=
+eyJoaXN0b3J5IjpbNzYzODE2NTQwLDE3NjQ2MTE3MzgsLTMwOD
+M5MzczOSwtMTcyODA0NzgzMCwyMTE0MjExNjE5LDE5MTEwMTg1
+NDFdfQ==
 -->
