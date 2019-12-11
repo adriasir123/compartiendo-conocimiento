@@ -78,8 +78,9 @@ Dentro de la zona de administración, tendremos que irnos a "Site -> Settings ->
 Cuando guardemos, y volvamos a la web principal, veremos que el nombre de la web se cambió correctamente
 ![](https://i.imgur.com/xDdXVKc.png)
 ## Añadir post con imagen
-Dentro de la zona de administración, tendremos que irnos a "Content -> Blog posts -> Add blog post". Una vez aquí, simplemente rellenaremos los campos necesarios, y crearemos el post.
-
+* Dentro de la zona de administración, tendremos que irnos a "Content -> Blog posts -> Add blog post". Una vez aquí, simplemente rellenaremos los campos necesarios, y crearemos el post.
+* Cuando lo tengamos creado, nos aparecerá el nuevo post en la lista general de posts
+![](https://i.imgur.com/2LI2L2u.png)*
 
 
 
@@ -118,11 +119,11 @@ Dentro de la zona de administración, tendremos que irnos a "Content -> Blog pos
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjIwOTM4ODYsMzcyMTMyMDEwLC04ND
-k5NzkwMSwzNDU5MzYwMCwtMTQyNzQ2NywtODU1MjE3NTM4LC0x
-NjY1Njg1NzcsNjk5MzE0NTU3LC05NDEyMTI3NjcsMTY4NjQ4Nz
-MwNSwxMTIxOTY4MTIsLTc1NDE3Njg5MywtNzM4MjE2Mjk2LC0x
-NjQ3MTI0Njk1LC02MDI1NzE5ODEsLTE5OTEwMjM1MzUsLTIwNj
-Q5MTc0MzQsNzYzODE2NTQwLDE3NjQ2MTE3MzgsLTMwODM5Mzcz
-OV19
+eyJoaXN0b3J5IjpbLTc0Mjg5NzAxNywtMTI2MjA5Mzg4NiwzNz
+IxMzIwMTAsLTg0OTk3OTAxLDM0NTkzNjAwLC0xNDI3NDY3LC04
+NTUyMTc1MzgsLTE2NjU2ODU3Nyw2OTkzMTQ1NTcsLTk0MTIxMj
+c2NywxNjg2NDg3MzA1LDExMjE5NjgxMiwtNzU0MTc2ODkzLC03
+MzgyMTYyOTYsLTE2NDcxMjQ2OTUsLTYwMjU3MTk4MSwtMTk5MT
+AyMzUzNSwtMjA2NDkxNzQzNCw3NjM4MTY1NDAsMTc2NDYxMTcz
+OF19
 -->
