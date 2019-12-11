@@ -16,8 +16,10 @@ python3 -m venv mezzanine-pyenv
 ```
 source mezzanine-pyenv/bin/activate
 ```
-## 
-
+## Instalando Mezzanine
+```
+pip install mezzanine
+```
 
 
 
@@ -51,7 +53,7 @@ source mezzanine-pyenv/bin/activate
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjQ5MTc0MzQsNzYzODE2NTQwLDE3Nj
-Q2MTE3MzgsLTMwODM5MzczOSwtMTcyODA0NzgzMCwyMTE0MjEx
-NjE5LDE5MTEwMTg1NDFdfQ==
+eyJoaXN0b3J5IjpbLTE3NjE0MjA4MzUsLTIwNjQ5MTc0MzQsNz
+YzODE2NTQwLDE3NjQ2MTE3MzgsLTMwODM5MzczOSwtMTcyODA0
+NzgzMCwyMTE0MjExNjE5LDE5MTEwMTg1NDFdfQ==
 -->
