@@ -80,7 +80,7 @@ Cuando guardemos, y volvamos a la web principal, veremos que el nombre de la web
 ## Añadir post con imagen
 * Dentro de la zona de administración, tendremos que irnos a "Content -> Blog posts -> Add blog post". Una vez aquí, simplemente rellenaremos los campos necesarios, y crearemos el post.
 * Cuando lo tengamos creado, nos aparecerá el nuevo post en la lista general de posts
-![](https://i.imgur.com/2LI2L2u.png)* Para verlo directamente en la web, la manera más sencilla y rápida sería hacer click en "View on site"
+![](https://i.imgur.com/2LI2L2u.png)* Para ver el post directamente en la web, la manera más sencilla y rápida sería hacer click en "View on site"
 
 
 
@@ -119,7 +119,7 @@ Cuando guardemos, y volvamos a la web principal, veremos que el nombre de la web
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5MzAyNjQyNCw4MTc1MDk0MDMsLTEyNj
+eyJoaXN0b3J5IjpbLTk3MDA3ODI1OCw4MTc1MDk0MDMsLTEyNj
 IwOTM4ODYsMzcyMTMyMDEwLC04NDk5NzkwMSwzNDU5MzYwMCwt
 MTQyNzQ2NywtODU1MjE3NTM4LC0xNjY1Njg1NzcsNjk5MzE0NT
 U3LC05NDEyMTI3NjcsMTY4NjQ4NzMwNSwxMTIxOTY4MTIsLTc1
