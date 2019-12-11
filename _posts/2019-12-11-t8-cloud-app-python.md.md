@@ -12,7 +12,7 @@ title: "Tarea 8 Cloud:  Instalación de app python (Mezzanine)"
 
 
 
-# Paso 3: guardar en un repos los ficheros del CMS 
+# Paso 3: guardar en un repo los ficheros del CMS 
 
 
 
@@ -27,6 +27,6 @@ title: "Tarea 8 Cloud:  Instalación de app python (Mezzanine)"
 
 -   Realiza el despliegue de la aplicación en tu entorno de producción (servidor web y servidor de base de datos en el cloud). Utiliza un entorno virtual. Como servidor de aplicación puedes usar gunicorn o uwsgi (crea una unidad systemd para gestionar este servicio). La aplicación será accesible en la url `python.tunombre.gonzalonazareno.org`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkwMDE0NTUzLDIxMTQyMTE2MTksMTkxMT
-AxODU0MV19
+eyJoaXN0b3J5IjpbLTE3MjgwNDc4MzAsMjExNDIxMTYxOSwxOT
+ExMDE4NTQxXX0=
 -->
