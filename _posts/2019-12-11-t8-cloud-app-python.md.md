@@ -28,7 +28,7 @@ Nos movemos dentro de ese directorio
 ```
 cd my_mezzanine
 ```
-
+# 
 
 
 
@@ -64,8 +64,8 @@ cd my_mezzanine
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwMjU3MTk4MSwtMTk5MTAyMzUzNSwtMj
-A2NDkxNzQzNCw3NjM4MTY1NDAsMTc2NDYxMTczOCwtMzA4Mzkz
-NzM5LC0xNzI4MDQ3ODMwLDIxMTQyMTE2MTksMTkxMTAxODU0MV
-19
+eyJoaXN0b3J5IjpbMzU5NTMxMjgwLC02MDI1NzE5ODEsLTE5OT
+EwMjM1MzUsLTIwNjQ5MTc0MzQsNzYzODE2NTQwLDE3NjQ2MTE3
+MzgsLTMwODM5MzczOSwtMTcyODA0NzgzMCwyMTE0MjExNjE5LD
+E5MTEwMTg1NDFdfQ==
 -->
