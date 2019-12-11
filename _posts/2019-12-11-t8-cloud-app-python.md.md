@@ -28,8 +28,10 @@ Nos movemos dentro de ese directorio
 ```
 cd my_mezzanine
 ```
-# 
-
+## Creamos la base de datos
+```
+python manage.py createdb
+```
 
 
 
@@ -64,8 +66,8 @@ cd my_mezzanine
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU5NTMxMjgwLC02MDI1NzE5ODEsLTE5OT
-EwMjM1MzUsLTIwNjQ5MTc0MzQsNzYzODE2NTQwLDE3NjQ2MTE3
-MzgsLTMwODM5MzczOSwtMTcyODA0NzgzMCwyMTE0MjExNjE5LD
-E5MTEwMTg1NDFdfQ==
+eyJoaXN0b3J5IjpbLTE2NDcxMjQ2OTUsLTYwMjU3MTk4MSwtMT
+k5MTAyMzUzNSwtMjA2NDkxNzQzNCw3NjM4MTY1NDAsMTc2NDYx
+MTczOCwtMzA4MzkzNzM5LC0xNzI4MDQ3ODMwLDIxMTQyMTE2MT
+ksMTkxMTAxODU0MV19
 -->
