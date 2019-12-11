@@ -59,11 +59,12 @@ python manage.py runserver 0.0.0.0:8000
 ![](https://i.imgur.com/x5DsdvA.png)
 ## Accediendo a la parte de administración
 Para ello, tendremos que acceder a una URL parecida a la siguiente  
-(digo parecida, porque simplemente lo que cambiaría será la IP)
+(digo parecida, porque simplemente lo que cambiaría sería la IP)
 ```
 http://192.168.1.104:8000/admin/
 ```
-
+Una vez dentro, la parte de administración sería tal que así
+![]()
 
 
 
@@ -98,11 +99,11 @@ http://192.168.1.104:8000/admin/
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0OTk3OTAxLDM0NTkzNjAwLC0xNDI3ND
-Y3LC04NTUyMTc1MzgsLTE2NjU2ODU3Nyw2OTkzMTQ1NTcsLTk0
-MTIxMjc2NywxNjg2NDg3MzA1LDExMjE5NjgxMiwtNzU0MTc2OD
-kzLC03MzgyMTYyOTYsLTE2NDcxMjQ2OTUsLTYwMjU3MTk4MSwt
-MTk5MTAyMzUzNSwtMjA2NDkxNzQzNCw3NjM4MTY1NDAsMTc2ND
-YxMTczOCwtMzA4MzkzNzM5LC0xNzI4MDQ3ODMwLDIxMTQyMTE2
-MTldfQ==
+eyJoaXN0b3J5IjpbLTQyMzIzNDkyOSwtODQ5OTc5MDEsMzQ1OT
+M2MDAsLTE0Mjc0NjcsLTg1NTIxNzUzOCwtMTY2NTY4NTc3LDY5
+OTMxNDU1NywtOTQxMjEyNzY3LDE2ODY0ODczMDUsMTEyMTk2OD
+EyLC03NTQxNzY4OTMsLTczODIxNjI5NiwtMTY0NzEyNDY5NSwt
+NjAyNTcxOTgxLC0xOTkxMDIzNTM1LC0yMDY0OTE3NDM0LDc2Mz
+gxNjU0MCwxNzY0NjExNzM4LC0zMDgzOTM3MzksLTE3MjgwNDc4
+MzBdfQ==
 -->
