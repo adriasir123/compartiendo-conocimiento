@@ -81,10 +81,7 @@ Cuando guardemos, y volvamos a la web principal, veremos que el nombre de la web
 * Dentro de la zona de administración, tendremos que irnos a "Content -> Blog posts -> Add blog post". Una vez aquí, simplemente rellenaremos los campos necesarios, y crearemos el post.
 * Cuando lo tengamos creado, nos aparecerá el nuevo post en la lista general de posts
 ![](https://i.imgur.com/2LI2L2u.png)* Para ver el post directamente en la web, la manera más sencilla y rápida sería hacer click en "View on site". Nuestro post ya terminado, quedaría tal que así:
-![]()
-
-
-
+![](https://i.imgur.com/N1DUceg.png)
 
 ## Cambiar tema
 
@@ -120,11 +117,11 @@ Cuando guardemos, y volvamos a la web principal, veremos que el nombre de la web
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxODU0MjMxNCw4MTc1MDk0MDMsLTEyNj
-IwOTM4ODYsMzcyMTMyMDEwLC04NDk5NzkwMSwzNDU5MzYwMCwt
-MTQyNzQ2NywtODU1MjE3NTM4LC0xNjY1Njg1NzcsNjk5MzE0NT
-U3LC05NDEyMTI3NjcsMTY4NjQ4NzMwNSwxMTIxOTY4MTIsLTc1
-NDE3Njg5MywtNzM4MjE2Mjk2LC0xNjQ3MTI0Njk1LC02MDI1Nz
-E5ODEsLTE5OTEwMjM1MzUsLTIwNjQ5MTc0MzQsNzYzODE2NTQw
-XX0=
+eyJoaXN0b3J5IjpbMTY3Mjc2NDM0LDgxNzUwOTQwMywtMTI2Mj
+A5Mzg4NiwzNzIxMzIwMTAsLTg0OTk3OTAxLDM0NTkzNjAwLC0x
+NDI3NDY3LC04NTUyMTc1MzgsLTE2NjU2ODU3Nyw2OTkzMTQ1NT
+csLTk0MTIxMjc2NywxNjg2NDg3MzA1LDExMjE5NjgxMiwtNzU0
+MTc2ODkzLC03MzgyMTYyOTYsLTE2NDcxMjQ2OTUsLTYwMjU3MT
+k4MSwtMTk5MTAyMzUzNSwtMjA2NDkxNzQzNCw3NjM4MTY1NDBd
+fQ==
 -->
