@@ -100,7 +100,10 @@ sqlite3 dev.db
 ```
 .backup backup_mezzanine.sq3
 ```
-*
+* Salimos de la terminal de SQLite, y encontraremos el archivo de backup en el mismo directorio en el que estábamos
+```
+-rw-r--r-- 1 vagrant vagrant 421888 Dec 11 22:26 backup_mezzanine.sq3
+```
 
 
 
@@ -111,11 +114,11 @@ sqlite3 dev.db
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDEzODkyMDczLC0xOTgzNzk4OTExLDE3MT
-QyNzY2MTEsOTc2MTYxOTE0LC0xMTU2Njk3MTQ4LDgxNzUwOTQw
-MywtMTI2MjA5Mzg4NiwzNzIxMzIwMTAsLTg0OTk3OTAxLDM0NT
-kzNjAwLC0xNDI3NDY3LC04NTUyMTc1MzgsLTE2NjU2ODU3Nyw2
-OTkzMTQ1NTcsLTk0MTIxMjc2NywxNjg2NDg3MzA1LDExMjE5Nj
-gxMiwtNzU0MTc2ODkzLC03MzgyMTYyOTYsLTE2NDcxMjQ2OTVd
-fQ==
+eyJoaXN0b3J5IjpbLTIyOTk3MTEzMCwtMTk4Mzc5ODkxMSwxNz
+E0Mjc2NjExLDk3NjE2MTkxNCwtMTE1NjY5NzE0OCw4MTc1MDk0
+MDMsLTEyNjIwOTM4ODYsMzcyMTMyMDEwLC04NDk5NzkwMSwzND
+U5MzYwMCwtMTQyNzQ2NywtODU1MjE3NTM4LC0xNjY1Njg1Nzcs
+Njk5MzE0NTU3LC05NDEyMTI3NjcsMTY4NjQ4NzMwNSwxMTIxOT
+Y4MTIsLTc1NDE3Njg5MywtNzM4MjE2Mjk2LC0xNjQ3MTI0Njk1
+XX0=
 -->
