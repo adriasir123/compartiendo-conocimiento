@@ -74,8 +74,8 @@ Una vez dentro, la parte de administración sería tal que así
 
 ## Cambiar nombre de la página
 Dentro de la zona de administración, tendremos que irnos a "Site -> Settings -> Site -> Site Title". Una vez aquí, podremos cambiar el nombre de la web al que queramos:
-![]() 
-
+![](https://i.imgur.com/CussH1y.png) 
+Cuando guardemos, 
 
 ## Cambiar tema
 
@@ -111,11 +111,11 @@ Dentro de la zona de administración, tendremos que irnos a "Site -> Settings ->
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2OTU5NDM1MiwtODQ5OTc5MDEsMzQ1OT
-M2MDAsLTE0Mjc0NjcsLTg1NTIxNzUzOCwtMTY2NTY4NTc3LDY5
-OTMxNDU1NywtOTQxMjEyNzY3LDE2ODY0ODczMDUsMTEyMTk2OD
-EyLC03NTQxNzY4OTMsLTczODIxNjI5NiwtMTY0NzEyNDY5NSwt
-NjAyNTcxOTgxLC0xOTkxMDIzNTM1LC0yMDY0OTE3NDM0LDc2Mz
-gxNjU0MCwxNzY0NjExNzM4LC0zMDgzOTM3MzksLTE3MjgwNDc4
-MzBdfQ==
+eyJoaXN0b3J5IjpbLTE5MjI3NDE3NTIsLTg0OTk3OTAxLDM0NT
+kzNjAwLC0xNDI3NDY3LC04NTUyMTc1MzgsLTE2NjU2ODU3Nyw2
+OTkzMTQ1NTcsLTk0MTIxMjc2NywxNjg2NDg3MzA1LDExMjE5Nj
+gxMiwtNzU0MTc2ODkzLC03MzgyMTYyOTYsLTE2NDcxMjQ2OTUs
+LTYwMjU3MTk4MSwtMTk5MTAyMzUzNSwtMjA2NDkxNzQzNCw3Nj
+M4MTY1NDAsMTc2NDYxMTczOCwtMzA4MzkzNzM5LC0xNzI4MDQ3
+ODMwXX0=
 -->
