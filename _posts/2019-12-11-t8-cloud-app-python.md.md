@@ -52,8 +52,6 @@ python manage.py runserver 0.0.0.0:8000
 
 
 
-
-
 # Paso 2: personalización de la web
 ## Cambiar nombre de la página
 
@@ -78,9 +76,10 @@ python manage.py runserver 0.0.0.0:8000
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0MTIxMjc2NywxNjg2NDg3MzA1LDExMj
-E5NjgxMiwtNzU0MTc2ODkzLC03MzgyMTYyOTYsLTE2NDcxMjQ2
-OTUsLTYwMjU3MTk4MSwtMTk5MTAyMzUzNSwtMjA2NDkxNzQzNC
-w3NjM4MTY1NDAsMTc2NDYxMTczOCwtMzA4MzkzNzM5LC0xNzI4
-MDQ3ODMwLDIxMTQyMTE2MTksMTkxMTAxODU0MV19
+eyJoaXN0b3J5IjpbNjk5MzE0NTU3LC05NDEyMTI3NjcsMTY4Nj
+Q4NzMwNSwxMTIxOTY4MTIsLTc1NDE3Njg5MywtNzM4MjE2Mjk2
+LC0xNjQ3MTI0Njk1LC02MDI1NzE5ODEsLTE5OTEwMjM1MzUsLT
+IwNjQ5MTc0MzQsNzYzODE2NTQwLDE3NjQ2MTE3MzgsLTMwODM5
+MzczOSwtMTcyODA0NzgzMCwyMTE0MjExNjE5LDE5MTEwMTg1ND
+FdfQ==
 -->
