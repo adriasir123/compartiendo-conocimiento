@@ -91,7 +91,7 @@ Cuando guardemos, y volvamos a la web principal, veremos que el nombre de la web
 
 
 # Paso 3: guardado en Github
-##
+## Backup de SQLite
 
 
 
@@ -106,11 +106,11 @@ Cuando guardemos, y volvamos a la web principal, veremos que el nombre de la web
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTc0OTM4MzYsOTc2MTYxOTE0LC0xMT
-U2Njk3MTQ4LDgxNzUwOTQwMywtMTI2MjA5Mzg4NiwzNzIxMzIw
-MTAsLTg0OTk3OTAxLDM0NTkzNjAwLC0xNDI3NDY3LC04NTUyMT
-c1MzgsLTE2NjU2ODU3Nyw2OTkzMTQ1NTcsLTk0MTIxMjc2Nywx
-Njg2NDg3MzA1LDExMjE5NjgxMiwtNzU0MTc2ODkzLC03MzgyMT
-YyOTYsLTE2NDcxMjQ2OTUsLTYwMjU3MTk4MSwtMTk5MTAyMzUz
-NV19
+eyJoaXN0b3J5IjpbMTcxNDI3NjYxMSw5NzYxNjE5MTQsLTExNT
+Y2OTcxNDgsODE3NTA5NDAzLC0xMjYyMDkzODg2LDM3MjEzMjAx
+MCwtODQ5OTc5MDEsMzQ1OTM2MDAsLTE0Mjc0NjcsLTg1NTIxNz
+UzOCwtMTY2NTY4NTc3LDY5OTMxNDU1NywtOTQxMjEyNzY3LDE2
+ODY0ODczMDUsMTEyMTk2ODEyLC03NTQxNzY4OTMsLTczODIxNj
+I5NiwtMTY0NzEyNDY5NSwtNjAyNTcxOTgxLC0xOTkxMDIzNTM1
+XX0=
 -->
