@@ -43,11 +43,11 @@ ALLOWED_HOSTS = ["localhost", "127.0.0.1", "::1", "172.22.0.245"]
 ```
 Lo que estamos haciendo con esto, es permitir el acceso a la aplicación python, a la máquina donde nos queremos conectar (en mi caso es una máquina virtual vagrant)
 
-## Ejecutamos el server web local
+## Ejecutamos el servidor web
 ```
 python manage.py runserver 0.0.0.0:8000
 ```
-
+## Mostramos 
 
 
 
@@ -79,9 +79,9 @@ python manage.py runserver 0.0.0.0:8000
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4NjQ4NzMwNSwxMTIxOTY4MTIsLTc1ND
-E3Njg5MywtNzM4MjE2Mjk2LC0xNjQ3MTI0Njk1LC02MDI1NzE5
-ODEsLTE5OTEwMjM1MzUsLTIwNjQ5MTc0MzQsNzYzODE2NTQwLD
-E3NjQ2MTE3MzgsLTMwODM5MzczOSwtMTcyODA0NzgzMCwyMTE0
-MjExNjE5LDE5MTEwMTg1NDFdfQ==
+eyJoaXN0b3J5IjpbLTEyMDM5NzM4NzgsMTY4NjQ4NzMwNSwxMT
+IxOTY4MTIsLTc1NDE3Njg5MywtNzM4MjE2Mjk2LC0xNjQ3MTI0
+Njk1LC02MDI1NzE5ODEsLTE5OTEwMjM1MzUsLTIwNjQ5MTc0Mz
+QsNzYzODE2NTQwLDE3NjQ2MTE3MzgsLTMwODM5MzczOSwtMTcy
+ODA0NzgzMCwyMTE0MjExNjE5LDE5MTEwMTg1NDFdfQ==
 -->
