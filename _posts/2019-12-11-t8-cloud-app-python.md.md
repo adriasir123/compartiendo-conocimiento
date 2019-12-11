@@ -3,7 +3,7 @@ title: "Tarea 8 Cloud:  Instalación de app python (Mezzanine)"
 ---
 
 # Paso 1: instalación en desarrollo con entorno virtual
-## Creación 
+## Creación del entorno virtual
 
 
 
@@ -33,6 +33,6 @@ title: "Tarea 8 Cloud:  Instalación de app python (Mezzanine)"
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5MTQ5NTgwNSwtMzA4MzkzNzM5LC0xNz
+eyJoaXN0b3J5IjpbMjAwMTMxNTQzMCwtMzA4MzkzNzM5LC0xNz
 I4MDQ3ODMwLDIxMTQyMTE2MTksMTkxMTAxODU0MV19
 -->
