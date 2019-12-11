@@ -72,7 +72,7 @@ Una vez dentro, la parte de administración sería tal que así
 
 # Paso 2: personalización de la web
 ## Cambiar nombre de la página
-Tendremos que irnos a 
+Dentro de la zona de administración, tendremos que irnos a "" 
 
 
 ## Cambiar tema
@@ -109,7 +109,7 @@ Tendremos que irnos a
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjI0ODc0MjcsLTg0OTk3OTAxLDM0NT
+eyJoaXN0b3J5IjpbLTIwODgxODYxODksLTg0OTk3OTAxLDM0NT
 kzNjAwLC0xNDI3NDY3LC04NTUyMTc1MzgsLTE2NjU2ODU3Nyw2
 OTkzMTQ1NTcsLTk0MTIxMjc2NywxNjg2NDg3MzA1LDExMjE5Nj
 gxMiwtNzU0MTc2ODkzLC03MzgyMTYyOTYsLTE2NDcxMjQ2OTUs
