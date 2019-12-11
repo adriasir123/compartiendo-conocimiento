@@ -23,7 +23,7 @@ sudo firewall-cmd --permanent --add-port=21/tcp
 sudo firewall-cmd --reload
 ```
 * Por último, no nos podemos olvidar de abrir el puerto 21 en el firewall de Openstack
-
+(esto no lo he hecho aún)
 
 
 
@@ -52,7 +52,8 @@ sudo firewall-cmd --reload
 
 # Paso 4: Crear usuario BD y la BD
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTkxODcxMzcsLTE3NzUyMTM1MTUsLT
-E4MjQ3NTQ2NDIsMTYzNzkyMDQ2MSwtMTQ2MzgzMTk5LDE5Mjg5
-NTEzODEsLTE1MTQ0MjY2MjAsLTExMTU0MDg5NjVdfQ==
+eyJoaXN0b3J5IjpbMjExMjM0MDYwMiwtMTk1OTE4NzEzNywtMT
+c3NTIxMzUxNSwtMTgyNDc1NDY0MiwxNjM3OTIwNDYxLC0xNDYz
+ODMxOTksMTkyODk1MTM4MSwtMTUxNDQyNjYyMCwtMTExNTQwOD
+k2NV19
 -->
