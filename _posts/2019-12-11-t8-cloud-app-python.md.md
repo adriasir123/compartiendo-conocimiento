@@ -24,8 +24,10 @@ pip install mezzanine
 ```
 mezzanine-project my_mezzanine
 ```
-
-
+Nos movemos dentro de ese directorio
+```
+cd my_mezzanine
+```
 
 
 
@@ -53,7 +55,7 @@ mezzanine-project my_mezzanine
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwODk2OTExMiwtMjA2NDkxNzQzNCw3Nj
-M4MTY1NDAsMTc2NDYxMTczOCwtMzA4MzkzNzM5LC0xNzI4MDQ3
-ODMwLDIxMTQyMTE2MTksMTkxMTAxODU0MV19
+eyJoaXN0b3J5IjpbLTE5OTEwMjM1MzUsLTIwNjQ5MTc0MzQsNz
+YzODE2NTQwLDE3NjQ2MTE3MzgsLTMwODM5MzczOSwtMTcyODA0
+NzgzMCwyMTE0MjExNjE5LDE5MTEwMTg1NDFdfQ==
 -->
