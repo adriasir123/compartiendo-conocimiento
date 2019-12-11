@@ -2,7 +2,7 @@
 title: "Tarea 7 Cloud: Hosting"
 ---
 
-# 
+# Paso 0: preparativos
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4OTg5NjI1NCwtMTExNTQwODk2NV19
+eyJoaXN0b3J5IjpbLTMxNjM3MTc1MSwtMTExNTQwODk2NV19
 -->
