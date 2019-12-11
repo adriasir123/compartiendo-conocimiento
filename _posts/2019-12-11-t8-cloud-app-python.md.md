@@ -73,7 +73,8 @@ Una vez dentro, la parte de administración sería tal que así
 # Paso 2: personalización de la web
 
 ## Cambiar nombre de la página
-Dentro de la zona de administración, tendremos que irnos a "Site -> Settings -> Site -> Site Title". Una vez aquí, podremos cambiar el nombre de la web, al que queramos 
+Dentro de la zona de administración, tendremos que irnos a "Site -> Settings -> Site -> Site Title". Una vez aquí, podremos cambiar el nombre de la web, al que queramos:
+ 
 
 
 ## Cambiar tema
@@ -110,11 +111,11 @@ Dentro de la zona de administración, tendremos que irnos a "Site -> Settings ->
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxNDk1NDQ5MiwtODQ5OTc5MDEsMzQ1OT
-M2MDAsLTE0Mjc0NjcsLTg1NTIxNzUzOCwtMTY2NTY4NTc3LDY5
-OTMxNDU1NywtOTQxMjEyNzY3LDE2ODY0ODczMDUsMTEyMTk2OD
-EyLC03NTQxNzY4OTMsLTczODIxNjI5NiwtMTY0NzEyNDY5NSwt
-NjAyNTcxOTgxLC0xOTkxMDIzNTM1LC0yMDY0OTE3NDM0LDc2Mz
-gxNjU0MCwxNzY0NjExNzM4LC0zMDgzOTM3MzksLTE3MjgwNDc4
-MzBdfQ==
+eyJoaXN0b3J5IjpbLTYwNjU1OTg2LC04NDk5NzkwMSwzNDU5Mz
+YwMCwtMTQyNzQ2NywtODU1MjE3NTM4LC0xNjY1Njg1NzcsNjk5
+MzE0NTU3LC05NDEyMTI3NjcsMTY4NjQ4NzMwNSwxMTIxOTY4MT
+IsLTc1NDE3Njg5MywtNzM4MjE2Mjk2LC0xNjQ3MTI0Njk1LC02
+MDI1NzE5ODEsLTE5OTEwMjM1MzUsLTIwNjQ5MTc0MzQsNzYzOD
+E2NTQwLDE3NjQ2MTE3MzgsLTMwODM5MzczOSwtMTcyODA0Nzgz
+MF19
 -->
