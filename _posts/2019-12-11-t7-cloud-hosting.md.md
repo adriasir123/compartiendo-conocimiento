@@ -10,11 +10,11 @@ No lo hago, porque ya lo tengo
 ```
 sudo yum update
 ```
-* Instalamos el ser
+* Instalamos el servidor FTP
 ```
 sudo yum install proftpd
 ```
-
+* Añadimos las reglas de firewall
 
 
 
@@ -51,7 +51,7 @@ sudo yum install proftpd
 
 # Paso 4: Crear usuario BD y la BD
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTE4ODIyOTIsLTE4MjQ3NTQ2NDIsMT
-YzNzkyMDQ2MSwtMTQ2MzgzMTk5LDE5Mjg5NTEzODEsLTE1MTQ0
-MjY2MjAsLTExMTU0MDg5NjVdfQ==
+eyJoaXN0b3J5IjpbMTg2NzA0ODY0MCwtMTgyNDc1NDY0MiwxNj
+M3OTIwNDYxLC0xNDYzODMxOTksMTkyODk1MTM4MSwtMTUxNDQy
+NjYyMCwtMTExNTQwODk2NV19
 -->
