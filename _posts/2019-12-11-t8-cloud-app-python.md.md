@@ -90,16 +90,11 @@ Cuando guardemos, y volvamos a la web principal, veremos que el nombre de la web
 
 
 
-
-
-
-
-
-
-
-
-
 # Paso 3: guardado en Github
+
+
+
+
 
 
 
@@ -111,11 +106,11 @@ Cuando guardemos, y volvamos a la web principal, veremos que el nombre de la web
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc2MTYxOTE0LC0xMTU2Njk3MTQ4LDgxNz
-UwOTQwMywtMTI2MjA5Mzg4NiwzNzIxMzIwMTAsLTg0OTk3OTAx
-LDM0NTkzNjAwLC0xNDI3NDY3LC04NTUyMTc1MzgsLTE2NjU2OD
-U3Nyw2OTkzMTQ1NTcsLTk0MTIxMjc2NywxNjg2NDg3MzA1LDEx
-MjE5NjgxMiwtNzU0MTc2ODkzLC03MzgyMTYyOTYsLTE2NDcxMj
-Q2OTUsLTYwMjU3MTk4MSwtMTk5MTAyMzUzNSwtMjA2NDkxNzQz
-NF19
+eyJoaXN0b3J5IjpbLTE1ODEyMDk5NjQsOTc2MTYxOTE0LC0xMT
+U2Njk3MTQ4LDgxNzUwOTQwMywtMTI2MjA5Mzg4NiwzNzIxMzIw
+MTAsLTg0OTk3OTAxLDM0NTkzNjAwLC0xNDI3NDY3LC04NTUyMT
+c1MzgsLTE2NjU2ODU3Nyw2OTkzMTQ1NTcsLTk0MTIxMjc2Nywx
+Njg2NDg3MzA1LDExMjE5NjgxMiwtNzU0MTc2ODkzLC03MzgyMT
+YyOTYsLTE2NDcxMjQ2OTUsLTYwMjU3MTk4MSwtMTk5MTAyMzUz
+NV19
 -->
