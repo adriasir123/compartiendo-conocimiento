@@ -54,7 +54,7 @@ Lo que estamos haciendo con esto, es permitir el acceso a la aplicación python,
 python manage.py runserver 0.0.0.0:8000
 ```
 > En mi caso lo abro permitiendo las conexiones desde cualquier IP, porque mi entorno de desarrollo es una VM vagrant
->
+
 ## Mostramos la web
 ![](https://i.imgur.com/x5DsdvA.png)
 ## Accediendo a la parte de administración
@@ -97,11 +97,11 @@ python manage.py runserver 0.0.0.0:8000
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MzUyNjg2OCwtMTQyNzQ2NywtODU1Mj
-E3NTM4LC0xNjY1Njg1NzcsNjk5MzE0NTU3LC05NDEyMTI3Njcs
-MTY4NjQ4NzMwNSwxMTIxOTY4MTIsLTc1NDE3Njg5MywtNzM4Mj
-E2Mjk2LC0xNjQ3MTI0Njk1LC02MDI1NzE5ODEsLTE5OTEwMjM1
-MzUsLTIwNjQ5MTc0MzQsNzYzODE2NTQwLDE3NjQ2MTE3MzgsLT
-MwODM5MzczOSwtMTcyODA0NzgzMCwyMTE0MjExNjE5LDE5MTEw
-MTg1NDFdfQ==
+eyJoaXN0b3J5IjpbMzQ1OTM2MDAsLTE0Mjc0NjcsLTg1NTIxNz
+UzOCwtMTY2NTY4NTc3LDY5OTMxNDU1NywtOTQxMjEyNzY3LDE2
+ODY0ODczMDUsMTEyMTk2ODEyLC03NTQxNzY4OTMsLTczODIxNj
+I5NiwtMTY0NzEyNDY5NSwtNjAyNTcxOTgxLC0xOTkxMDIzNTM1
+LC0yMDY0OTE3NDM0LDc2MzgxNjU0MCwxNzY0NjExNzM4LC0zMD
+gzOTM3MzksLTE3MjgwNDc4MzAsMjExNDIxMTYxOSwxOTExMDE4
+NTQxXX0=
 -->
