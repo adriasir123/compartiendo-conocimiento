@@ -58,10 +58,10 @@ python manage.py runserver 0.0.0.0:8000
 ## Mostramos la web
 ![](https://i.imgur.com/x5DsdvA.png)
 ## Accediendo a la parte de administración
-
-
-
-
+Para ello, tendremos que acceder a una URL parecida a la siguiente `
+```
+http://192.168.1.104:8000/admin/
+```
 
 
 
@@ -97,11 +97,11 @@ python manage.py runserver 0.0.0.0:8000
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQ1OTM2MDAsLTE0Mjc0NjcsLTg1NTIxNz
-UzOCwtMTY2NTY4NTc3LDY5OTMxNDU1NywtOTQxMjEyNzY3LDE2
-ODY0ODczMDUsMTEyMTk2ODEyLC03NTQxNzY4OTMsLTczODIxNj
-I5NiwtMTY0NzEyNDY5NSwtNjAyNTcxOTgxLC0xOTkxMDIzNTM1
-LC0yMDY0OTE3NDM0LDc2MzgxNjU0MCwxNzY0NjExNzM4LC0zMD
-gzOTM3MzksLTE3MjgwNDc4MzAsMjExNDIxMTYxOSwxOTExMDE4
-NTQxXX0=
+eyJoaXN0b3J5IjpbODU0NDgwMjU1LDM0NTkzNjAwLC0xNDI3ND
+Y3LC04NTUyMTc1MzgsLTE2NjU2ODU3Nyw2OTkzMTQ1NTcsLTk0
+MTIxMjc2NywxNjg2NDg3MzA1LDExMjE5NjgxMiwtNzU0MTc2OD
+kzLC03MzgyMTYyOTYsLTE2NDcxMjQ2OTUsLTYwMjU3MTk4MSwt
+MTk5MTAyMzUzNSwtMjA2NDkxNzQzNCw3NjM4MTY1NDAsMTc2ND
+YxMTczOCwtMzA4MzkzNzM5LC0xNzI4MDQ3ODMwLDIxMTQyMTE2
+MTldfQ==
 -->
