@@ -34,7 +34,7 @@ python manage.py createdb
 ```
 > Durante la creación nos pide un usuario y contraseña. En mi caso, ha sido "Usuario: vagrant" "Contraseña: 1234".
 > Pero, ¿qué es esta cuenta que hemos configurado?
-> Pues es simplemente 
+> Pues es simplemente la cuenta que se usa a la hora de acceder a la zona de administración de la página web. Es importante que no
 ## Permitimos la conexión a la app web
 En el fichero `local_settings.py`, tenemos que modificar la siguiente línea
 ```
@@ -92,11 +92,11 @@ python manage.py runserver 0.0.0.0:8000
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUyNTMxMjQyLC0xNDI3NDY3LC04NTUyMT
-c1MzgsLTE2NjU2ODU3Nyw2OTkzMTQ1NTcsLTk0MTIxMjc2Nywx
-Njg2NDg3MzA1LDExMjE5NjgxMiwtNzU0MTc2ODkzLC03MzgyMT
-YyOTYsLTE2NDcxMjQ2OTUsLTYwMjU3MTk4MSwtMTk5MTAyMzUz
-NSwtMjA2NDkxNzQzNCw3NjM4MTY1NDAsMTc2NDYxMTczOCwtMz
-A4MzkzNzM5LC0xNzI4MDQ3ODMwLDIxMTQyMTE2MTksMTkxMTAx
-ODU0MV19
+eyJoaXN0b3J5IjpbMTMwMzQxODI1NiwtMTQyNzQ2NywtODU1Mj
+E3NTM4LC0xNjY1Njg1NzcsNjk5MzE0NTU3LC05NDEyMTI3Njcs
+MTY4NjQ4NzMwNSwxMTIxOTY4MTIsLTc1NDE3Njg5MywtNzM4Mj
+E2Mjk2LC0xNjQ3MTI0Njk1LC02MDI1NzE5ODEsLTE5OTEwMjM1
+MzUsLTIwNjQ5MTc0MzQsNzYzODE2NTQwLDE3NjQ2MTE3MzgsLT
+MwODM5MzczOSwtMTcyODA0NzgzMCwyMTE0MjExNjE5LDE5MTEw
+MTg1NDFdfQ==
 -->
