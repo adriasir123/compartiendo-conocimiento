@@ -34,7 +34,10 @@ python manage.py createdb
 ```
 > Durante la creación nos pide un usuario y contraseña. En mi caso, ha sido "Usuario: vagrant" "Contraseña: 1234".
 > Pero, ¿qué es esta cuenta que hemos configurado?
-> Pues es simplemente la cuenta que se usa a la hora de acceder a la zona de administración de la página web. Es importante que no
+> Pues es simplemente la cuenta que se usa a la hora de acceder a la zona de administración de la página web. 
+> Es importante que no confundamos esta cuenta como si fuese la cuenta que estuviéramos creando para autenticarnos contra la base de datos, porque sqlite no tiene el concepto de usuarios y contraseñas para el acceso (usa los permisos del sistema para contro 
+
+
 ## Permitimos la conexión a la app web
 En el fichero `local_settings.py`, tenemos que modificar la siguiente línea
 ```
@@ -92,11 +95,11 @@ python manage.py runserver 0.0.0.0:8000
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwMzQxODI1NiwtMTQyNzQ2NywtODU1Mj
-E3NTM4LC0xNjY1Njg1NzcsNjk5MzE0NTU3LC05NDEyMTI3Njcs
-MTY4NjQ4NzMwNSwxMTIxOTY4MTIsLTc1NDE3Njg5MywtNzM4Mj
-E2Mjk2LC0xNjQ3MTI0Njk1LC02MDI1NzE5ODEsLTE5OTEwMjM1
-MzUsLTIwNjQ5MTc0MzQsNzYzODE2NTQwLDE3NjQ2MTE3MzgsLT
-MwODM5MzczOSwtMTcyODA0NzgzMCwyMTE0MjExNjE5LDE5MTEw
-MTg1NDFdfQ==
+eyJoaXN0b3J5IjpbLTE1NzkxNzYxOTcsLTE0Mjc0NjcsLTg1NT
+IxNzUzOCwtMTY2NTY4NTc3LDY5OTMxNDU1NywtOTQxMjEyNzY3
+LDE2ODY0ODczMDUsMTEyMTk2ODEyLC03NTQxNzY4OTMsLTczOD
+IxNjI5NiwtMTY0NzEyNDY5NSwtNjAyNTcxOTgxLC0xOTkxMDIz
+NTM1LC0yMDY0OTE3NDM0LDc2MzgxNjU0MCwxNzY0NjExNzM4LC
+0zMDgzOTM3MzksLTE3MjgwNDc4MzAsMjExNDIxMTYxOSwxOTEx
+MDE4NTQxXX0=
 -->
