@@ -31,6 +31,15 @@ cd my_mezzanine
 
 
 
+
+
+
+
+
+
+
+
+
 # Paso 2: personalización de la web
 ## Cambiar nombre de la página
 
@@ -55,7 +64,8 @@ cd my_mezzanine
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTEwMjM1MzUsLTIwNjQ5MTc0MzQsNz
-YzODE2NTQwLDE3NjQ2MTE3MzgsLTMwODM5MzczOSwtMTcyODA0
-NzgzMCwyMTE0MjExNjE5LDE5MTEwMTg1NDFdfQ==
+eyJoaXN0b3J5IjpbLTYwMjU3MTk4MSwtMTk5MTAyMzUzNSwtMj
+A2NDkxNzQzNCw3NjM4MTY1NDAsMTc2NDYxMTczOCwtMzA4Mzkz
+NzM5LC0xNzI4MDQ3ODMwLDIxMTQyMTE2MTksMTkxMTAxODU0MV
+19
 -->
