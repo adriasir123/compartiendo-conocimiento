@@ -11,8 +11,12 @@ title: "Tarea 7 Cloud: Hosting"
 
 # Paso 2: VirtualHost + Document Root + Default Root
 
-# Paso 3: Crear CNAME
+# Paso 3: Crear CNAME para VH
+
+
+
+# Paso 4: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTQ0MjY2MjAsLTExMTU0MDg5NjVdfQ
-==
+eyJoaXN0b3J5IjpbLTE5MTQ2NTAwMTAsLTE1MTQ0MjY2MjAsLT
+ExMTU0MDg5NjVdfQ==
 -->
