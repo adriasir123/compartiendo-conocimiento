@@ -47,9 +47,10 @@ Lo que estamos haciendo con esto, es permitir el acceso a la aplicación python,
 ```
 python manage.py runserver 0.0.0.0:8000
 ```
-## Mostramos 
+## Mostramos la web
+```
 
-
+```
 
 
 
@@ -79,9 +80,9 @@ python manage.py runserver 0.0.0.0:8000
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDM5NzM4NzgsMTY4NjQ4NzMwNSwxMT
-IxOTY4MTIsLTc1NDE3Njg5MywtNzM4MjE2Mjk2LC0xNjQ3MTI0
-Njk1LC02MDI1NzE5ODEsLTE5OTEwMjM1MzUsLTIwNjQ5MTc0Mz
-QsNzYzODE2NTQwLDE3NjQ2MTE3MzgsLTMwODM5MzczOSwtMTcy
-ODA0NzgzMCwyMTE0MjExNjE5LDE5MTEwMTg1NDFdfQ==
+eyJoaXN0b3J5IjpbLTk3MTExODY1OSwxNjg2NDg3MzA1LDExMj
+E5NjgxMiwtNzU0MTc2ODkzLC03MzgyMTYyOTYsLTE2NDcxMjQ2
+OTUsLTYwMjU3MTk4MSwtMTk5MTAyMzUzNSwtMjA2NDkxNzQzNC
+w3NjM4MTY1NDAsMTc2NDYxMTczOCwtMzA4MzkzNzM5LC0xNzI4
+MDQ3ODMwLDIxMTQyMTE2MTksMTkxMTAxODU0MV19
 -->
