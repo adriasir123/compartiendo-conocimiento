@@ -83,12 +83,6 @@ Cuando guardemos, y volvamos a la web principal, veremos que el nombre de la web
 ![](https://i.imgur.com/2LI2L2u.png)* Para ver el post directamente en la web principal, la manera más sencilla y rápida sería hacer click en "View on site". Nuestro post ya terminado, quedaría tal que así:
 ![](https://i.imgur.com/N1DUceg.png)
 
-## Cambiar tema
-
-
-
-
-
 
 
 
@@ -117,11 +111,11 @@ Cuando guardemos, y volvamos a la web principal, veremos que el nombre de la web
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTY2OTcxNDgsODE3NTA5NDAzLC0xMj
-YyMDkzODg2LDM3MjEzMjAxMCwtODQ5OTc5MDEsMzQ1OTM2MDAs
-LTE0Mjc0NjcsLTg1NTIxNzUzOCwtMTY2NTY4NTc3LDY5OTMxND
-U1NywtOTQxMjEyNzY3LDE2ODY0ODczMDUsMTEyMTk2ODEyLC03
-NTQxNzY4OTMsLTczODIxNjI5NiwtMTY0NzEyNDY5NSwtNjAyNT
-cxOTgxLC0xOTkxMDIzNTM1LC0yMDY0OTE3NDM0LDc2MzgxNjU0
-MF19
+eyJoaXN0b3J5IjpbOTc2MTYxOTE0LC0xMTU2Njk3MTQ4LDgxNz
+UwOTQwMywtMTI2MjA5Mzg4NiwzNzIxMzIwMTAsLTg0OTk3OTAx
+LDM0NTkzNjAwLC0xNDI3NDY3LC04NTUyMTc1MzgsLTE2NjU2OD
+U3Nyw2OTkzMTQ1NTcsLTk0MTIxMjc2NywxNjg2NDg3MzA1LDEx
+MjE5NjgxMiwtNzU0MTc2ODkzLC03MzgyMTYyOTYsLTE2NDcxMj
+Q2OTUsLTYwMjU3MTk4MSwtMTk5MTAyMzUzNSwtMjA2NDkxNzQz
+NF19
 -->
