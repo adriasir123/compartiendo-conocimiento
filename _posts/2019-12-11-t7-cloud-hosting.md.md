@@ -6,7 +6,10 @@ title: "Tarea 7 Cloud: Hosting"
 ## Instalar/configurar proftpd
 * Añadir el repositorio EPEL
 No lo hago, porque ya lo tengo
-
+* Actualizamos los paquetes 
+```
+sudo yum update
+```
 
 
 # Paso 1: Creación del usuario
@@ -34,7 +37,7 @@ No lo hago, porque ya lo tengo
 
 # Paso 4: Crear usuario BD y la BD
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwNjU3MDkzNCwxNjM3OTIwNDYxLC0xND
-YzODMxOTksMTkyODk1MTM4MSwtMTUxNDQyNjYyMCwtMTExNTQw
-ODk2NV19
+eyJoaXN0b3J5IjpbLTE4MjQ3NTQ2NDIsMTYzNzkyMDQ2MSwtMT
+Q2MzgzMTk5LDE5Mjg5NTEzODEsLTE1MTQ0MjY2MjAsLTExMTU0
+MDg5NjVdfQ==
 -->
