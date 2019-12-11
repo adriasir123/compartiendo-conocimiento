@@ -10,7 +10,7 @@ title: "Tarea 8 Cloud:  Instalación de app python (Mezzanine)"
 
 
 # Paso 2: personalización de la web
-## Cambiar nombre
+## Cambiar nombre de la página
 
 ## Cambiar tema
 
@@ -33,6 +33,6 @@ title: "Tarea 8 Cloud:  Instalación de app python (Mezzanine)"
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4Nzc1NDY0NywtMzA4MzkzNzM5LC0xNz
+eyJoaXN0b3J5IjpbLTI5MTQ5NTgwNSwtMzA4MzkzNzM5LC0xNz
 I4MDQ3ODMwLDIxMTQyMTE2MTksMTkxMTAxODU0MV19
 -->
