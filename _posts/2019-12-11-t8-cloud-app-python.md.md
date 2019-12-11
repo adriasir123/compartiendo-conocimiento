@@ -32,8 +32,10 @@ cd my_mezzanine
 ```
 python manage.py createdb
 ```
-
-
+## Ejecutamos el server web local
+```
+python manage.py runserver 0.0.0.0:8000
+```
 
 
 
@@ -66,8 +68,8 @@ python manage.py createdb
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDcxMjQ2OTUsLTYwMjU3MTk4MSwtMT
-k5MTAyMzUzNSwtMjA2NDkxNzQzNCw3NjM4MTY1NDAsMTc2NDYx
-MTczOCwtMzA4MzkzNzM5LC0xNzI4MDQ3ODMwLDIxMTQyMTE2MT
-ksMTkxMTAxODU0MV19
+eyJoaXN0b3J5IjpbLTczODIxNjI5NiwtMTY0NzEyNDY5NSwtNj
+AyNTcxOTgxLC0xOTkxMDIzNTM1LC0yMDY0OTE3NDM0LDc2Mzgx
+NjU0MCwxNzY0NjExNzM4LC0zMDgzOTM3MzksLTE3MjgwNDc4Mz
+AsMjExNDIxMTYxOSwxOTExMDE4NTQxXX0=
 -->
