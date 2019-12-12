@@ -115,14 +115,18 @@ Por aquí dejo el [enlace](https://github.com/adriasir123/app_mezzanine) al repo
 # Paso 4: despliegue en producción
 
 
+Realiza el despliegue de la aplicación en tu entorno de producción (servidor web y servidor de base de datos en el cloud). Utiliza un entorno virtual. 
 
+Como servidor de aplicación puedes usar gunicorn o uwsgi (crea una unidad systemd para gestionar este servicio). 
+
+La aplicación será accesible en la url `python.tunombre.gonzalonazareno.org`.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU5OTg3MzYxLC0zMzU4NDM4NywyMTM1ND
-Q1MTU5LC0yMDQ2NTcwOTQ0LC0xOTgzNzk4OTExLDE3MTQyNzY2
-MTEsOTc2MTYxOTE0LC0xMTU2Njk3MTQ4LDgxNzUwOTQwMywtMT
-I2MjA5Mzg4NiwzNzIxMzIwMTAsLTg0OTk3OTAxLDM0NTkzNjAw
-LC0xNDI3NDY3LC04NTUyMTc1MzgsLTE2NjU2ODU3Nyw2OTkzMT
-Q1NTcsLTk0MTIxMjc2NywxNjg2NDg3MzA1LDExMjE5NjgxMl19
-
+eyJoaXN0b3J5IjpbLTExMzAzNTcxNzYsMzU5OTg3MzYxLC0zMz
+U4NDM4NywyMTM1NDQ1MTU5LC0yMDQ2NTcwOTQ0LC0xOTgzNzk4
+OTExLDE3MTQyNzY2MTEsOTc2MTYxOTE0LC0xMTU2Njk3MTQ4LD
+gxNzUwOTQwMywtMTI2MjA5Mzg4NiwzNzIxMzIwMTAsLTg0OTk3
+OTAxLDM0NTkzNjAwLC0xNDI3NDY3LC04NTUyMTc1MzgsLTE2Nj
+U2ODU3Nyw2OTkzMTQ1NTcsLTk0MTIxMjc2NywxNjg2NDg3MzA1
+XX0=
 -->
