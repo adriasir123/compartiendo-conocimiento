@@ -114,10 +114,22 @@ Por aquí dejo el [enlace](https://github.com/adriasir123/app_mezzanine) al repo
 
 # Paso 4: despliegue en producción
 
-
 Realiza el despliegue de la aplicación en tu entorno de producción (servidor web y servidor de base de datos en el cloud). Utiliza un entorno virtual. 
 
-Como servidor de aplicación puedes usar gunicorn o uwsgi (crea una unidad systemd para gestionar este servicio). 
+Como servidor de aplicación puedes usar gunicorn (crea una unidad systemd para gestionar este servicio). 
+
+## Configurando NGINX
+* Creamos el document root para Mezzanine
+```
+sudo mkdir /var/www/mezzanine
+```
+
+
+
+
+
+
+
 
 
 ## Nuevo registro DNS para la app
@@ -125,12 +137,4 @@ Como servidor de aplicación puedes usar gunicorn o uwsgi (crea una unidad syste
 python.aincrad-adrijara.gonzalonazareno.org
 
 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbNjUyMzE0MDkzLC0xMTMwMzU3MTc2LDM1OT
-k4NzM2MSwtMzM1ODQzODcsMjEzNTQ0NTE1OSwtMjA0NjU3MDk0
-NCwtMTk4Mzc5ODkxMSwxNzE0Mjc2NjExLDk3NjE2MTkxNCwtMT
-E1NjY5NzE0OCw4MTc1MDk0MDMsLTEyNjIwOTM4ODYsMzcyMTMy
-MDEwLC04NDk5NzkwMSwzNDU5MzYwMCwtMTQyNzQ2NywtODU1Mj
-E3NTM4LC0xNjY1Njg1NzcsNjk5MzE0NTU3LC05NDEyMTI3Njdd
-fQ==
--->
+
