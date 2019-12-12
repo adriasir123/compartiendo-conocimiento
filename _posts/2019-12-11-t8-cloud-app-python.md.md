@@ -119,14 +119,16 @@ Realiza el despliegue de la aplicación en tu entorno de producción (servidor w
 
 Como servidor de aplicación puedes usar gunicorn o uwsgi (crea una unidad systemd para gestionar este servicio). 
 
+
+## Registro DNS
 La aplicación será accesible en la url `python.tunombre.gonzalonazareno.org`.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzAzNTcxNzYsMzU5OTg3MzYxLC0zMz
-U4NDM4NywyMTM1NDQ1MTU5LC0yMDQ2NTcwOTQ0LC0xOTgzNzk4
-OTExLDE3MTQyNzY2MTEsOTc2MTYxOTE0LC0xMTU2Njk3MTQ4LD
-gxNzUwOTQwMywtMTI2MjA5Mzg4NiwzNzIxMzIwMTAsLTg0OTk3
-OTAxLDM0NTkzNjAwLC0xNDI3NDY3LC04NTUyMTc1MzgsLTE2Nj
-U2ODU3Nyw2OTkzMTQ1NTcsLTk0MTIxMjc2NywxNjg2NDg3MzA1
-XX0=
+eyJoaXN0b3J5IjpbLTEzMTk4LC0xMTMwMzU3MTc2LDM1OTk4Nz
+M2MSwtMzM1ODQzODcsMjEzNTQ0NTE1OSwtMjA0NjU3MDk0NCwt
+MTk4Mzc5ODkxMSwxNzE0Mjc2NjExLDk3NjE2MTkxNCwtMTE1Nj
+Y5NzE0OCw4MTc1MDk0MDMsLTEyNjIwOTM4ODYsMzcyMTMyMDEw
+LC04NDk5NzkwMSwzNDU5MzYwMCwtMTQyNzQ2NywtODU1MjE3NT
+M4LC0xNjY1Njg1NzcsNjk5MzE0NTU3LC05NDEyMTI3NjddfQ==
+
 -->
