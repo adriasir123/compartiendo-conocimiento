@@ -2,7 +2,7 @@
 title:  "Essay: Most people fill their leisure time with meaningless activities. Do you agree? "
 ---
 
-Indeed, I agree with the statement that nowadays a lot of people fill their leisure time with activities that will lead us to nowhere.
+Indeed, I agree with the statement that nowadays a lot of people fill their leisure time with activities that will lead them to nowhere.
 
 One of the main reasons why we as humans do activities, is because we need to feel useful doing something and we need to get a reward from doing it. This reward is the satisfaction of having achieved something, and this satisfaction will lead us to feel happy, which is our main reason for staying alive.
 
