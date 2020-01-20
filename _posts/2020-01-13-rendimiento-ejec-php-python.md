@@ -36,7 +36,7 @@ Aquí aparece el módulo
 php7_module (shared)
 ```
 
-* He aprovechado el document root del virtualhost por defecto, para crear ahí un `ìnfo.php` de prueba 
+* He aprovechado el document root del virtualhost por defecto, para crear ahí un `info.php` de prueba  
 ```
 /var/www
 └── /var/www/html
