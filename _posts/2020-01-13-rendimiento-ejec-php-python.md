@@ -235,7 +235,7 @@ hay 2 cosas que influyen en el rendimiento del servidor web: el modo mpm que est
 
 
 
-# Fuentes :fountain:
+# :fountain: Fuentes :fountain:
 https://kinsta.com/blog/wordpress-maximum-upload-file-size/#
 
 
