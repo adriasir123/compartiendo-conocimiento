@@ -42,8 +42,6 @@ php7_module (shared)
 └── /var/www/html
     ├── /var/www/html/index.html
     └── /var/www/html/info.php
-
-1 directory, 2 files
 ```
 
 * Muestro que el contenido de info.php se carga correctamente
