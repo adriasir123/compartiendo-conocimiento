@@ -144,16 +144,19 @@ Ahora sí, el tamaño máximo de archivo que podremos subir es de 10MB, tal y co
 
 
 
+### **Realiza varias pruebas (al menos 5) de rendimiento sobre la configuración actual y quedáte con una media de las peticiones respondidas por segundo. Vamos a realizar pruebas con 200 peticiones concurrentes. Nota: Recuerda reinciar el servidor web entre prueba y prueba (después de cada test de ab, para que se reinicien el número de procesos de apache manejando peticiones)**
 
-### **Realiza varias pruebas (al menos 5) de rendimiento sobre la configuración actual y quedáte con una media de las peticiones respondidas por segundo. ¿Qué configuración responde más peticiones por segundo?. Vamos a realizar pruebas con 200 peticiones concurrentes: `ab -t 10 -c 200 -h http://172.22.x.x/index.php`. Nota: Recuerda reinciar el servidor web entre prueba y prueba.**
+Comando que vamos a realizar para las pruebas
+```
+ab -t 10 -c 200 -h http://www.wordpress-rend-adri.com/index.php
+```
 
-
-
-
-
-
-
-
+> Como habrás podido notar, he cambiado la dirección de acceso a `www.wordpress-rend-adri.com`, en vez de estar accediendo por la 192.168.1.116. He tenido que hacer este cambio porque realicé la instalación de Wordpress accediendo desde la IP dicha, y entonces todas las URL se guardaron en la base de datos siguiendo ese patrón de IP. Por este motivo, al intentar acceder a cualquier enlace estando en clase, no funciona, porque se intentan las conexiones con IPs que no existen.  
+Con el siguiente comando, se reemplazarán en la base de datos las URLs que tuvieran la IP `192.168.1.116`, por el nombre indicado. De esta manera arreglaremos el problema de acceso casa-instituto a Wordpress, porque ya estaríamos accediendo por nombre, y sólo tendríamos que cambiar la IP en `/etc/hosts` cuando cambiásemos de red para que funcionase
+>```
+>sudo wp search-replace http://192.168.1.116 http://www.wordpress-rend-adri.com
+>```
+>Después de esto, al recargar la página en firefox limpiando la caché (ctrl+shift+r), las URL habrán cambiado, y ya podremos navegar sin problemas
 
 
 
@@ -195,7 +198,7 @@ hay 2 cosas que influyen en el rendimiento del servidor web: el modo mpm que est
 
 
 
-
+## ¿Qué combinación ha respondido más peticiones por segundo según vuestras pruebas?
 
 
 
@@ -223,9 +226,11 @@ hay 2 cosas que influyen en el rendimiento del servidor web: el modo mpm que est
 
 
 
+
+
+
 # 3. Ejecución de scripts Python
-
-
+Instalar django-cms en lugar de mezzanine
 
 
 
