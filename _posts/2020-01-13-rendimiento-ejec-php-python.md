@@ -148,24 +148,45 @@ Ahora sí, el tamaño máximo de archivo que podremos subir es de 10MB, tal y co
 
 Comando que vamos a realizar para las pruebas
 ```
-ab -t 10 -c 200 -h http://www.wordpress-rend-adri.com/index.php
+ab -t 10 -c 200 http://www.wordpress-rend-adri.com/index.php
 ```
 
-> Como habrás podido notar, he cambiado la dirección de acceso a `www.wordpress-rend-adri.com`, en vez de estar accediendo por la 192.168.1.116. He tenido que hacer este cambio porque realicé la instalación de Wordpress accediendo desde la IP dicha, y entonces todas las URL se guardaron en la base de datos siguiendo ese patrón de IP. Por este motivo, al intentar acceder a cualquier enlace estando en clase, no funciona, porque se intentan las conexiones con IPs que no existen.  
-Con el siguiente comando, se reemplazarán en la base de datos las URLs que tuvieran la IP `192.168.1.116`, por el nombre indicado. De esta manera arreglaremos el problema de acceso casa-instituto a Wordpress, porque ya estaríamos accediendo por nombre, y sólo tendríamos que cambiar la IP en `/etc/hosts` cuando cambiásemos de red para que funcionase
+> Como habrás podido notar, he cambiado la dirección de acceso a `www.wordpress-rend-adri.com`, en vez de estar accediendo por la 192.168.1.116. He tenido que hacer este cambio porque realicé la instalación de Wordpress accediendo desde la IP dicha, y entonces todas las URL se guardaron en la base de datos siguiendo ese patrón de IP. Por este motivo, al intentar acceder a cualquier enlace estando en clase, no funciona, porque se intentan las conexiones con una IP que no existe en esa red.  
+Por lo tanto encontré el siguiente comando (utilidad que nos aporta la herramienta wp-cli), con el que se reemplazarán en la base de datos todas las URLs que tuvieran la IP `192.168.1.116`, por el nombre `www.wordpress-rend-adri.com`.  
 >```
 >sudo wp search-replace http://192.168.1.116 http://www.wordpress-rend-adri.com
 >```
->Después de esto, al recargar la página en firefox limpiando la caché (ctrl+shift+r), las URL habrán cambiado, y ya podremos navegar sin problemas
+>De esta manera estaríamos arreglando el problema de acceso en el instituto a Wordpress, porque al acceder por nombre, ya sólo tendríamos que cambiar la IP en nuestro `/etc/hosts` cuando cambiásemos de red para que la conexión funcionase.  
+Tras ejecutar el comando anterior, al recargar la página en firefox limpiando la caché (ctrl+shift+r), las URLs en nuestro CMS habrán cambiado, y ya podremos navegar por él sin problemas
 
 
+* Prueba 1
+```
+Requests per second:    224.81 [#/sec] (mean)
+```
+
+* Prueba 2
+```
+Requests per second:    226.61 [#/sec] (mean)
+```
+
+* Prueba 3
+```
+Requests per second:    224.95 [#/sec] (mean)
+```
+
+* Prueba 4
+```
+Requests per second:    220.79 [#/sec] (mean)
+```
+
+* Prueba 5
+```
+Requests per second:    163.79 [#/sec] (mean)
+```
 
 
-
-
-
-
-
+* Media de peticiones respondidas por segundo: **212.19**
 
 
 
@@ -240,6 +261,6 @@ Instalar django-cms en lugar de mezzanine
 
 # :fountain: Fuentes :fountain:
 https://kinsta.com/blog/wordpress-maximum-upload-file-size/#
-
+https://www.cyberciti.biz/tips/howto-performance-benchmarks-a-web-server.html
 
 

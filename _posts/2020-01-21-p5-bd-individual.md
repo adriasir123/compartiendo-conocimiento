@@ -2,7 +2,16 @@
 title: "Práctica 5 BD: Gestión del almacenamiento (individual)"
 ---
 
-(soy el Alumno3)
+# Alumno 3
+
+## Oracle
+
+## PostgreSQL
+
+## MySQL
+
+## MongoDB
+
 
 # 1. Ejecución de scripts PHP
 
