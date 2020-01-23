@@ -148,7 +148,7 @@ Ahora sí, el tamaño máximo de archivo que podremos subir es de 10MB, tal y co
 
 Comando que vamos a realizar para las pruebas
 ```
-ab -t 10 -c 200 http://www.wordpress-rend-adri.com/index.php
+ab -t 10 -c 200 -k http://www.wordpress-rend-adri.com/index.php
 ```
 
 > Como habrás podido notar, he cambiado la dirección de acceso a `www.wordpress-rend-adri.com`, en vez de estar accediendo por la 192.168.1.116. He tenido que hacer este cambio porque realicé la instalación de Wordpress accediendo desde la IP dicha, y entonces todas las URL se guardaron en la base de datos siguiendo ese patrón de IP. Por este motivo, al intentar acceder a cualquier enlace estando en clase, no funciona, porque se intentan las conexiones con una IP que no existe en esa red.  
@@ -162,39 +162,153 @@ Tras ejecutar el comando anterior, al recargar la página en firefox limpiando l
 
 * Prueba 1
 ```
-Requests per second:    224.81 [#/sec] (mean)
+Requests per second:    51.19 [#/sec] (mean)
 ```
 
 * Prueba 2
 ```
-Requests per second:    226.61 [#/sec] (mean)
+Requests per second:    242.43 [#/sec] (mean)
 ```
 
 * Prueba 3
 ```
-Requests per second:    224.95 [#/sec] (mean)
+Requests per second:    48.49 [#/sec] (mean)
 ```
 
 * Prueba 4
 ```
-Requests per second:    220.79 [#/sec] (mean)
+Requests per second:    244.52 [#/sec] (mean)
 ```
 
 * Prueba 5
 ```
-Requests per second:    163.79 [#/sec] (mean)
+Requests per second:    47.34 [#/sec] (mean)
 ```
 
 
-* Media de peticiones respondidas por segundo: **212.19**
+* Media de peticiones respondidas por segundo: **126.794**
+
+
 
 
 
 
 ## Combinación 2: PHP-FPM (socket unix) + apache2
-hay que cambiar el mpm a event, porque cuando se activa mod_php se pone el modo prefork por defecto, y eso ralentizaría la manera en la que se responden peticiones
 
-hay 2 cosas que influyen en el rendimiento del servidor web: el modo mpm que esté activado, y quién ejecute php (mod_php o php-fpm)
+### **Realiza la configuración indicada y muestra una comprobación (con phpinfo) donde se vea la configuración actual**
+
+* Lo primero que tenemos que hacer es cambiar el modo mpm en el que está funcionando apache a event. Para ello, es obligatorio que deshabilitemos PRIMERO mod_php.
+
+>**¿Por qué?** Porque al tenerlo funcionando por la configuración anterior que hicimos, y al depender del módulo prefork, es necesario que lo deshabilitemos primero antes de cambiar el módulo prefork por event.
+
+```
+sudo a2dismod php7.3
+```
+
+* Después de haber hecho esto, podemos deshabilitar prefork, y activar event
+```
+sudo a2dismod mpm_prefork
+```
+```
+sudo a2enmod mpm_event
+```
+
+* Reiniciamos apache para que se apliquen los cambios
+```
+sudo systemctl restart apache2.service
+```
+
+* Comprobamos que tenemos event cargado correctamente
+```
+sudo apache2ctl -V
+```
+> Voy a mostrar SÓLO la información relevante de la salida de éste comando  
+```
+Server MPM:     event
+  threaded:     yes (fixed thread count)
+    forked:     yes (variable process count)
+```
+
+* Una vez hecho todo esto, si intentamos navegar de nuevo por Wordpress, directamente no cargará nada. Esto sucede porque antes hemos deshabilitado mod_php, y por lo tanto ya no hay nada que se encargue de manejar el código php. En éste punto, es cuando tenemos que instalar php-fpm:
+```
+sudo apt install php-fpm
+```
+
+* Lo siguiente que tendríamos que configurar, es su funcionamiento mediante socket unix. Por suerte por defecto, ya viene configurado de ésta manera. El fichero `/etc/php/7.3/fpm/pool.d/www.conf`, se utiliza para configurar php-fpm, y dentro de ese fichero, viene una línea muy importante:
+```
+listen = /run/php/php7.3-fpm.sock
+```
+Esta línea está indicando la dirección donde php-fpm está aceptando peticiones. En este caso, como estamos usando socket, viene indicada la dirección a éste.
+
+* Habilitamos unos módulos necesarios en apache, y reiniciamos
+```
+sudo a2enmod proxy proxy_fcgi
+```
+```
+sudo systemctl restart apache2.service
+```
+Estos módulos son necesarios porque apache tiene que ser capaz de redirigir las peticiones a ficheros php, a php-fpm para que las procese, y le devuelva un resultado.
+
+* Después de todo ésto, lo único que tendremos que hacer es añadir el siguiente bloque de configuración a nuestro virtualhost por defecto que estamos usando
+```
+	<FilesMatch \.php$>
+		# 2.4.10+ can proxy to unix socket
+	    SetHandler "proxy:unix:/run/php/php7.3-fpm.sock|fcgi://localhost/"
+
+		# Else we can just use a tcp socket:
+		# SetHandler "proxy:fcgi://127.0.0.1:9000"
+    </FilesMatch>
+```
+Con ésta configuración simplemente lo que estamos diciendo es que, cuando se estén haciendo peticiones sobre ficheros que terminen en ".php", se manden mediante el socket en el que está escuchando php-fpm. Por lo tanto al final, php-fpm será capaz de procesar esas peticiones, ejecutando todo el código php que necesite ejecutar, y devolverá los resultados a apache. 
+
+Al final, para que todo termine de funcionar, tenemos que reiniciar apache una última vez
+```
+sudo systemctl restart apache2.service
+```
+
+* Para terminar, mostraré la página de phpinfo
+![](https://i.imgur.com/Gk3EKU0.png)
+
+
+
+
+### **Explica brevemente la modificación en los ficheros de configuración para la opción actual**
+
+
+
+### **Mostrar el funcionamiento con esta configuración de WordPress**
+
+![](https://i.imgur.com/lDjaCsw.png)
+
+> No he tenido que hacer ningún cambio para que Wordpress funcionase de nuevo. Conque se active php-fpm, es suficiente, porque lo único que sucedía es que no había nada que pudiera procesar las peticiones php
+
+
+### **Modifica la configuración de PHP para aumentar el tamaño de los ficheros que podemos subir**
+
+
+### **Realiza varias pruebas (al menos 5) de rendimiento sobre la configuración actual y quedáte con una media de las peticiones respondidas por segundo. Vamos a realizar pruebas con 200 peticiones concurrentes. Nota: Recuerda reinciar el servidor web entre prueba y prueba (después de cada test de ab, para que se reinicien el número de procesos de apache manejando peticiones)**
+
+Comando que vamos a realizar para las pruebas
+```
+ab -t 10 -c 200 -k http://www.wordpress-rend-adri.com/index.php
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
