@@ -222,7 +222,7 @@ sudo systemctl restart apache2.service
 ```
 sudo apache2ctl -V
 ```
-> Voy a mostrar SÓLO la información relevante de la salida de éste comando  
+Voy a mostrar SÓLO la información relevante de la salida de éste comando  
 ```
 Server MPM:     event
   threaded:     yes (fixed thread count)
