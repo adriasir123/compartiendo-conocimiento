@@ -267,7 +267,10 @@ sudo systemctl restart apache2.service
 ```
 
 * Para terminar, mostraré la página de phpinfo
-![](https://i.imgur.com/Gk3EKU0.png)
+
+[![](https://i.imgur.com/Gk3EKU0.png)](https://i.imgur.com/Gk3EKU0.png)
+
+
 
 
 
@@ -278,7 +281,7 @@ sudo systemctl restart apache2.service
 
 ### **Mostrar el funcionamiento con esta configuración de WordPress**
 
-![](https://i.imgur.com/lDjaCsw.png)
+[![](https://i.imgur.com/lDjaCsw.png)](https://i.imgur.com/lDjaCsw.png)
 
 > No he tenido que hacer ningún cambio para que Wordpress funcionase de nuevo. Conque se active php-fpm, es suficiente, porque lo único que sucedía es que no había nada que pudiera procesar las peticiones php
 
