@@ -373,6 +373,6 @@ Instalar django-cms en lugar de mezzanine
 # :fountain: Fuentes :fountain:
 <https://kinsta.com/blog/wordpress-maximum-upload-file-size/#>
 <https://www.cyberciti.biz/tips/howto-performance-benchmarks-a-web-server.html>
-
+<https://serversforhackers.com/c/apache-and-php-fpm>
 
 
