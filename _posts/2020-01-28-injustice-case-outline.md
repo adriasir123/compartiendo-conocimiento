@@ -55,16 +55,43 @@ BUT His lawyers claim he was wrongfully convicted in that case, too, but prosecu
 
 
 
-
-
 # Conclusion
 
 Law experts say that:
 >“Re-entering society is profoundly difficult for wrongfully convicted individuals, so we have an obligation to provide compassionate compensation to these men for the harm they suffered”
 
 
+
+
+
+
 # Relevant vocabulary and expressions
 
-
-
+* **Former** = ex, antiguo
+* **Autoworker** = trabajador de la industria automotriz, vehicle manufacturing worker
+* **Imprisoned** = encarcelado, imprison [sb], put in prison
+* **Fatal** = something that causes death or that leads to failure or disaster, letal, causing deaths
+* **Shooting** = tiroteo, gun crime (offences involving firearms)
+* **Behind bars** = in prison, tras las rejas
+* **Life without parole** = this term is defined as a person spending the rest of his/her life in prison. This means that the criminal sentence does not include an option for parole. A Parole allows an individual to leave prison or jail after serving only a portion of their total sentence.
+* **Serve** = cumplir (condena), spend time in prison 
+* **Admit to** = admitir, confess to a crime 
+* **Support** = financiar
+* **Restitution** = indemnización, compensación
+* **Official** = government employee, funcionario
+* **Exonerees** = a person who is shown to be not guilty of a crime for which he or she was formerly found guilty
+* **Payout** = paga, amount paid as compensation
+* **Armed robbery** = robo a mano armada, crime: theft with a weapon
+* **Claim** = asegurar
+* **Prosecutor** = fiscal, abogado de la acusación
+* **Acquit** = absolver a, exonerar a, pronounce not guilty
+* **Take up** = aceptar una oferta, un reto
+* **Co-defendant** = codemandado
+* **Parole board** = a panel (committee, group with task) of people who decide whether an offender should be released from prison on parole after serving at least a minimum portion of their sentence as prescribed by the sentencing judge
+* **Have no role** = no intervino
+* **Exonerate** = exonerar, liberar, absolver, clear from blame, free from responsibility
+* **Compassionate** = compasivo, por compasión
+* **Compensation** = same as payout
+* **Obligation** = obligación, responsabilidad, moral requirement
+ 
 
