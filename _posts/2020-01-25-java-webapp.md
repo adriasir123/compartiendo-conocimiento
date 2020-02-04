@@ -5,10 +5,9 @@ OUTLINE para hacer:
 Conexiones a tener de guacamole:
 -2 VNC (1 linux, 1 windows)
 -SSH
--Telnet
 
 
-Funcionalidad añadida (fallo de compilación por necesidad de patch)
+Funcionalidad añadida
 -Grabaciones en vídeo de las sesiones
 
 
@@ -17,6 +16,7 @@ Funcionalidades que no he podido añadir
 freerdp2-dev (la que se puede instalar en buster, pero el configure no detecta esa librería para que funcione RDP)
 libfreerdp-dev (la que te pide el manual de guacamole, está en stretch, pero fue eliminada de buster por BUGS...etc)
 
+-Telnet (por errores no se activaba correctamente telnet)
 
 
 
@@ -26,6 +26,8 @@ libfreerdp-dev (la que te pide el manual de guacamole, está en stretch, pero fu
 Apache Guacamole
 
 # 2. Escribe una guía de los pasos fundamentales para realizar la instalación
+
+## Requisitos previos
 
 -Lo necesitamos para poder compilar guacamole server
 sudo apt install build-essential
@@ -41,6 +43,8 @@ install tomcat9
 https://tecadmin.net/install-apache-tomcat-9-on-debian/
 
 sudo apt install tomcat9
+
+## Instalación
 
 
 ## Configuración guacamole
@@ -61,10 +65,14 @@ sudo mkdir /.guacamole
 
 
 
+
+
+
 UTILIZAR EL COMANDO PATCH, COGER EL PARCHE, LLEVARLO A UN FICHERO, Y APLICÁRSELO AL FICHERO C CORRESPONDIENTE.
 LA SINTAXIS NO ERA DE GIT, ERA UN DIFF FILE, UN FICHERO DE DIFERENCIAS
 
-
+patch guacenc.c ~/patch
+(comando usado para evitar el error que tenía al compilar, teniendo las librerías necesarias para la grabación de sesiones)
 
 
 
@@ -105,12 +113,15 @@ https://www.tecmint.com/guacamole-access-remote-linux-windows-machines-via-web-b
 
 
 
-Important data
+[ Important data ]
 
 - Password vnc server connections (linux server and Windows)
 passsword 12345678 (NOT VIEW ONLY)
 
 Longitud máxima de 8 caracteres en las contraseñas
 
-- Password for vagrant user (porque pasé el paquete de guacamole server y client)
+- Password for vagrant user (porque pasé el paquete de guacamole server y client por scp y me logueé con contraseña)
 1234
+
+- Administrative password TightVNC Server (en windows)
+12345678
