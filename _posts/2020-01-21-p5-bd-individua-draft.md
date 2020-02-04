@@ -63,6 +63,7 @@ SELECT SEGMENT_NAME,
 
 ### 2. Borra la tabla que está llenando TS2 consiguiendo que vuelvan a existir extensiones libres. Añade después otro fichero de datos a TS2.
 
+
 Con `truncate table` se borra una tabla, y además se libera el espacio en disco
 ```
 TRUNCATE TABLE <nombre_tabla>;
@@ -73,6 +74,11 @@ Añadir datafile a tablespace
 ALTER TABLESPACE TS2
 	ADD DATAFILE '/opt/oracle/oradata/orcl/extra.dbf'; 
 ```
+
+       
+
+
+
 
 
 ### 3. Crea el tablespace TS3 gestionado localmente con un tamaño de extensión uniforme de 128K y un fichero de datos asociado. Cambia la ubicación del fichero de datos y modifica la base de datos para que pueda acceder al mismo. Crea en TS3 dos tablas e inserta registros en las mismas. Comprueba que segmentos tiene TS3, qué extensiones tiene cada uno de ellos y en qué ficheros se encuentran.
@@ -186,6 +192,8 @@ No hay un sistema nativo de quotas en PostgreSQL, pero hay algunas soluciones pa
 
 ### 8. Averigua si existe el concepto de extensión (extent) en MySQL y si coincide con el existente en ORACLE.
 
+(pages y extents son conceptos prácticamente iguales en MySQL y Oracle, lo único que se diferencia son los segmentos, que en MySQL son ficheros físicos que componen el tablespace. ¿En MySQL cada segmento corresponderá sólamente a 1 objeto como en Oracle, o podrán convivir más objetos dentro del mismo segmento?)
+
 Sí, existe el concepto de extent, y básicamente coincide con el concepto de Oracle.
 
 La única diferencia que podría anotar, sería más bien de nomenclatura. Con respecto a las pages en Mysql y los data blocks en Oracle, son prácticamente lo mismo, pero con distinto nombre.
@@ -212,7 +220,10 @@ Con respecto a InnoDB, es un storage engine:
 
 ### 9. Averigua si en MongoDB puede saberse el espacio disponible para almacenar nuevos documentos
 
+(hay manera para hacerlo en mongo nativamente, pero no es trivial ni de hacer 1 solo comando)
+
 En MongoDB, los datos se almacenan en forma de documentos (ficheros json), que a su vez, se agrupan en colecciones.
+
 
 [Se pueden comprobar tamaño de las colecciones, almacenamiento usado en la base de datos...](https://docs.mongodb.com/manual/faq/storage/#faq-disk-size)
 
