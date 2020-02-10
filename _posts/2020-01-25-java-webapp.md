@@ -1,14 +1,17 @@
 ---
 title: "Práctica: Despliegue de CMS java"
 ---
+
 OUTLINE para hacer:
-Conexiones a tener de guacamole:
--2 VNC (1 linux, 1 windows)
+
+Conexiones a tener en guacamole:
+-1 VNC linux
+-1 VNC windows
 -SSH
 
 
-Funcionalidad añadida
--Grabaciones en vídeo de las sesiones
+Funcionalidad añadida de grabaciones
+-Grabaciones en vídeo de las sesión ssh (se graba por sesión)
 
 
 Funcionalidades que no he podido añadir
@@ -16,7 +19,8 @@ Funcionalidades que no he podido añadir
 freerdp2-dev (la que se puede instalar en buster, pero el configure no detecta esa librería para que funcione RDP)
 libfreerdp-dev (la que te pide el manual de guacamole, está en stretch, pero fue eliminada de buster por BUGS...etc)
 
--Telnet (por errores no se activaba correctamente telnet)
+-Telnet (por errores en Windows7 no se activaba correctamente telnet)
+
 
 
 
@@ -24,6 +28,11 @@ libfreerdp-dev (la que te pide el manual de guacamole, está en stretch, pero fu
 # 1. Indica la aplicación escogida y su funcionalidad.
 
 Apache Guacamole
+
+Consta de un cliente (app web) y un servidor (guacd, que establece las conexiones remotas)
+
+
+
 
 # 2. Escribe una guía de los pasos fundamentales para realizar la instalación
 
@@ -74,6 +83,20 @@ LA SINTAXIS NO ERA DE GIT, ERA UN DIFF FILE, UN FICHERO DE DIFERENCIAS
 patch guacenc.c ~/patch
 (comando usado para evitar el error que tenía al compilar, teniendo las librerías necesarias para la grabación de sesiones)
 
+Enlace al parche por el error al compilar con la funcionalidad de grabación (librerías de vídeo instaladas)
+https://issues.apache.org/jira/browse/GUACAMOLE-638
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # 3. ¿Has necesitado instalar alguna librería? ¿Has necesitado instalar un conector de una base de datos?
@@ -103,6 +126,9 @@ https://guacamole.apache.org/doc/gug/configuring-guacamole.html#guacamole-home
 
 
 
+
+
+
 Guides not followed, maybe working
 
 guacamole debian guide (not followed, not sure if works)
@@ -110,6 +136,9 @@ https://wiki.debian.org/Guacamole
 
 tecmint guide for guacamole (not followed)
 https://www.tecmint.com/guacamole-access-remote-linux-windows-machines-via-web-browser/
+
+
+
 
 
 

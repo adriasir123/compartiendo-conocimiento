@@ -2,6 +2,8 @@
 title: "Práctica 5 BD: Gestión del almacenamiento (individual)"
 ---
 
+AQUÍ TERMINARÉ LA PRÁCTICA 
+
 # Alumno 3
 ## Oracle
 
