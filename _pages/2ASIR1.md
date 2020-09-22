@@ -9,3 +9,7 @@ permalink: /2asir1/
       {{ post.title }}
     </a>
 {% endfor %}
+
+{% for post in site.categories.2asir1 %}
+ <li><span>{{ post.date | date_to_string }}</span> &nbsp; <a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
