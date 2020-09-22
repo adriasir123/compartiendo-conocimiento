@@ -1,11 +1,14 @@
-docs_list_title: ACME Documentation
+docs_list_title: Posts by category
 docs:
 
-- title: Introduction
+- title: 2º ASIR 1
   url: introduction.html
 
-- title: Configuration
+- title: 2º ASIR 2
   url: configuration.html
 
-- title: Deployment
+- title: C1.1
   url: deployment.html
+
+- title: C1.2
+  url: example.com

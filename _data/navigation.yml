@@ -4,13 +4,11 @@ main:
     url: /about/
   - title: "Contact"
     url: /contact/
-  - title: "2 ASIR (1º)"
-    url: /2asir1/
 
 
 
-  - title: "Posts"
-    url: /2asir1/
+#  - title: "Posts"
+#    url: /2asir1/
 #  - title: "Categories"
 #    url: /categories/
 #  - title: "Tags"
