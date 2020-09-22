@@ -1,5 +1,5 @@
 ---
-title: 2 ASIR (1º)
+title: 2ASIR1
 layout: single
 permalink: /2asir1/
 ---
