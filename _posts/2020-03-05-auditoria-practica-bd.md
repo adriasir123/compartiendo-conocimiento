@@ -1,5 +1,6 @@
 ---
 title: "Práctica 6: Auditoría de bases de datos"
+categories: 2asir1
 ---
 
 # 1. Activa desde SQL*Plus la auditoría de los intentos de acceso fallidos al sistema. Comprueba su funcionamiento. 
