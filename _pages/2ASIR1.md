@@ -1,6 +1,6 @@
 ---
 title: 2ASIR1
-layout: single
+layout: page
 permalink: /2asir1/
 ---
 
