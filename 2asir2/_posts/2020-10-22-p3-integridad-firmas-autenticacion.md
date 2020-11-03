@@ -21,8 +21,9 @@ Y ésta es la firma resultante
 -rw-r--r-- 1 vagrant vagrant  438 Oct 28 12:17 file.txt.sig
 ```
 
-Fichero+firma, se lo mando a Calderón.
+Fichero y firma, se los mando a Calderón.
 
+---
 
 El fichero+firma que Calderón me manda a mí, es el siguiente
 ``` 
@@ -46,7 +47,7 @@ Primary key fingerprint: DCFB 091C 5495 684E 59BC  061E A52A 6818 34F0 E596
 > Tengo que haber tenido para que funcionase este proceso, la clave pública de Calderón asociada en mi anillo de claves, claro.
 
 
-
+## 2. 
 
 
 
