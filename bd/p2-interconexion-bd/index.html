@@ -1,0 +1,3722 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../prueba-inicial/">
+      
+      
+        <link rel="next" href="../examen-practicas-1-2/">
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>Práctica 2: interconexiones - Compartiendo Conocimiento</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/asciinema-player.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#practica-2-interconexion-de-servidores" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Compartiendo Conocimiento" class="md-header__button md-logo" aria-label="Compartiendo Conocimiento" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.62 8.35c-.42.28-1.75 1.04-1.95 1.19-.39.31-.75.29-1.14-.01-.2-.16-1.53-.92-1.95-1.19-.48-.31-.45-.7.08-.92 1.64-.69 3.28-.64 4.91.03.49.21.51.6.05.9m7.22 7.28c-.93-2.09-2.2-3.99-3.84-5.66a4.31 4.31 0 0 1-1.06-1.88c-.1-.33-.17-.67-.24-1.01-.2-.88-.29-1.78-.7-2.61-.73-1.58-2-2.4-3.84-2.47-1.81.05-3.16.81-3.95 2.4-.21.43-.36.88-.46 1.34-.17.76-.32 1.55-.5 2.32-.15.65-.45 1.21-.96 1.71-1.61 1.57-2.9 3.37-3.88 5.35-.14.29-.28.58-.37.88-.19.66.29 1.12.99.96.44-.09.88-.18 1.3-.31.41-.15.57-.05.67.35.65 2.15 2.07 3.66 4.24 4.5 4.12 1.56 8.93-.66 9.97-4.58.07-.27.17-.37.47-.27.46.14.93.24 1.4.35.49.09.85-.16.92-.64.03-.26-.06-.49-.16-.73"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Compartiendo Conocimiento
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Práctica 2: interconexiones
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../2asir19-20/auditoria-practica-bd/" class="md-tabs__link">
+        2º ASIR 19/20
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../2asir20-21/compilacion-programaC-con-makefile/" class="md-tabs__link">
+        2º ASIR 20/21
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../sri/ej1-playbook-sencillo/" class="md-tabs__link">
+        2º ASIR 21/22
+      </a>
+    </li>
+  
+
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../aso/instalacion_debian11/" class="md-tabs__link md-tabs__link--active">
+        2º ASIR 22/23
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../openwebinars/sql-desde-cero/" class="md-tabs__link">
+        OpenWebinars
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../c1/describing-place-essay/" class="md-tabs__link">
+        C1
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Compartiendo Conocimiento" class="md-nav__button md-logo" aria-label="Compartiendo Conocimiento" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.62 8.35c-.42.28-1.75 1.04-1.95 1.19-.39.31-.75.29-1.14-.01-.2-.16-1.53-.92-1.95-1.19-.48-.31-.45-.7.08-.92 1.64-.69 3.28-.64 4.91.03.49.21.51.6.05.9m7.22 7.28c-.93-2.09-2.2-3.99-3.84-5.66a4.31 4.31 0 0 1-1.06-1.88c-.1-.33-.17-.67-.24-1.01-.2-.88-.29-1.78-.7-2.61-.73-1.58-2-2.4-3.84-2.47-1.81.05-3.16.81-3.95 2.4-.21.43-.36.88-.46 1.34-.17.76-.32 1.55-.5 2.32-.15.65-.45 1.21-.96 1.71-1.61 1.57-2.9 3.37-3.88 5.35-.14.29-.28.58-.37.88-.19.66.29 1.12.99.96.44-.09.88-.18 1.3-.31.41-.15.57-.05.67.35.65 2.15 2.07 3.66 4.24 4.5 4.12 1.56 8.93-.66 9.97-4.58.07-.27.17-.37.47-.27.46.14.93.24 1.4.35.49.09.85-.16.92-.64.03-.26-.06-.49-.16-.73"/></svg>
+
+    </a>
+    Compartiendo Conocimiento
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          2º ASIR 19/20
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          2º ASIR 19/20
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/auditoria-practica-bd/" class="md-nav__link">
+        Práctica 6: Auditoría de bases de datos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/database-interconnection/" class="md-nav__link">
+        Práctica 4 BD: Interconexión de Servidores de Bases de Datos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/java-webapp/" class="md-nav__link">
+        Práctica: Despliegue de CMS java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/metrics-logs-monitoring/" class="md-nav__link">
+        Práctica: Métricas, logs y monitorización
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/p3-bd-pi-oracle/" class="md-nav__link">
+        Práctica 3 BD (PI): Gestión de usuarios, privilegios y roles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/p5-bd-individua-draft/" class="md-nav__link">
+        Práctica 5 BD draft: Gestión del almacenamiento (individual)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/p5-bd-individual/" class="md-nav__link">
+        Práctica 5 BD: Gestión del almacenamiento (individual)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/proxy-practica/" class="md-nav__link">
+        Práctica: Proxy, proxy inverso y balanceadores de carga
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/rendimiento-ejec-php-python/" class="md-nav__link">
+        Práctica servicios: Ejecución de scripts PHP y Python. Rendimiento
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/t4-formas-juridicas/" class="md-nav__link">
+        Tema 6: Las formas jurídicas de la empresa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/t7-cloud-hosting/" class="md-nav__link">
+        Tarea 7 Cloud: Hosting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/t8-cloud-app-python.md/" class="md-nav__link">
+        Tarea 8 Cloud:  Instalación de app python (Mezzanine)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/usuarios-grupos-acl-ldap/" class="md-nav__link">
+        Práctica: Usuarios, grupos y ACLs en LDAP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          2º ASIR 20/21
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          2º ASIR 20/21
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir20-21/compilacion-programaC-con-makefile/" class="md-nav__link">
+        Compilación de un programa en C
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir20-21/doc-servidores-fisicos/" class="md-nav__link">
+        Documentación servidores físicos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir20-21/ejercicio-cifrado-simetrico-gpg-openssl/" class="md-nav__link">
+        Ejercicio: Cifrado simétrico con gpg+openssl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir20-21/ejs-modulos-kernel/" class="md-nav__link">
+        Ejercicios de manejo de módulos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir20-21/instalacion-debian-10/" class="md-nav__link">
+        Práctica: Instalación de Debian 10
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir20-21/mapeo-urls-sistema-ficheros/" class="md-nav__link">
+        Ejercicio 4: Mapeo URLs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir20-21/p3-integridad-firmas-autenticacion/" class="md-nav__link">
+        Práctica 3: Integridad, firmas y autenticación
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir20-21/practica-cifrado-asimetrico-gpg-openssl/" class="md-nav__link">
+        Práctica: Cifrado asimétrico con gpg y openssl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir20-21/practica-infantil-plsql/" class="md-nav__link">
+        Práctica infantil de PL/SQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir20-21/practicas-ud1-seg/" class="md-nav__link">
+        Prácticas de la UD1 SEG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir20-21/tarea-creacion-sistema-automatizado-instalacion/" class="md-nav__link">
+        Tarea: Creación de un sistema automatizado de instalación
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          2º ASIR 21/22
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          2º ASIR 21/22
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+          SRI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          SRI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1_1" id="__nav_4_1_1_label" tabindex="0">
+          Vagrant y Ansible
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Vagrant y Ansible
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej1-playbook-sencillo/" class="md-nav__link">
+        Ejercicio 1: Playbook sencillo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej2-router-nat-vagrant/" class="md-nav__link">
+        Ejercicio 2: router NAT vagrant
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej3-config-escenario-router-nat/" class="md-nav__link">
+        Ejercicio 3: Configuración escenario router NAT
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1_2" id="__nav_4_1_2_label" tabindex="0">
+          DHCP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          DHCP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej1-instalar-configurar-dhcp/" class="md-nav__link">
+        Ejercicio 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej2-reserva-dhcp/" class="md-nav__link">
+        Ejercicio 2: reservas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/practica-servidor-dhcp/" class="md-nav__link">
+        Práctica
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1_3" id="__nav_4_1_3_label" tabindex="0">
+          HTTP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          HTTP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej1-mapeo-urls-al-sistema-ficheros/" class="md-nav__link">
+        Ejercicio 1: Mapeo de URLs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej2-control-acceso-autenticacion-autorizacion/" class="md-nav__link">
+        Ejercicio 2: Control de acceso
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej3-apache-.htaccess/" class="md-nav__link">
+        Ejercicio 3: .htaccess con Apache
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej4-modulos-apache/" class="md-nav__link">
+        Ejercicio 4: Módulos en Apache
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej5-vps/" class="md-nav__link">
+        Ejercicio 5: VPS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej6-apache-proxy-inverso/" class="md-nav__link">
+        Ejercicio 6: Apache proxy inverso
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/practica3-LEMP-VPS/" class="md-nav__link">
+        Práctica: LEMP en VPS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1_4" id="__nav_4_1_4_label" tabindex="0">
+          DNS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          DNS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej1-instalar-configurar-bind9/" class="md-nav__link">
+        Ejercicio 1: bind9
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej2-instalar-configurar-slave/" class="md-nav__link">
+        Ejercicio 2: Slave DNS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej3-delegacion-subdominio-bind9/" class="md-nav__link">
+        Ejercicio 3: Delegación subdominios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/practica-web-bd-dns-escenario/" class="md-nav__link">
+        Práctica: DNS+Web+BD en escenario
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1_5" id="__nav_4_1_5_label" tabindex="0">
+          HTTPS (1ª Parte)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          HTTPS (1ª Parte)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/practica-https-vps/" class="md-nav__link">
+        Práctica: HTTPS en VPS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1_6" id="__nav_4_1_6_label" tabindex="0">
+          HTTP (2ª Parte)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          HTTP (2ª Parte)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/practica-aumento-rendimiento-web/" class="md-nav__link">
+        Práctica: Aumento rendimiento web
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1_7" id="__nav_4_1_7_label" tabindex="0">
+          Correo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1_7">
+          <span class="md-nav__icon md-icon"></span>
+          Correo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ejercicios-correo/" class="md-nav__link">
+        Ejercicios en escenario libvirt
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/practica-servidor-correo/" class="md-nav__link">
+        Práctica: Servidor de correos en VPS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1_8" id="__nav_4_1_8_label" tabindex="0">
+          HA Clusters
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1_8">
+          <span class="md-nav__icon md-icon"></span>
+          HA Clusters
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/practica-cluster-ha/" class="md-nav__link">
+        Práctica
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          IAW
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          IAW
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/2021-09-22-ej1-pull-request/" class="md-nav__link">
+        ej1-pull-request
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/2021-10-5-implantacion-despliegue-aplicacion-web-estatica/" class="md-nav__link">
+        app-web-estatica
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/2021-10-14-ej2-pr-pag-compa%C3%B1ero/" class="md-nav__link">
+        ej2-pr-pag-compañero
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_4" id="__nav_4_2_4_label" tabindex="0">
+          PHP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          PHP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/ej1-phpmyadmin/" class="md-nav__link">
+        Ejercicio 1: phpMyAdmin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/ej2-bookmedik/" class="md-nav__link">
+        Ejercicio 2: BookMedik
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/ej3-phpfpm/" class="md-nav__link">
+        Ejercicio 3: php-fpm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/practica1-implantacion-apps-php/" class="md-nav__link">
+        Práctica 1: Apps PHP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/practica2-instalacion-migracion-apps-PHP-en-VPS/" class="md-nav__link">
+        Práctica 2: Instalación/migración de apps a VPS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_5" id="__nav_4_2_5_label" tabindex="0">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/ej1-apps-flask-apache2-mod_wsgi/" class="md-nav__link">
+        Ejercicio 1: Apache + mod_wsgi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/ej2-apache2-gunicorn/" class="md-nav__link">
+        Ejercicio 2: Apache/Nginx + Gunicorn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/ej3-apache-uwsgi/" class="md-nav__link">
+        Ejercicio 3: Apache/Nginx + uWSGI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/practica-despliegue-apps-python/" class="md-nav__link">
+        Práctica: Despliegue python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/practica-cms-python/" class="md-nav__link">
+        Práctica: CMS Python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_6" id="__nav_4_2_6_label" tabindex="0">
+          Java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          Java
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/practica-cms-java/" class="md-nav__link">
+        Práctica: CMS Java
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_7" id="__nav_4_2_7_label" tabindex="0">
+          Docker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/ejs-docker/" class="md-nav__link">
+        Ejercicios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/practica-docker-php/" class="md-nav__link">
+        Práctica: BookMedik en Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/practica-docker-python/" class="md-nav__link">
+        Práctica: Django tutorial en Docker
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+          SAD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          SAD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sad/practica-cifrado-asimetrico-gpg-openssl/" class="md-nav__link">
+        Criptografía 1: Cifrado asímetrico
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sad/practica-integridad-firmas-autenticacion/" class="md-nav__link">
+        Criptografía 2: Firmas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sad/practica-vpn-sad/" class="md-nav__link">
+        Práctica: VPN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3_4" id="__nav_4_3_4_label" tabindex="0">
+          Cortafuegos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Cortafuegos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sad/ej1-iptables-nodo/" class="md-nav__link">
+        Ejercicio 1 iptables: por nodo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sad/ej1-nftables-nodo/" class="md-nav__link">
+        Ejercicio 1 nftables: por nodo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sad/ej2-iptables-perimetral/" class="md-nav__link">
+        Ejercicio 2 iptables: perimetral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sad/ej2-nftables-perimetral/" class="md-nav__link">
+        Ejercicio 2 nftables: perimetral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sad/perimetral-iptables-escenario/" class="md-nav__link">
+        Práctica iptables: perimetral escenario
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practica-escenario-libvirt/" class="md-nav__link">
+        Escenario libvirt
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          2º ASIR 22/23
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          2º ASIR 22/23
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+          ASO
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          ASO
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/instalacion_debian11/" class="md-nav__link">
+        Instalación Debian 11
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/debian11_automatico/" class="md-nav__link">
+        Instalación Debian 11 preseed
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/ejercicios-paqueteria/" class="md-nav__link">
+        Ejercicios de paquetería
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/systemd-montaje-nfs/" class="md-nav__link">
+        Montaje NFS systemd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1_5" id="__nav_5_1_5_label" tabindex="0">
+          Kernel
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          Kernel
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/teoria-kernel/" class="md-nav__link">
+        Teoría
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/ejercicios-de-modulos/" class="md-nav__link">
+        Ejercicios de módulos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/ejercicios-parametros-kernel/" class="md-nav__link">
+        Ejercicios de parámetros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/compilacion-programas-c/" class="md-nav__link">
+        Compilación programas C
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/compilacion-kernel/" class="md-nav__link">
+        Compilación de Kernel
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1_6" id="__nav_5_1_6_label" tabindex="0">
+          Red Hat
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          Red Hat
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/migracion-centos/" class="md-nav__link">
+        Migración CentOS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/recoleccion-logs-journald/" class="md-nav__link">
+        Recolección de logs journald
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1_8" id="__nav_5_1_8_label" tabindex="0">
+          OpenLDAP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_1_8">
+          <span class="md-nav__icon md-icon"></span>
+          OpenLDAP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/ldap-inicial/" class="md-nav__link">
+        Práctica inicial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/ldaps/" class="md-nav__link">
+        LDAPs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          BD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          BD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prueba-inicial/" class="md-nav__link">
+        Prueba inicial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.grupalesbdc.ga/p1-servidores-clientes/intro" class="md-nav__link">
+        Práctica 1: servidores y clientes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Práctica 2: interconexiones
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Práctica 2: interconexiones
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pasos-previos" class="md-nav__link">
+    Pasos previos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oracle-oracle" class="md-nav__link">
+    Oracle ⇆ Oracle
+  </a>
+  
+    <nav class="md-nav" aria-label="Oracle ⇆ Oracle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#en-servidororacle1" class="md-nav__link">
+    En servidororacle1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-servidororacle2" class="md-nav__link">
+    En servidororacle2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#postgresql-postgresql" class="md-nav__link">
+    PostgreSQL ⇆ PostgreSQL
+  </a>
+  
+    <nav class="md-nav" aria-label="PostgreSQL ⇆ PostgreSQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#en-servidorpostgresql1" class="md-nav__link">
+    En servidorpostgresql1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-servidorpostgresql2" class="md-nav__link">
+    En servidorpostgresql2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oracle-postgresql" class="md-nav__link">
+    Oracle ⇆ PostgreSQL
+  </a>
+  
+    <nav class="md-nav" aria-label="Oracle ⇆ PostgreSQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servidororacle1-servidorpostgresql1" class="md-nav__link">
+    servidororacle1 → servidorpostgresql1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servidorpostgresql1-servidororacle1" class="md-nav__link">
+    servidorpostgresql1 → servidororacle1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examen-practicas-1-2/" class="md-nav__link">
+        Examen prácticas 1 y 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p3-peque%C3%B1a-plsql/" class="md-nav__link">
+        Práctica 3: pequeña PL/SQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.grupalesbdc.ga/p4-grupal-plsql/intro" class="md-nav__link">
+        Práctica 4: grupal PL/SQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examen-practicas-3-4/" class="md-nav__link">
+        Examen prácticas 3 y 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.grupalesbdc.ga/p5-usuarios/intro" class="md-nav__link">
+        Práctica 5 usuarios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examen-practicas-5-6/" class="md-nav__link">
+        Examen prácticas 5 y 6
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+          HLC
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          HLC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_1" id="__nav_5_3_1_label" tabindex="0">
+          Virtualización en Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Virtualización en Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hlc/taller1-virtualizacion/" class="md-nav__link">
+        Taller 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hlc/taller2-virtualizacion/" class="md-nav__link">
+        Taller 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hlc/taller3-virtualizacion/" class="md-nav__link">
+        Taller 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hlc/taller4-virtualizacion/" class="md-nav__link">
+        Taller 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hlc/taller5-virtualizacion/" class="md-nav__link">
+        Taller 5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hlc/taller6-virtualizacion/" class="md-nav__link">
+        Taller 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hlc/practica-virtualizacion/" class="md-nav__link">
+        Práctica
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_2" id="__nav_5_3_2_label" tabindex="0">
+          OpenStack
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          OpenStack
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hlc/taller1-cliente-vpn/" class="md-nav__link">
+        Taller 1
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_3" id="__nav_5_3_3_label" tabindex="0">
+          Kubernetes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Kubernetes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hlc/ejercicio1-minikube-kubectl/" class="md-nav__link">
+        Ejercicio 1: minikube y kubectl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hlc/taller1-pods/" class="md-nav__link">
+        Taller 1: pods
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hlc/taller2-replicaset/" class="md-nav__link">
+        Taller 2: ReplicaSet
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          OpenWebinars
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          OpenWebinars
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openwebinars/sql-desde-cero/" class="md-nav__link">
+        SQL desde Cero
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openwebinars/fundamentos-plsql/" class="md-nav__link">
+        Fundamentos de PL/SQL
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          C1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          C1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c1/describing-place-essay/" class="md-nav__link">
+        Essay: describing a place
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c1/injustice-case-outline/" class="md-nav__link">
+        Outline: injustice case
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c1/leisure-time-meaningless-activities/" class="md-nav__link">
+        Essay: meaningless activities
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pasos-previos" class="md-nav__link">
+    Pasos previos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oracle-oracle" class="md-nav__link">
+    Oracle ⇆ Oracle
+  </a>
+  
+    <nav class="md-nav" aria-label="Oracle ⇆ Oracle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#en-servidororacle1" class="md-nav__link">
+    En servidororacle1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-servidororacle2" class="md-nav__link">
+    En servidororacle2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#postgresql-postgresql" class="md-nav__link">
+    PostgreSQL ⇆ PostgreSQL
+  </a>
+  
+    <nav class="md-nav" aria-label="PostgreSQL ⇆ PostgreSQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#en-servidorpostgresql1" class="md-nav__link">
+    En servidorpostgresql1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-servidorpostgresql2" class="md-nav__link">
+    En servidorpostgresql2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oracle-postgresql" class="md-nav__link">
+    Oracle ⇆ PostgreSQL
+  </a>
+  
+    <nav class="md-nav" aria-label="Oracle ⇆ PostgreSQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servidororacle1-servidorpostgresql1" class="md-nav__link">
+    servidororacle1 → servidorpostgresql1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servidorpostgresql1-servidororacle1" class="md-nav__link">
+    servidorpostgresql1 → servidororacle1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="practica-2-interconexion-de-servidores">Práctica 2: Interconexión de servidores</h1>
+<h2 id="pasos-previos">Pasos previos</h2>
+<p>En esta práctica voy a reutilizar el escenario de la práctica 1.</p>
+<p>Modifico el <code>Vagrantfile</code> para añadir un segundo servidor Oracle:</p>
+<p><a class="glightbox" href="https://i.imgur.com/DQqt2Y8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="oracle1y2" src="https://i.imgur.com/DQqt2Y8.png" /></a></p>
+<p>Instalaré Oracle en el segundo servidor añadido siguiendo <a href="https://www.servidoresclientes.ga/ri/alumno1/#1-oracle-19c">mi propia documentación</a> de la práctica anterior.</p>
+<p>Modifico el <code>Vagrantfile</code> para añadir un segundo servidor PostgreSQL:</p>
+<p><a class="glightbox" href="https://i.imgur.com/9oT9suI.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="postgresql1y2" src="https://i.imgur.com/9oT9suI.png" /></a></p>
+<p>Instalaré PostgreSQL en el segundo servidor añadido siguiendo <a href="https://www.servidoresclientes.ga/ri/alumno1/#2-postgresql">mi propia documentación</a> de la práctica anterior.</p>
+<h2 id="oracle-oracle">Oracle ⇆ Oracle</h2>
+<h3 id="en-servidororacle1">En <code>servidororacle1</code></h3>
+<p>Añado lo siguiente a <code>/opt/oracle/product/19c/dbhome_1/network/admin/tnsnames.ora</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">ORACLE2</span><span class="o">=</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="o">(</span><span class="nv">DESCRIPTION</span><span class="w"> </span><span class="o">=</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="o">(</span><span class="nv">ADDRESS_LIST</span><span class="w"> </span><span class="o">=</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">      </span><span class="o">(</span><span class="nv">ADDRESS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span><span class="nv">PROTOCOL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>TCP<span class="o">)(</span><span class="nv">HOST</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span>.0.0.3<span class="o">)(</span><span class="nv">PORT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1521</span><span class="o">))</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="o">)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="o">(</span><span class="nv">CONNECT_DATA</span><span class="w"> </span><span class="o">=</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="o">(</span><span class="nv">SERVICE_NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>ORCLCDB<span class="o">)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="o">)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="o">)</span>
+</code></pre></div>
+<p>Creo el enlace:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">LINK</span><span class="w"> </span><span class="n">oracle2</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">CONNECT</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">SCOTT</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">tiger</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">USING</span><span class="w"> </span><span class="s1">&#39;ORACLE2&#39;</span><span class="p">;</span>
+</code></pre></div>
+<p>Muestro la tabla <code>dept</code> remota usando el enlace:</p>
+<p><a class="glightbox" href="https://i.imgur.com/yj3zKvW.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="deptoracle2" src="https://i.imgur.com/yj3zKvW.png" /></a></p>
+<p>Compruebo que <strong>sin usar el enlace</strong> estoy en <code>servidororacle1</code>:</p>
+<p><a class="glightbox" href="https://i.imgur.com/CDDJjfU.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="sinenlace" src="https://i.imgur.com/CDDJjfU.png" /></a></p>
+<p>Compruebo que <strong>usando el enlace</strong> estoy en <code>servidororacle2</code>:</p>
+<p><a class="glightbox" href="https://i.imgur.com/6hxgSqd.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="conenlace" src="https://i.imgur.com/6hxgSqd.png" /></a></p>
+<h3 id="en-servidororacle2">En <code>servidororacle2</code></h3>
+<p>Añado lo siguiente a <code>/opt/oracle/product/19c/dbhome_1/network/admin/tnsnames.ora</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">ORACLE1</span><span class="o">=</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="o">(</span><span class="nv">DESCRIPTION</span><span class="w"> </span><span class="o">=</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="o">(</span><span class="nv">ADDRESS_LIST</span><span class="w"> </span><span class="o">=</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">      </span><span class="o">(</span><span class="nv">ADDRESS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span><span class="nv">PROTOCOL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>TCP<span class="o">)(</span><span class="nv">HOST</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span>.0.0.2<span class="o">)(</span><span class="nv">PORT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1521</span><span class="o">))</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="o">)</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="o">(</span><span class="nv">CONNECT_DATA</span><span class="w"> </span><span class="o">=</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">      </span><span class="o">(</span><span class="nv">SERVICE_NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>ORCLCDB<span class="o">)</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="o">)</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="o">)</span>
+</code></pre></div>
+<p>Creo el enlace:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">LINK</span><span class="w"> </span><span class="n">oracle1</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">CONNECT</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">SCOTT</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">tiger</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">USING</span><span class="w"> </span><span class="s1">&#39;ORACLE1&#39;</span><span class="p">;</span>
+</code></pre></div>
+<p>Muestro la tabla <code>dept</code> remota usando el enlace:</p>
+<p><a class="glightbox" href="https://i.imgur.com/DMwPLhl.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="deptoracle1" src="https://i.imgur.com/DMwPLhl.png" /></a></p>
+<p>Compruebo que <strong>sin usar el enlace</strong> estoy en <code>servidororacle2</code>:</p>
+<p><a class="glightbox" href="https://i.imgur.com/FseG8QN.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="sinenlace" src="https://i.imgur.com/FseG8QN.png" /></a></p>
+<p>Compruebo que <strong>usando el enlace</strong> estoy en <code>servidororacle1</code>:</p>
+<p><a class="glightbox" href="https://i.imgur.com/keNoqto.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="conenlace" src="https://i.imgur.com/keNoqto.png" /></a></p>
+<h2 id="postgresql-postgresql">PostgreSQL ⇆ PostgreSQL</h2>
+<h3 id="en-servidorpostgresql1">En <code>servidorpostgresql1</code></h3>
+<p>Añado la extensión necesaria:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">postgres</span><span class="o">=#</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="n">extension</span><span class="w"> </span><span class="n">dblink</span><span class="p">;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="n">EXTENSION</span>
+</code></pre></div>
+<p>Compruebo que se ha añadido:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nv">postgres</span><span class="o">=</span><span class="c1"># \dx</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">                                 </span>List<span class="w"> </span>of<span class="w"> </span>installed<span class="w"> </span>extensions
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span>Name<span class="w">   </span><span class="p">|</span><span class="w"> </span>Version<span class="w"> </span><span class="p">|</span><span class="w">   </span>Schema<span class="w">   </span><span class="p">|</span><span class="w">                         </span>Description
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>---------+---------+------------+--------------------------------------------------------------
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w"> </span>dblink<span class="w">  </span><span class="p">|</span><span class="w"> </span><span class="m">1</span>.2<span class="w">     </span><span class="p">|</span><span class="w"> </span>public<span class="w">     </span><span class="p">|</span><span class="w"> </span>connect<span class="w"> </span>to<span class="w"> </span>other<span class="w"> </span>PostgreSQL<span class="w"> </span>databases<span class="w"> </span>from<span class="w"> </span>within<span class="w"> </span>a<span class="w"> </span>database
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w"> </span>plpgsql<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">1</span>.0<span class="w">     </span><span class="p">|</span><span class="w"> </span>pg_catalog<span class="w"> </span><span class="p">|</span><span class="w"> </span>PL/pgSQL<span class="w"> </span>procedural<span class="w"> </span>language
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="o">(</span><span class="m">2</span><span class="w"> </span>rows<span class="o">)</span>
+</code></pre></div>
+<p>Creo el "Foreign server" apuntando a <code>servidorpostgresql2</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">postgres</span><span class="o">=#</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="n">SERVER</span><span class="w"> </span><span class="n">servidorpostgresql2</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">DATA</span><span class="w"> </span><span class="n">WRAPPER</span><span class="w"> </span><span class="n">dblink_fdw</span><span class="w"> </span><span class="k">OPTIONS</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">host</span><span class="w"> </span><span class="s1">&#39;10.0.1.3&#39;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">dbname</span><span class="w"> </span><span class="s1">&#39;bibliofilos&#39;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">port</span><span class="w"> </span><span class="s1">&#39;5432&#39;</span><span class="p">);</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="n">SERVER</span>
+</code></pre></div>
+<p>Compruebo que se ha creado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="err">\</span><span class="n">des</span><span class="o">+</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w">                                                                     </span>List<span class="w"> </span>of<span class="w"> </span>foreign<span class="w"> </span>servers
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">        </span>Name<span class="w">         </span><span class="p">|</span><span class="w">  </span>Owner<span class="w">   </span><span class="p">|</span><span class="w"> </span>Foreign-data<span class="w"> </span>wrapper<span class="w"> </span><span class="p">|</span><span class="w"> </span>Access<span class="w"> </span>privileges<span class="w"> </span><span class="p">|</span><span class="w"> </span>Type<span class="w"> </span><span class="p">|</span><span class="w"> </span>Version<span class="w"> </span><span class="p">|</span><span class="w">                     </span>FDW<span class="w"> </span>options<span class="w">                      </span><span class="p">|</span><span class="w"> </span>Description
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>---------------------+----------+----------------------+-------------------+------+---------+------------------------------------------------------+-------------
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w"> </span>servidorpostgresql2<span class="w"> </span><span class="p">|</span><span class="w"> </span>postgres<span class="w"> </span><span class="p">|</span><span class="w"> </span>dblink_fdw<span class="w">           </span><span class="p">|</span><span class="w">                   </span><span class="p">|</span><span class="w">      </span><span class="p">|</span><span class="w">         </span><span class="p">|</span><span class="w"> </span><span class="o">(</span>host<span class="w"> </span><span class="s1">&#39;10.0.1.3&#39;</span>,<span class="w"> </span>dbname<span class="w"> </span><span class="s1">&#39;bibliofilos&#39;</span>,<span class="w"> </span>port<span class="w"> </span><span class="s1">&#39;5432&#39;</span><span class="o">)</span><span class="w"> </span><span class="p">|</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="o">(</span><span class="m">1</span><span class="w"> </span>row<span class="o">)</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="o">(</span>END<span class="o">)</span>
+</code></pre></div>
+<p>Creo el "USER MAPPING":</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">postgres</span><span class="o">=#</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">MAPPING</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="n">postgres</span><span class="w"> </span><span class="n">SERVER</span><span class="w"> </span><span class="n">servidorpostgresql2</span><span class="w"> </span><span class="k">OPTIONS</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="s1">&#39;bibliofilos_admin&#39;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="s1">&#39;1234&#39;</span><span class="p">);</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">MAPPING</span>
+</code></pre></div>
+<p>Compruebo que se ha creado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">postgres</span><span class="o">=#</span><span class="w"> </span><span class="err">\</span><span class="n">deu</span><span class="o">+</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">                              </span><span class="n">List</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="n">mappings</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">       </span><span class="n">Server</span><span class="w">        </span><span class="o">|</span><span class="w"> </span><span class="k">User</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">|</span><span class="w">                  </span><span class="n">FDW</span><span class="w"> </span><span class="k">options</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1">---------------------+-----------+-----------------------------------------------</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w"> </span><span class="n">servidorpostgresql2</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">postgres</span><span class="w">  </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;user&quot;</span><span class="w"> </span><span class="s1">&#39;bibliofilos_admin&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="s1">&#39;1234&#39;</span><span class="p">)</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="k">row</span><span class="p">)</span>
+</code></pre></div>
+<p>Pruebo la conexión:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">postgres</span><span class="o">=#</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">dblink_connect</span><span class="p">(</span><span class="s1">&#39;my_new_conn1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;servidorpostgresql2&#39;</span><span class="p">);</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w"> </span><span class="n">dblink_connect</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="c1">----------------</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w"> </span><span class="n">OK</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="k">row</span><span class="p">)</span>
+</code></pre></div>
+<p>Muestro la tabla <code>bibliotecas</code> remota usando el enlace:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">dblink</span><span class="p">(</span><span class="s1">&#39;servidorpostgresql2&#39;</span><span class="p">,</span><span class="s1">&#39;select * from bibliotecas&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">object_list</span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="nb">integer</span><span class="p">,</span><span class="w"> </span><span class="n">ciudad</span><span class="w"> </span><span class="nb">varchar</span><span class="p">,</span><span class="w"> </span><span class="n">calle</span><span class="w"> </span><span class="nb">varchar</span><span class="p">);</span>
+</code></pre></div>
+<p><a class="glightbox" href="https://i.imgur.com/qCnaUTd.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="bibliotecaspostgres2" src="https://i.imgur.com/qCnaUTd.png" /></a></p>
+<p>Compruebo que <strong>sin usar el enlace</strong> estoy en <code>servidorpostgresql1</code>:</p>
+<p><a class="glightbox" href="https://i.imgur.com/6aG1tJh.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="sinenlace" src="https://i.imgur.com/6aG1tJh.png" /></a></p>
+<p>No obtengo IP y esto es correcto, ya que estoy conectado localmente usando un socket Unix, y no se usan IPs.</p>
+<p>Compruebo que <strong>usando el enlace</strong> estoy en <code>servidorpostgresql2</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">dblink</span><span class="p">(</span><span class="s1">&#39;servidorpostgresql2&#39;</span><span class="p">,</span><span class="s1">&#39;select inet_server_addr();&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">object_list</span><span class="p">(</span><span class="n">ip</span><span class="w"> </span><span class="nb">varchar</span><span class="p">);</span>
+</code></pre></div>
+<p><a class="glightbox" href="https://i.imgur.com/wg8qZZU.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="conenlace" src="https://i.imgur.com/wg8qZZU.png" /></a></p>
+<p>Muestro que efectivamente esa es la IP de <code>servidorpostgresql2</code>:</p>
+<p><a class="glightbox" href="https://i.imgur.com/orCpJY7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ipservidorpostgresql2" src="https://i.imgur.com/orCpJY7.png" /></a></p>
+<h3 id="en-servidorpostgresql2">En <code>servidorpostgresql2</code></h3>
+<p>Añado la extensión necesaria:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">postgres</span><span class="o">=#</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="n">extension</span><span class="w"> </span><span class="n">dblink</span><span class="p">;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="n">EXTENSION</span>
+</code></pre></div>
+<p>Compruebo que se ha añadido:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nv">postgres</span><span class="o">=</span><span class="c1"># \dx</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">                                 </span>List<span class="w"> </span>of<span class="w"> </span>installed<span class="w"> </span>extensions
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">  </span>Name<span class="w">   </span><span class="p">|</span><span class="w"> </span>Version<span class="w"> </span><span class="p">|</span><span class="w">   </span>Schema<span class="w">   </span><span class="p">|</span><span class="w">                         </span>Description
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>---------+---------+------------+--------------------------------------------------------------
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w"> </span>dblink<span class="w">  </span><span class="p">|</span><span class="w"> </span><span class="m">1</span>.2<span class="w">     </span><span class="p">|</span><span class="w"> </span>public<span class="w">     </span><span class="p">|</span><span class="w"> </span>connect<span class="w"> </span>to<span class="w"> </span>other<span class="w"> </span>PostgreSQL<span class="w"> </span>databases<span class="w"> </span>from<span class="w"> </span>within<span class="w"> </span>a<span class="w"> </span>database
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w"> </span>plpgsql<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">1</span>.0<span class="w">     </span><span class="p">|</span><span class="w"> </span>pg_catalog<span class="w"> </span><span class="p">|</span><span class="w"> </span>PL/pgSQL<span class="w"> </span>procedural<span class="w"> </span>language
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="o">(</span><span class="m">2</span><span class="w"> </span>rows<span class="o">)</span>
+</code></pre></div>
+<p>Creo el "Foreign server" apuntando a <code>servidorpostgresql1</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">postgres</span><span class="o">=#</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="n">SERVER</span><span class="w"> </span><span class="n">servidorpostgresql1</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">DATA</span><span class="w"> </span><span class="n">WRAPPER</span><span class="w"> </span><span class="n">dblink_fdw</span><span class="w"> </span><span class="k">OPTIONS</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">host</span><span class="w"> </span><span class="s1">&#39;10.0.1.2&#39;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">dbname</span><span class="w"> </span><span class="s1">&#39;bibliofilos&#39;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">port</span><span class="w"> </span><span class="s1">&#39;5432&#39;</span><span class="p">);</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="n">SERVER</span>
+</code></pre></div>
+<p>Compruebo que se ha creado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="err">\</span><span class="n">des</span><span class="o">+</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="w">                                                                     </span>List<span class="w"> </span>of<span class="w"> </span>foreign<span class="w"> </span>servers
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">        </span>Name<span class="w">         </span><span class="p">|</span><span class="w">  </span>Owner<span class="w">   </span><span class="p">|</span><span class="w"> </span>Foreign-data<span class="w"> </span>wrapper<span class="w"> </span><span class="p">|</span><span class="w"> </span>Access<span class="w"> </span>privileges<span class="w"> </span><span class="p">|</span><span class="w"> </span>Type<span class="w"> </span><span class="p">|</span><span class="w"> </span>Version<span class="w"> </span><span class="p">|</span><span class="w">                     </span>FDW<span class="w"> </span>options<span class="w">                      </span><span class="p">|</span><span class="w"> </span>Description
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>---------------------+----------+----------------------+-------------------+------+---------+------------------------------------------------------+-------------
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w"> </span>servidorpostgresql1<span class="w"> </span><span class="p">|</span><span class="w"> </span>postgres<span class="w"> </span><span class="p">|</span><span class="w"> </span>dblink_fdw<span class="w">           </span><span class="p">|</span><span class="w">                   </span><span class="p">|</span><span class="w">      </span><span class="p">|</span><span class="w">         </span><span class="p">|</span><span class="w"> </span><span class="o">(</span>host<span class="w"> </span><span class="s1">&#39;10.0.1.2&#39;</span>,<span class="w"> </span>dbname<span class="w"> </span><span class="s1">&#39;bibliofilos&#39;</span>,<span class="w"> </span>port<span class="w"> </span><span class="s1">&#39;5432&#39;</span><span class="o">)</span><span class="w"> </span><span class="p">|</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="o">(</span><span class="m">1</span><span class="w"> </span>row<span class="o">)</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="o">(</span>END<span class="o">)</span>
+</code></pre></div>
+<p>Creo el "USER MAPPING":</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">postgres</span><span class="o">=#</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">MAPPING</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="n">postgres</span><span class="w"> </span><span class="n">SERVER</span><span class="w"> </span><span class="n">servidorpostgresql1</span><span class="w"> </span><span class="k">OPTIONS</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="s1">&#39;bibliofilos_admin&#39;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="s1">&#39;1234&#39;</span><span class="p">);</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">MAPPING</span>
+</code></pre></div>
+<p>Compruebo que se ha creado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">postgres</span><span class="o">=#</span><span class="w"> </span><span class="err">\</span><span class="n">deu</span><span class="o">+</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">                              </span><span class="n">List</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="n">mappings</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">       </span><span class="n">Server</span><span class="w">        </span><span class="o">|</span><span class="w"> </span><span class="k">User</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">|</span><span class="w">                  </span><span class="n">FDW</span><span class="w"> </span><span class="k">options</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="c1">---------------------+-----------+-----------------------------------------------</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w"> </span><span class="n">servidorpostgresql1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">postgres</span><span class="w">  </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;user&quot;</span><span class="w"> </span><span class="s1">&#39;bibliofilos_admin&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="s1">&#39;1234&#39;</span><span class="p">)</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="k">row</span><span class="p">)</span>
+</code></pre></div>
+<p>Pruebo la conexión:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">postgres</span><span class="o">=#</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">dblink_connect</span><span class="p">(</span><span class="s1">&#39;my_new_conn1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;servidorpostgresql1&#39;</span><span class="p">);</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w"> </span><span class="n">dblink_connect</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="c1">----------------</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w"> </span><span class="n">OK</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="k">row</span><span class="p">)</span>
+</code></pre></div>
+<p>Muestro la tabla <code>bibliotecas</code> remota usando el enlace:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">dblink</span><span class="p">(</span><span class="s1">&#39;servidorpostgresql1&#39;</span><span class="p">,</span><span class="s1">&#39;select * from bibliotecas&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">object_list</span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="nb">integer</span><span class="p">,</span><span class="w"> </span><span class="n">ciudad</span><span class="w"> </span><span class="nb">varchar</span><span class="p">,</span><span class="w"> </span><span class="n">calle</span><span class="w"> </span><span class="nb">varchar</span><span class="p">);</span>
+</code></pre></div>
+<p><a class="glightbox" href="https://i.imgur.com/ZxD89CN.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="bibliotecaspostgres1" src="https://i.imgur.com/ZxD89CN.png" /></a></p>
+<p>Compruebo que <strong>sin usar el enlace</strong> estoy en <code>servidorpostgresql2</code>:</p>
+<p><a class="glightbox" href="https://i.imgur.com/Ncjdype.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="sinenlace" src="https://i.imgur.com/Ncjdype.png" /></a></p>
+<p>No obtengo IP y esto es correcto, ya que estoy conectado localmente usando un socket Unix, y no se usan IPs.</p>
+<p>Compruebo que <strong>usando el enlace</strong> estoy en <code>servidorpostgresql1</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">dblink</span><span class="p">(</span><span class="s1">&#39;servidorpostgresql1&#39;</span><span class="p">,</span><span class="s1">&#39;select inet_server_addr();&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">object_list</span><span class="p">(</span><span class="n">ip</span><span class="w"> </span><span class="nb">varchar</span><span class="p">);</span>
+</code></pre></div>
+<p><a class="glightbox" href="https://i.imgur.com/m1AeaH7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="conenlace" src="https://i.imgur.com/m1AeaH7.png" /></a></p>
+<p>Muestro que efectivamente esa es la IP de <code>servidorpostgresql1</code>:</p>
+<p><a class="glightbox" href="https://i.imgur.com/CIuUM5r.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ipservidorpostgresql1" src="https://i.imgur.com/CIuUM5r.png" /></a></p>
+<h2 id="oracle-postgresql">Oracle ⇆ PostgreSQL</h2>
+<h3 id="servidororacle1-servidorpostgresql1"><code>servidororacle1</code> → <code>servidorpostgresql1</code></h3>
+<p>Instalo el driver para la conexión con PostgreSQL:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>odbc-postgresql
+</code></pre></div>
+<p>Muestro el fichero que se me ha generado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>vagrant@servidororacle1:~$<span class="w"> </span>cat<span class="w"> </span>/etc/odbcinst.ini
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="o">[</span>PostgreSQL<span class="w"> </span>ANSI<span class="o">]</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="nv">Description</span><span class="o">=</span>PostgreSQL<span class="w"> </span>ODBC<span class="w"> </span>driver<span class="w"> </span><span class="o">(</span>ANSI<span class="w"> </span>version<span class="o">)</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="nv">Driver</span><span class="o">=</span>psqlodbca.so
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="nv">Setup</span><span class="o">=</span>libodbcpsqlS.so
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="nv">Debug</span><span class="o">=</span><span class="m">0</span>
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a><span class="nv">CommLog</span><span class="o">=</span><span class="m">1</span>
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a><span class="nv">UsageCount</span><span class="o">=</span><span class="m">1</span>
+<a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>
+<a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a><span class="o">[</span>PostgreSQL<span class="w"> </span>Unicode<span class="o">]</span>
+<a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a><span class="nv">Description</span><span class="o">=</span>PostgreSQL<span class="w"> </span>ODBC<span class="w"> </span>driver<span class="w"> </span><span class="o">(</span>Unicode<span class="w"> </span>version<span class="o">)</span>
+<a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a><span class="nv">Driver</span><span class="o">=</span>psqlodbcw.so
+<a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a><span class="nv">Setup</span><span class="o">=</span>libodbcpsqlS.so
+<a id="__codelineno-25-14" name="__codelineno-25-14" href="#__codelineno-25-14"></a><span class="nv">Debug</span><span class="o">=</span><span class="m">0</span>
+<a id="__codelineno-25-15" name="__codelineno-25-15" href="#__codelineno-25-15"></a><span class="nv">CommLog</span><span class="o">=</span><span class="m">1</span>
+<a id="__codelineno-25-16" name="__codelineno-25-16" href="#__codelineno-25-16"></a><span class="nv">UsageCount</span><span class="o">=</span><span class="m">1</span>
+</code></pre></div>
+<p>Dejo <code>odbc.ini</code> de la siguiente manera:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/odbc.ini
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="o">[</span>postgresql<span class="o">]</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="nv">Description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>postgresql
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="nv">Driver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/usr/lib/x86_64-linux-gnu/odbc/psqlodbcw.so
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="nv">ServerName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">192</span>.168.121.222
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="nv">Username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>bibliofilos_admin
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="nv">Password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1234</span>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="nv">Port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5432</span>
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a><span class="nv">Database</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>bibliofilos
+</code></pre></div>
+<p>Hago una prueba de conexión:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>isql<span class="w"> </span>-v<span class="w"> </span>postgresql
+</code></pre></div>
+<p><a class="glightbox" href="https://i.imgur.com/dIevmYu.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="isqlpostgresql" src="https://i.imgur.com/dIevmYu.png" /></a></p>
+<p>Creo el fichero <code>initpostgresql.ora</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/opt/oracle/product/19c/dbhome_1/hs/admin/initpostgresql.ora
+</code></pre></div>
+<p>Con el siguiente contenido:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="c1"># This is a sample agent init file that contains the HS parameters that are</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="c1"># needed for the Database Gateway for ODBC</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="c1">#</span>
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a><span class="c1"># HS init parameters</span>
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a><span class="c1">#</span>
+<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a><span class="nv">HS_FDS_CONNECT_INFO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>postgresql
+<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a><span class="nv">HS_FDS_TRACE_LEVEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span>
+<a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a><span class="nv">HS_FDS_SHAREABLE_NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/usr/lib/x86_64-linux-gnu/odbc/psqlodbcw.so
+<a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a><span class="nv">HS_LANGUAGE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>AMERICAN_AMERICA.WE8ISO8859P9
+<a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a>
+<a id="__codelineno-30-12" name="__codelineno-30-12" href="#__codelineno-30-12"></a><span class="c1">#</span>
+<a id="__codelineno-30-13" name="__codelineno-30-13" href="#__codelineno-30-13"></a><span class="c1"># ODBC specific environment variables</span>
+<a id="__codelineno-30-14" name="__codelineno-30-14" href="#__codelineno-30-14"></a><span class="c1">#</span>
+<a id="__codelineno-30-15" name="__codelineno-30-15" href="#__codelineno-30-15"></a><span class="nb">set</span><span class="w"> </span><span class="nv">ODBCINI</span><span class="o">=</span>/etc/odbc.ini
+<a id="__codelineno-30-16" name="__codelineno-30-16" href="#__codelineno-30-16"></a>
+<a id="__codelineno-30-17" name="__codelineno-30-17" href="#__codelineno-30-17"></a><span class="c1">#</span>
+<a id="__codelineno-30-18" name="__codelineno-30-18" href="#__codelineno-30-18"></a><span class="c1"># Environment variables required for the non-Oracle system</span>
+<a id="__codelineno-30-19" name="__codelineno-30-19" href="#__codelineno-30-19"></a><span class="c1">#</span>
+</code></pre></div>
+<p>Añado la siguiente entrada a <code>tnsnames.ora</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/opt/oracle/product/19c/dbhome_1/network/admin/tnsnames.ora
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="nv">postgresql</span><span class="w"> </span><span class="o">=</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="w">  </span><span class="o">(</span><span class="nv">DESCRIPTION</span><span class="w"> </span><span class="o">=</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="w">    </span><span class="o">(</span><span class="nv">ADDRESS_LIST</span><span class="w"> </span><span class="o">=</span>
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="w">      </span><span class="o">(</span><span class="nv">ADDRESS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span><span class="nv">PROTOCOL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>TCP<span class="o">)(</span><span class="nv">HOST</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>servidororacle1<span class="o">)(</span><span class="nv">PORT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1521</span><span class="o">))</span>
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="w">    </span><span class="o">)</span>
+<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a><span class="w">    </span><span class="o">(</span><span class="nv">CONNECT_DATA</span><span class="w"> </span><span class="o">=</span>
+<a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a><span class="w">      </span><span class="o">(</span><span class="nv">SID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>postgresql<span class="o">)</span>
+<a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a><span class="w">    </span><span class="o">)</span>
+<a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a><span class="w">    </span><span class="o">(</span><span class="nv">HS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>OK<span class="o">)</span>
+<a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a><span class="w">  </span><span class="o">)</span>
+</code></pre></div>
+<p>Dejo <code>listener.ora</code> de la siguiente manera:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/opt/oracle/product/19c/dbhome_1/network/admin/listener.ora
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="c1"># listener.ora Network Configuration File: /opt/oracle/product/19c/dbhome_1/network/admin/listener.ora</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="c1"># Generated by Oracle configuration tools.</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="nv">LISTENER</span><span class="w"> </span><span class="o">=</span>
+<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a><span class="w">  </span><span class="o">(</span><span class="nv">DESCRIPTION_LIST</span><span class="w"> </span><span class="o">=</span>
+<a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a><span class="w">    </span><span class="o">(</span><span class="nv">DESCRIPTION</span><span class="w"> </span><span class="o">=</span>
+<a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a><span class="w">      </span><span class="o">(</span><span class="nv">ADDRESS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span><span class="nv">PROTOCOL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>TCP<span class="o">)(</span><span class="nv">HOST</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>.0.0.0<span class="o">)(</span><span class="nv">PORT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1521</span><span class="o">))</span>
+<a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a><span class="w">      </span><span class="o">(</span><span class="nv">ADDRESS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span><span class="nv">PROTOCOL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>IPC<span class="o">)(</span><span class="nv">KEY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>EXTPROC1521<span class="o">))</span>
+<a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a><span class="w">    </span><span class="o">)</span>
+<a id="__codelineno-34-10" name="__codelineno-34-10" href="#__codelineno-34-10"></a><span class="w">  </span><span class="o">)</span>
+<a id="__codelineno-34-11" name="__codelineno-34-11" href="#__codelineno-34-11"></a>
+<a id="__codelineno-34-12" name="__codelineno-34-12" href="#__codelineno-34-12"></a><span class="nv">SID_LIST_LISTENER</span><span class="w"> </span><span class="o">=</span>
+<a id="__codelineno-34-13" name="__codelineno-34-13" href="#__codelineno-34-13"></a><span class="w">  </span><span class="o">(</span><span class="nv">SID_LIST</span><span class="w"> </span><span class="o">=</span>
+<a id="__codelineno-34-14" name="__codelineno-34-14" href="#__codelineno-34-14"></a><span class="w">    </span><span class="o">(</span><span class="nv">SID_DESC</span><span class="w"> </span><span class="o">=</span>
+<a id="__codelineno-34-15" name="__codelineno-34-15" href="#__codelineno-34-15"></a><span class="w">      </span><span class="o">(</span><span class="nv">GLOBAL_DBNAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>ORCLCDB<span class="o">)</span>
+<a id="__codelineno-34-16" name="__codelineno-34-16" href="#__codelineno-34-16"></a><span class="w">      </span><span class="o">(</span><span class="nv">ORACLE_HOME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/opt/oracle/product/19c/dbhome_1<span class="o">)</span>
+<a id="__codelineno-34-17" name="__codelineno-34-17" href="#__codelineno-34-17"></a><span class="w">      </span><span class="o">(</span><span class="nv">SID_NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>ORCLCDB<span class="o">)</span>
+<a id="__codelineno-34-18" name="__codelineno-34-18" href="#__codelineno-34-18"></a><span class="w">    </span><span class="o">)</span>
+<a id="__codelineno-34-19" name="__codelineno-34-19" href="#__codelineno-34-19"></a><span class="w">    </span><span class="o">(</span><span class="nv">SID_DESC</span><span class="w"> </span><span class="o">=</span>
+<a id="__codelineno-34-20" name="__codelineno-34-20" href="#__codelineno-34-20"></a><span class="w">      </span><span class="o">(</span><span class="nv">SID_NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>postgresql<span class="o">)</span>
+<a id="__codelineno-34-21" name="__codelineno-34-21" href="#__codelineno-34-21"></a><span class="w">      </span><span class="o">(</span><span class="nv">ORACLE_HOME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/opt/oracle/product/19c/dbhome_1<span class="o">)</span>
+<a id="__codelineno-34-22" name="__codelineno-34-22" href="#__codelineno-34-22"></a><span class="w">      </span><span class="o">(</span><span class="nv">PROGRAM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>dg4odbc<span class="o">)</span>
+<a id="__codelineno-34-23" name="__codelineno-34-23" href="#__codelineno-34-23"></a><span class="w">    </span><span class="o">)</span>
+<a id="__codelineno-34-24" name="__codelineno-34-24" href="#__codelineno-34-24"></a><span class="w">  </span><span class="o">)</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>He añadido un nuevo <code>SID</code></p>
+</div>
+<p>Reinicio el listener:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>oracle@servidororacle1:~$<span class="w"> </span>lsnrctl<span class="w"> </span>reload
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>LSNRCTL<span class="w"> </span><span class="k">for</span><span class="w"> </span>Linux:<span class="w"> </span>Version<span class="w"> </span><span class="m">19</span>.0.0.0.0<span class="w"> </span>-<span class="w"> </span>Production<span class="w"> </span>on<span class="w"> </span><span class="m">27</span>-NOV-2022<span class="w"> </span><span class="m">23</span>:38:45
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>
+<a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>Copyright<span class="w"> </span><span class="o">(</span>c<span class="o">)</span><span class="w"> </span><span class="m">1991</span>,<span class="w"> </span><span class="m">2019</span>,<span class="w"> </span>Oracle.<span class="w">  </span>All<span class="w"> </span>rights<span class="w"> </span>reserved.
+<a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a>
+<a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a>Connecting<span class="w"> </span>to<span class="w"> </span><span class="o">(</span><span class="nv">DESCRIPTION</span><span class="o">=(</span><span class="nv">ADDRESS</span><span class="o">=(</span><span class="nv">PROTOCOL</span><span class="o">=</span>TCP<span class="o">)(</span><span class="nv">HOST</span><span class="o">=</span><span class="m">0</span>.0.0.0<span class="o">)(</span><span class="nv">PORT</span><span class="o">=</span><span class="m">1521</span><span class="o">)))</span>
+<a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a>The<span class="w"> </span><span class="nb">command</span><span class="w"> </span>completed<span class="w"> </span>successfully
+</code></pre></div>
+<p>Pruebo que funciona el nuevo registro de tns:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>oracle@servidororacle1:~$<span class="w"> </span>tnsping<span class="w"> </span>postgresql
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>TNS<span class="w"> </span>Ping<span class="w"> </span>Utility<span class="w"> </span><span class="k">for</span><span class="w"> </span>Linux:<span class="w"> </span>Version<span class="w"> </span><span class="m">19</span>.0.0.0.0<span class="w"> </span>-<span class="w"> </span>Production<span class="w"> </span>on<span class="w"> </span><span class="m">27</span>-NOV-2022<span class="w"> </span><span class="m">23</span>:56:17
+<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>
+<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>Copyright<span class="w"> </span><span class="o">(</span>c<span class="o">)</span><span class="w"> </span><span class="m">1997</span>,<span class="w"> </span><span class="m">2019</span>,<span class="w"> </span>Oracle.<span class="w">  </span>All<span class="w"> </span>rights<span class="w"> </span>reserved.
+<a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a>
+<a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a>Used<span class="w"> </span>parameter<span class="w"> </span>files:
+<a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a>/opt/oracle/product/19c/dbhome_1/network/admin/sqlnet.ora
+<a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a>
+<a id="__codelineno-36-10" name="__codelineno-36-10" href="#__codelineno-36-10"></a>
+<a id="__codelineno-36-11" name="__codelineno-36-11" href="#__codelineno-36-11"></a>Used<span class="w"> </span>TNSNAMES<span class="w"> </span>adapter<span class="w"> </span>to<span class="w"> </span>resolve<span class="w"> </span>the<span class="w"> </span><span class="nb">alias</span>
+<a id="__codelineno-36-12" name="__codelineno-36-12" href="#__codelineno-36-12"></a>Attempting<span class="w"> </span>to<span class="w"> </span>contact<span class="w"> </span><span class="o">(</span><span class="nv">DESCRIPTION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span><span class="nv">ADDRESS_LIST</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span><span class="nv">ADDRESS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span><span class="nv">PROTOCOL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>TCP<span class="o">)(</span><span class="nv">HOST</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>servidororacle1<span class="o">)(</span><span class="nv">PORT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1521</span><span class="o">)))</span><span class="w"> </span><span class="o">(</span><span class="nv">CONNECT_DATA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span><span class="nv">SID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>postgresql<span class="o">))</span><span class="w"> </span><span class="o">(</span><span class="nv">HS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>OK<span class="o">))</span>
+<a id="__codelineno-36-13" name="__codelineno-36-13" href="#__codelineno-36-13"></a>OK<span class="w"> </span><span class="o">(</span><span class="m">0</span><span class="w"> </span>msec<span class="o">)</span>
+</code></pre></div>
+<p>Creo el enlace:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">LINK</span><span class="w"> </span><span class="n">postgresql</span>
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="k">CONNECT</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="ss">&quot;bibliofilos_admin&quot;</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="ss">&quot;1234&quot;</span>
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="k">USING</span><span class="w"> </span><span class="s1">&#39;postgresql&#39;</span><span class="p">;</span>
+</code></pre></div>
+<p>Muestro la tabla <code>libros</code> remota usando el enlace:</p>
+<p><a class="glightbox" href="https://i.imgur.com/eTWZjuF.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="librospostgresql1" src="https://i.imgur.com/eTWZjuF.png" /></a></p>
+<h3 id="servidorpostgresql1-servidororacle1"><code>servidorpostgresql1</code> → <code>servidororacle1</code></h3>
+<p>Instalo el cliente de Oracle <a href="https://www.servidoresclientes.ga/ri/alumno1/#18-instalacion-del-cliente">siguiendo mi propia documentación de la práctica 1</a>.</p>
+<p>Descargo el paquete SDK del cliente de Oracle:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>wget<span class="w"> </span>https://download.oracle.com/otn_software/linux/instantclient/218000/instantclient-sdk-linux.x64-21.8.0.0.0dbru.zip
+</code></pre></div>
+<p>Descomprimo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>sudo<span class="w"> </span>unzip<span class="w"> </span>-d<span class="w"> </span>/opt/oracle<span class="w"> </span>instantclient-sdk-linux.x64-21.8.0.0.0dbru.zip
+</code></pre></div>
+<p>Añado la siguiente variable a <code>.bashrc</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>~/.bashrc
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">ORACLE_HOME</span><span class="o">=</span>/opt/oracle/instantclient_21_8
+</code></pre></div>
+<p>Recargo el fichero:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="nb">source</span><span class="w"> </span>~/.bashrc
+</code></pre></div>
+<p>Instalo los requerimientos de compilación:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>build-essential<span class="w"> </span>postgresql-server-dev-13
+</code></pre></div>
+<p>Descargo el código fuente de la extensión <code>oracle_fdw</code>, descomprimo, y entro al directorio:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>wget<span class="w"> </span>https://github.com/laurenz/oracle_fdw/archive/refs/tags/ORACLE_FDW_2_4_0.tar.gz
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>tar<span class="w"> </span>-xvzf<span class="w"> </span>ORACLE_FDW_2_4_0.tar.gz
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="nb">cd</span><span class="w"> </span>oracle_fdw-ORACLE_FDW_2_4_0
+</code></pre></div>
+<p>Compilo e instalo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>make
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>sudo<span class="w"> </span>make<span class="w"> </span>install
+</code></pre></div>
+<p>Dejo <code>ld.so.conf</code> de la siguiente manera:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/ld.so.conf
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>include<span class="w"> </span>/etc/ld.so.conf.d/*.conf
+<a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>
+<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>/opt/oracle/instantclient_21_8
+<a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a>/usr/share/postgresql/13/extension
+</code></pre></div>
+<p>Aplico los cambios y reinicio PostgreSQL:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>sudo<span class="w"> </span>ldconfig
+<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>postgresql
+</code></pre></div>
+<p>Añado la extensión necesaria:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="n">postgres</span><span class="o">=#</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="n">EXTENSION</span><span class="w"> </span><span class="n">oracle_fdw</span><span class="p">;</span>
+<a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="n">EXTENSION</span>
+</code></pre></div>
+<p>Compruebo que se ha añadido:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="nv">postgres</span><span class="o">=</span><span class="c1"># \dx</span>
+<a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a><span class="w">                                   </span>List<span class="w"> </span>of<span class="w"> </span>installed<span class="w"> </span>extensions
+<a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a><span class="w">    </span>Name<span class="w">    </span><span class="p">|</span><span class="w"> </span>Version<span class="w"> </span><span class="p">|</span><span class="w">   </span>Schema<span class="w">   </span><span class="p">|</span><span class="w">                         </span>Description
+<a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a>------------+---------+------------+--------------------------------------------------------------
+<a id="__codelineno-50-5" name="__codelineno-50-5" href="#__codelineno-50-5"></a><span class="w"> </span>dblink<span class="w">     </span><span class="p">|</span><span class="w"> </span><span class="m">1</span>.2<span class="w">     </span><span class="p">|</span><span class="w"> </span>public<span class="w">     </span><span class="p">|</span><span class="w"> </span>connect<span class="w"> </span>to<span class="w"> </span>other<span class="w"> </span>PostgreSQL<span class="w"> </span>databases<span class="w"> </span>from<span class="w"> </span>within<span class="w"> </span>a<span class="w"> </span>database
+<a id="__codelineno-50-6" name="__codelineno-50-6" href="#__codelineno-50-6"></a><span class="w"> </span>oracle_fdw<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">1</span>.2<span class="w">     </span><span class="p">|</span><span class="w"> </span>public<span class="w">     </span><span class="p">|</span><span class="w"> </span>foreign<span class="w"> </span>data<span class="w"> </span>wrapper<span class="w"> </span><span class="k">for</span><span class="w"> </span>Oracle<span class="w"> </span>access
+<a id="__codelineno-50-7" name="__codelineno-50-7" href="#__codelineno-50-7"></a><span class="w"> </span>plpgsql<span class="w">    </span><span class="p">|</span><span class="w"> </span><span class="m">1</span>.0<span class="w">     </span><span class="p">|</span><span class="w"> </span>pg_catalog<span class="w"> </span><span class="p">|</span><span class="w"> </span>PL/pgSQL<span class="w"> </span>procedural<span class="w"> </span>language
+<a id="__codelineno-50-8" name="__codelineno-50-8" href="#__codelineno-50-8"></a><span class="o">(</span><span class="m">3</span><span class="w"> </span>rows<span class="o">)</span>
+</code></pre></div>
+<p>Creo el "Foreign server" apuntando a <code>servidororacle1</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="n">postgres</span><span class="o">=#</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="n">SERVER</span><span class="w"> </span><span class="n">servidororacle1</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">DATA</span><span class="w"> </span><span class="n">WRAPPER</span><span class="w"> </span><span class="n">oracle_fdw</span><span class="w"> </span><span class="k">OPTIONS</span><span class="w"> </span><span class="p">(</span><span class="n">dbserver</span><span class="w"> </span><span class="s1">&#39;//192.168.121.211:1521/ORCLCDB&#39;</span><span class="p">);</span>
+<a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="n">SERVER</span>
+</code></pre></div>
+<p>Compruebo que se ha creado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="err">\</span><span class="n">des</span><span class="o">+</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="w">                                                                     </span>List<span class="w"> </span>of<span class="w"> </span>foreign<span class="w"> </span>servers
+<a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a><span class="w">        </span>Name<span class="w">         </span><span class="p">|</span><span class="w">  </span>Owner<span class="w">   </span><span class="p">|</span><span class="w"> </span>Foreign-data<span class="w"> </span>wrapper<span class="w"> </span><span class="p">|</span><span class="w"> </span>Access<span class="w"> </span>privileges<span class="w"> </span><span class="p">|</span><span class="w"> </span>Type<span class="w"> </span><span class="p">|</span><span class="w"> </span>Version<span class="w"> </span><span class="p">|</span><span class="w">                     </span>FDW<span class="w"> </span>options<span class="w">                      </span><span class="p">|</span><span class="w"> </span>Description
+<a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a>---------------------+----------+----------------------+-------------------+------+---------+------------------------------------------------------+-------------
+<a id="__codelineno-53-4" name="__codelineno-53-4" href="#__codelineno-53-4"></a><span class="w"> </span>servidororacle1<span class="w">     </span><span class="p">|</span><span class="w"> </span>postgres<span class="w"> </span><span class="p">|</span><span class="w"> </span>oracle_fdw<span class="w">           </span><span class="p">|</span><span class="w">                   </span><span class="p">|</span><span class="w">      </span><span class="p">|</span><span class="w">         </span><span class="p">|</span><span class="w"> </span><span class="o">(</span>dbserver<span class="w"> </span><span class="s1">&#39;//192.168.121.211:1521/ORCLCDB&#39;</span><span class="o">)</span><span class="w">          </span><span class="p">|</span>
+<a id="__codelineno-53-5" name="__codelineno-53-5" href="#__codelineno-53-5"></a><span class="w"> </span>servidorpostgresql2<span class="w"> </span><span class="p">|</span><span class="w"> </span>postgres<span class="w"> </span><span class="p">|</span><span class="w"> </span>dblink_fdw<span class="w">           </span><span class="p">|</span><span class="w">                   </span><span class="p">|</span><span class="w">      </span><span class="p">|</span><span class="w">         </span><span class="p">|</span><span class="w"> </span><span class="o">(</span>host<span class="w"> </span><span class="s1">&#39;10.0.1.3&#39;</span>,<span class="w"> </span>dbname<span class="w"> </span><span class="s1">&#39;bibliofilos&#39;</span>,<span class="w"> </span>port<span class="w"> </span><span class="s1">&#39;5432&#39;</span><span class="o">)</span><span class="w"> </span><span class="p">|</span>
+<a id="__codelineno-53-6" name="__codelineno-53-6" href="#__codelineno-53-6"></a><span class="o">(</span><span class="m">2</span><span class="w"> </span>rows<span class="o">)</span>
+<a id="__codelineno-53-7" name="__codelineno-53-7" href="#__codelineno-53-7"></a>
+<a id="__codelineno-53-8" name="__codelineno-53-8" href="#__codelineno-53-8"></a><span class="o">(</span>END<span class="o">)</span>
+</code></pre></div>
+<p>Creo el "USER MAPPING":</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="n">postgres</span><span class="o">=#</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">MAPPING</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="n">postgres</span><span class="w"> </span><span class="n">SERVER</span><span class="w"> </span><span class="n">servidororacle1</span><span class="w"> </span><span class="k">OPTIONS</span><span class="w"> </span><span class="p">(</span><span class="k">user</span><span class="w"> </span><span class="s1">&#39;SCOTT&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="s1">&#39;tiger&#39;</span><span class="p">);</span>
+<a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">MAPPING</span>
+</code></pre></div>
+<p>Compruebo que se ha creado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="n">postgres</span><span class="o">=#</span><span class="w"> </span><span class="err">\</span><span class="n">deu</span><span class="o">+</span>
+<a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a><span class="w">                              </span><span class="n">List</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="n">mappings</span>
+<a id="__codelineno-55-3" name="__codelineno-55-3" href="#__codelineno-55-3"></a><span class="w">       </span><span class="n">Server</span><span class="w">        </span><span class="o">|</span><span class="w"> </span><span class="k">User</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">|</span><span class="w">                  </span><span class="n">FDW</span><span class="w"> </span><span class="k">options</span>
+<a id="__codelineno-55-4" name="__codelineno-55-4" href="#__codelineno-55-4"></a><span class="c1">---------------------+-----------+-----------------------------------------------</span>
+<a id="__codelineno-55-5" name="__codelineno-55-5" href="#__codelineno-55-5"></a><span class="w"> </span><span class="n">servidororacle1</span><span class="w">     </span><span class="o">|</span><span class="w"> </span><span class="n">postgres</span><span class="w">  </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;user&quot;</span><span class="w"> </span><span class="s1">&#39;SCOTT&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="s1">&#39;tiger&#39;</span><span class="p">)</span>
+<a id="__codelineno-55-6" name="__codelineno-55-6" href="#__codelineno-55-6"></a><span class="w"> </span><span class="n">servidorpostgresql2</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">postgres</span><span class="w">  </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;user&quot;</span><span class="w"> </span><span class="s1">&#39;bibliofilos_admin&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="s1">&#39;1234&#39;</span><span class="p">)</span>
+<a id="__codelineno-55-7" name="__codelineno-55-7" href="#__codelineno-55-7"></a><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="k">rows</span><span class="p">)</span>
+</code></pre></div>
+<p>Creo una foreign table para probar el funcionamiento:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">DEPT</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a><span class="w">    </span><span class="n">DEPTNO</span><span class="w">      </span><span class="nb">integer</span><span class="w"> </span><span class="k">OPTIONS</span><span class="w"> </span><span class="p">(</span><span class="k">key</span><span class="w"> </span><span class="s1">&#39;true&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-56-3" name="__codelineno-56-3" href="#__codelineno-56-3"></a><span class="w">    </span><span class="n">DNAME</span><span class="w">       </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">14</span><span class="p">),</span>
+<a id="__codelineno-56-4" name="__codelineno-56-4" href="#__codelineno-56-4"></a><span class="w">    </span><span class="n">LOC</span><span class="w">         </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
+<a id="__codelineno-56-5" name="__codelineno-56-5" href="#__codelineno-56-5"></a><span class="p">)</span>
+<a id="__codelineno-56-6" name="__codelineno-56-6" href="#__codelineno-56-6"></a><span class="n">SERVER</span><span class="w"> </span><span class="n">servidororacle1</span><span class="w"> </span><span class="k">OPTIONS</span><span class="w"> </span><span class="p">(</span><span class="k">schema</span><span class="w"> </span><span class="s1">&#39;SCOTT&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="s1">&#39;DEPT&#39;</span><span class="p">);</span>
+</code></pre></div>
+<p>Compruebo que se ha creado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="n">postgres</span><span class="o">=#</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">information_schema</span><span class="p">.</span><span class="n">foreign_tables</span><span class="p">;</span>
+<a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a><span class="w"> </span><span class="n">foreign_table_catalog</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">foreign_table_schema</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">foreign_table_name</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">foreign_server_catalog</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">foreign_server_name</span>
+<a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a><span class="c1">-----------------------+----------------------+--------------------+------------------------+---------------------</span>
+<a id="__codelineno-57-4" name="__codelineno-57-4" href="#__codelineno-57-4"></a><span class="w"> </span><span class="n">postgres</span><span class="w">              </span><span class="o">|</span><span class="w"> </span><span class="k">public</span><span class="w">               </span><span class="o">|</span><span class="w"> </span><span class="n">dept</span><span class="w">               </span><span class="o">|</span><span class="w"> </span><span class="n">postgres</span><span class="w">               </span><span class="o">|</span><span class="w"> </span><span class="n">servidororacle1</span>
+<a id="__codelineno-57-5" name="__codelineno-57-5" href="#__codelineno-57-5"></a><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="k">row</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Una FOREIGN TABLE existe localmente en PostgreSQL pero muestra datos remotos usando un FDW. En este caso, <code>oracle_fdw</code>.</p>
+</div>
+<p>Muestro la tabla <code>DEPT</code> remota:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">DEPT</span><span class="p">;</span>
+</code></pre></div>
+<p><a class="glightbox" href="https://i.imgur.com/f5QFfuG.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="deptoracle1" src="https://i.imgur.com/f5QFfuG.png" /></a></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tabs", "navigation.sections"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+        
+          <script src="../../javascripts/asciinema-player.min.js"></script>
+        
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

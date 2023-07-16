@@ -1,0 +1,3763 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../2asir19-20/usuarios-grupos-acl-ldap/">
+      
+      
+        <link rel="next" href="../doc-servidores-fisicos/">
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>Práctica: Compilación de un programa en C utilizando un Makefile - Compartiendo Conocimiento</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/asciinema-player.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#enunciado" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Compartiendo Conocimiento" class="md-header__button md-logo" aria-label="Compartiendo Conocimiento" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.62 8.35c-.42.28-1.75 1.04-1.95 1.19-.39.31-.75.29-1.14-.01-.2-.16-1.53-.92-1.95-1.19-.48-.31-.45-.7.08-.92 1.64-.69 3.28-.64 4.91.03.49.21.51.6.05.9m7.22 7.28c-.93-2.09-2.2-3.99-3.84-5.66a4.31 4.31 0 0 1-1.06-1.88c-.1-.33-.17-.67-.24-1.01-.2-.88-.29-1.78-.7-2.61-.73-1.58-2-2.4-3.84-2.47-1.81.05-3.16.81-3.95 2.4-.21.43-.36.88-.46 1.34-.17.76-.32 1.55-.5 2.32-.15.65-.45 1.21-.96 1.71-1.61 1.57-2.9 3.37-3.88 5.35-.14.29-.28.58-.37.88-.19.66.29 1.12.99.96.44-.09.88-.18 1.3-.31.41-.15.57-.05.67.35.65 2.15 2.07 3.66 4.24 4.5 4.12 1.56 8.93-.66 9.97-4.58.07-.27.17-.37.47-.27.46.14.93.24 1.4.35.49.09.85-.16.92-.64.03-.26-.06-.49-.16-.73"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Compartiendo Conocimiento
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Práctica: Compilación de un programa en C utilizando un Makefile
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../2asir19-20/auditoria-practica-bd/" class="md-tabs__link">
+        2º ASIR 19/20
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        2º ASIR 20/21
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../sri/ej1-playbook-sencillo/" class="md-tabs__link">
+        2º ASIR 21/22
+      </a>
+    </li>
+  
+
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../aso/instalacion_debian11/" class="md-tabs__link">
+        2º ASIR 22/23
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../openwebinars/sql-desde-cero/" class="md-tabs__link">
+        OpenWebinars
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../c1/describing-place-essay/" class="md-tabs__link">
+        C1
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Compartiendo Conocimiento" class="md-nav__button md-logo" aria-label="Compartiendo Conocimiento" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.62 8.35c-.42.28-1.75 1.04-1.95 1.19-.39.31-.75.29-1.14-.01-.2-.16-1.53-.92-1.95-1.19-.48-.31-.45-.7.08-.92 1.64-.69 3.28-.64 4.91.03.49.21.51.6.05.9m7.22 7.28c-.93-2.09-2.2-3.99-3.84-5.66a4.31 4.31 0 0 1-1.06-1.88c-.1-.33-.17-.67-.24-1.01-.2-.88-.29-1.78-.7-2.61-.73-1.58-2-2.4-3.84-2.47-1.81.05-3.16.81-3.95 2.4-.21.43-.36.88-.46 1.34-.17.76-.32 1.55-.5 2.32-.15.65-.45 1.21-.96 1.71-1.61 1.57-2.9 3.37-3.88 5.35-.14.29-.28.58-.37.88-.19.66.29 1.12.99.96.44-.09.88-.18 1.3-.31.41-.15.57-.05.67.35.65 2.15 2.07 3.66 4.24 4.5 4.12 1.56 8.93-.66 9.97-4.58.07-.27.17-.37.47-.27.46.14.93.24 1.4.35.49.09.85-.16.92-.64.03-.26-.06-.49-.16-.73"/></svg>
+
+    </a>
+    Compartiendo Conocimiento
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          2º ASIR 19/20
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          2º ASIR 19/20
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/auditoria-practica-bd/" class="md-nav__link">
+        Práctica 6: Auditoría de bases de datos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/database-interconnection/" class="md-nav__link">
+        Práctica 4 BD: Interconexión de Servidores de Bases de Datos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/java-webapp/" class="md-nav__link">
+        Práctica: Despliegue de CMS java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/metrics-logs-monitoring/" class="md-nav__link">
+        Práctica: Métricas, logs y monitorización
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/p3-bd-pi-oracle/" class="md-nav__link">
+        Práctica 3 BD (PI): Gestión de usuarios, privilegios y roles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/p5-bd-individua-draft/" class="md-nav__link">
+        Práctica 5 BD draft: Gestión del almacenamiento (individual)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/p5-bd-individual/" class="md-nav__link">
+        Práctica 5 BD: Gestión del almacenamiento (individual)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/proxy-practica/" class="md-nav__link">
+        Práctica: Proxy, proxy inverso y balanceadores de carga
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/rendimiento-ejec-php-python/" class="md-nav__link">
+        Práctica servicios: Ejecución de scripts PHP y Python. Rendimiento
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/t4-formas-juridicas/" class="md-nav__link">
+        Tema 6: Las formas jurídicas de la empresa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/t7-cloud-hosting/" class="md-nav__link">
+        Tarea 7 Cloud: Hosting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/t8-cloud-app-python.md/" class="md-nav__link">
+        Tarea 8 Cloud:  Instalación de app python (Mezzanine)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2asir19-20/usuarios-grupos-acl-ldap/" class="md-nav__link">
+        Práctica: Usuarios, grupos y ACLs en LDAP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          2º ASIR 20/21
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          2º ASIR 20/21
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Compilación de un programa en C
+      </a>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../doc-servidores-fisicos/" class="md-nav__link">
+        Documentación servidores físicos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ejercicio-cifrado-simetrico-gpg-openssl/" class="md-nav__link">
+        Ejercicio: Cifrado simétrico con gpg+openssl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ejs-modulos-kernel/" class="md-nav__link">
+        Ejercicios de manejo de módulos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instalacion-debian-10/" class="md-nav__link">
+        Práctica: Instalación de Debian 10
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mapeo-urls-sistema-ficheros/" class="md-nav__link">
+        Ejercicio 4: Mapeo URLs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p3-integridad-firmas-autenticacion/" class="md-nav__link">
+        Práctica 3: Integridad, firmas y autenticación
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica-cifrado-asimetrico-gpg-openssl/" class="md-nav__link">
+        Práctica: Cifrado asimétrico con gpg y openssl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica-infantil-plsql/" class="md-nav__link">
+        Práctica infantil de PL/SQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas-ud1-seg/" class="md-nav__link">
+        Prácticas de la UD1 SEG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tarea-creacion-sistema-automatizado-instalacion/" class="md-nav__link">
+        Tarea: Creación de un sistema automatizado de instalación
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          2º ASIR 21/22
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          2º ASIR 21/22
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+          SRI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          SRI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1_1" id="__nav_4_1_1_label" tabindex="0">
+          Vagrant y Ansible
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Vagrant y Ansible
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej1-playbook-sencillo/" class="md-nav__link">
+        Ejercicio 1: Playbook sencillo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej2-router-nat-vagrant/" class="md-nav__link">
+        Ejercicio 2: router NAT vagrant
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej3-config-escenario-router-nat/" class="md-nav__link">
+        Ejercicio 3: Configuración escenario router NAT
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1_2" id="__nav_4_1_2_label" tabindex="0">
+          DHCP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          DHCP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej1-instalar-configurar-dhcp/" class="md-nav__link">
+        Ejercicio 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej2-reserva-dhcp/" class="md-nav__link">
+        Ejercicio 2: reservas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/practica-servidor-dhcp/" class="md-nav__link">
+        Práctica
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1_3" id="__nav_4_1_3_label" tabindex="0">
+          HTTP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          HTTP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej1-mapeo-urls-al-sistema-ficheros/" class="md-nav__link">
+        Ejercicio 1: Mapeo de URLs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej2-control-acceso-autenticacion-autorizacion/" class="md-nav__link">
+        Ejercicio 2: Control de acceso
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej3-apache-.htaccess/" class="md-nav__link">
+        Ejercicio 3: .htaccess con Apache
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej4-modulos-apache/" class="md-nav__link">
+        Ejercicio 4: Módulos en Apache
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej5-vps/" class="md-nav__link">
+        Ejercicio 5: VPS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej6-apache-proxy-inverso/" class="md-nav__link">
+        Ejercicio 6: Apache proxy inverso
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/practica3-LEMP-VPS/" class="md-nav__link">
+        Práctica: LEMP en VPS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1_4" id="__nav_4_1_4_label" tabindex="0">
+          DNS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          DNS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej1-instalar-configurar-bind9/" class="md-nav__link">
+        Ejercicio 1: bind9
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej2-instalar-configurar-slave/" class="md-nav__link">
+        Ejercicio 2: Slave DNS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ej3-delegacion-subdominio-bind9/" class="md-nav__link">
+        Ejercicio 3: Delegación subdominios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/practica-web-bd-dns-escenario/" class="md-nav__link">
+        Práctica: DNS+Web+BD en escenario
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1_5" id="__nav_4_1_5_label" tabindex="0">
+          HTTPS (1ª Parte)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          HTTPS (1ª Parte)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/practica-https-vps/" class="md-nav__link">
+        Práctica: HTTPS en VPS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1_6" id="__nav_4_1_6_label" tabindex="0">
+          HTTP (2ª Parte)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          HTTP (2ª Parte)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/practica-aumento-rendimiento-web/" class="md-nav__link">
+        Práctica: Aumento rendimiento web
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1_7" id="__nav_4_1_7_label" tabindex="0">
+          Correo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1_7">
+          <span class="md-nav__icon md-icon"></span>
+          Correo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/ejercicios-correo/" class="md-nav__link">
+        Ejercicios en escenario libvirt
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/practica-servidor-correo/" class="md-nav__link">
+        Práctica: Servidor de correos en VPS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1_8" id="__nav_4_1_8_label" tabindex="0">
+          HA Clusters
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1_8">
+          <span class="md-nav__icon md-icon"></span>
+          HA Clusters
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sri/practica-cluster-ha/" class="md-nav__link">
+        Práctica
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          IAW
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          IAW
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/2021-09-22-ej1-pull-request/" class="md-nav__link">
+        ej1-pull-request
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/2021-10-5-implantacion-despliegue-aplicacion-web-estatica/" class="md-nav__link">
+        app-web-estatica
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/2021-10-14-ej2-pr-pag-compa%C3%B1ero/" class="md-nav__link">
+        ej2-pr-pag-compañero
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_4" id="__nav_4_2_4_label" tabindex="0">
+          PHP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          PHP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/ej1-phpmyadmin/" class="md-nav__link">
+        Ejercicio 1: phpMyAdmin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/ej2-bookmedik/" class="md-nav__link">
+        Ejercicio 2: BookMedik
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/ej3-phpfpm/" class="md-nav__link">
+        Ejercicio 3: php-fpm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/practica1-implantacion-apps-php/" class="md-nav__link">
+        Práctica 1: Apps PHP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/practica2-instalacion-migracion-apps-PHP-en-VPS/" class="md-nav__link">
+        Práctica 2: Instalación/migración de apps a VPS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_5" id="__nav_4_2_5_label" tabindex="0">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/ej1-apps-flask-apache2-mod_wsgi/" class="md-nav__link">
+        Ejercicio 1: Apache + mod_wsgi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/ej2-apache2-gunicorn/" class="md-nav__link">
+        Ejercicio 2: Apache/Nginx + Gunicorn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/ej3-apache-uwsgi/" class="md-nav__link">
+        Ejercicio 3: Apache/Nginx + uWSGI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/practica-despliegue-apps-python/" class="md-nav__link">
+        Práctica: Despliegue python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/practica-cms-python/" class="md-nav__link">
+        Práctica: CMS Python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_6" id="__nav_4_2_6_label" tabindex="0">
+          Java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          Java
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/practica-cms-java/" class="md-nav__link">
+        Práctica: CMS Java
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_7" id="__nav_4_2_7_label" tabindex="0">
+          Docker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/ejs-docker/" class="md-nav__link">
+        Ejercicios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/practica-docker-php/" class="md-nav__link">
+        Práctica: BookMedik en Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iaw/practica-docker-python/" class="md-nav__link">
+        Práctica: Django tutorial en Docker
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+          SAD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          SAD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sad/practica-cifrado-asimetrico-gpg-openssl/" class="md-nav__link">
+        Criptografía 1: Cifrado asímetrico
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sad/practica-integridad-firmas-autenticacion/" class="md-nav__link">
+        Criptografía 2: Firmas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sad/practica-vpn-sad/" class="md-nav__link">
+        Práctica: VPN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3_4" id="__nav_4_3_4_label" tabindex="0">
+          Cortafuegos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Cortafuegos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sad/ej1-iptables-nodo/" class="md-nav__link">
+        Ejercicio 1 iptables: por nodo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sad/ej1-nftables-nodo/" class="md-nav__link">
+        Ejercicio 1 nftables: por nodo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sad/ej2-iptables-perimetral/" class="md-nav__link">
+        Ejercicio 2 iptables: perimetral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sad/ej2-nftables-perimetral/" class="md-nav__link">
+        Ejercicio 2 nftables: perimetral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sad/perimetral-iptables-escenario/" class="md-nav__link">
+        Práctica iptables: perimetral escenario
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practica-escenario-libvirt/" class="md-nav__link">
+        Escenario libvirt
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          2º ASIR 22/23
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          2º ASIR 22/23
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+          ASO
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          ASO
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/instalacion_debian11/" class="md-nav__link">
+        Instalación Debian 11
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/debian11_automatico/" class="md-nav__link">
+        Instalación Debian 11 preseed
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/ejercicios-paqueteria/" class="md-nav__link">
+        Ejercicios de paquetería
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/systemd-montaje-nfs/" class="md-nav__link">
+        Montaje NFS systemd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1_5" id="__nav_5_1_5_label" tabindex="0">
+          Kernel
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          Kernel
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/teoria-kernel/" class="md-nav__link">
+        Teoría
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/ejercicios-de-modulos/" class="md-nav__link">
+        Ejercicios de módulos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/ejercicios-parametros-kernel/" class="md-nav__link">
+        Ejercicios de parámetros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/compilacion-programas-c/" class="md-nav__link">
+        Compilación programas C
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/compilacion-kernel/" class="md-nav__link">
+        Compilación de Kernel
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1_6" id="__nav_5_1_6_label" tabindex="0">
+          Red Hat
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          Red Hat
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/migracion-centos/" class="md-nav__link">
+        Migración CentOS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/recoleccion-logs-journald/" class="md-nav__link">
+        Recolección de logs journald
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1_8" id="__nav_5_1_8_label" tabindex="0">
+          OpenLDAP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_1_8">
+          <span class="md-nav__icon md-icon"></span>
+          OpenLDAP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/ldap-inicial/" class="md-nav__link">
+        Práctica inicial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aso/ldaps/" class="md-nav__link">
+        LDAPs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          BD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          BD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bd/prueba-inicial/" class="md-nav__link">
+        Prueba inicial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.grupalesbdc.ga/p1-servidores-clientes/intro" class="md-nav__link">
+        Práctica 1: servidores y clientes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bd/p2-interconexion-bd/" class="md-nav__link">
+        Práctica 2: interconexiones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bd/examen-practicas-1-2/" class="md-nav__link">
+        Examen prácticas 1 y 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bd/p3-peque%C3%B1a-plsql/" class="md-nav__link">
+        Práctica 3: pequeña PL/SQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.grupalesbdc.ga/p4-grupal-plsql/intro" class="md-nav__link">
+        Práctica 4: grupal PL/SQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bd/examen-practicas-3-4/" class="md-nav__link">
+        Examen prácticas 3 y 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.grupalesbdc.ga/p5-usuarios/intro" class="md-nav__link">
+        Práctica 5 usuarios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bd/examen-practicas-5-6/" class="md-nav__link">
+        Examen prácticas 5 y 6
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+          HLC
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          HLC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_1" id="__nav_5_3_1_label" tabindex="0">
+          Virtualización en Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Virtualización en Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hlc/taller1-virtualizacion/" class="md-nav__link">
+        Taller 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hlc/taller2-virtualizacion/" class="md-nav__link">
+        Taller 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hlc/taller3-virtualizacion/" class="md-nav__link">
+        Taller 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hlc/taller4-virtualizacion/" class="md-nav__link">
+        Taller 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hlc/taller5-virtualizacion/" class="md-nav__link">
+        Taller 5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hlc/taller6-virtualizacion/" class="md-nav__link">
+        Taller 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hlc/practica-virtualizacion/" class="md-nav__link">
+        Práctica
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_2" id="__nav_5_3_2_label" tabindex="0">
+          OpenStack
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          OpenStack
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hlc/taller1-cliente-vpn/" class="md-nav__link">
+        Taller 1
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_3" id="__nav_5_3_3_label" tabindex="0">
+          Kubernetes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Kubernetes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hlc/ejercicio1-minikube-kubectl/" class="md-nav__link">
+        Ejercicio 1: minikube y kubectl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hlc/taller1-pods/" class="md-nav__link">
+        Taller 1: pods
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hlc/taller2-replicaset/" class="md-nav__link">
+        Taller 2: ReplicaSet
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          OpenWebinars
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          OpenWebinars
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openwebinars/sql-desde-cero/" class="md-nav__link">
+        SQL desde Cero
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openwebinars/fundamentos-plsql/" class="md-nav__link">
+        Fundamentos de PL/SQL
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          C1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          C1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c1/describing-place-essay/" class="md-nav__link">
+        Essay: describing a place
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c1/injustice-case-outline/" class="md-nav__link">
+        Outline: injustice case
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c1/leisure-time-meaningless-activities/" class="md-nav__link">
+        Essay: meaningless activities
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="enunciado">Enunciado</h1>
+<ol>
+<li>
+<p>Elige el programa escrito en C que prefieras y comprueba en las fuentes que exista un fichero Makefile para compilarlo</p>
+</li>
+<li>
+<p>Realiza los pasos necesarios para compilarlo e instálalo en tu equipo en un directorio que no interfiera con tu sistema de paquetes (/opt, /usr/local, etc.)</p>
+</li>
+<li>
+<p>La corrección se hará en clase y deberás ser capaz de explicar qué son todos los ficheros que se hayan instalado y realizar una desinstalación limpia.</p>
+</li>
+</ol>
+<h1 id="desarrollo">Desarrollo</h1>
+<h2 id="primera-parte">Primera parte</h2>
+<p>Elijo <code>gimp</code>, y dentro de su código fuente existe un fichero Makefile, efectivamente.<br />
+De hecho son 2:</p>
+<ul>
+<li>Makefile.am</li>
+<li>Makefile.in</li>
+</ul>
+<h2 id="segunda-parte">Segunda parte</h2>
+<h3 id="1-requerimientos-pre-compilacion"><strong>1. Requerimientos pre-compilación</strong></h3>
+<p>Resumen de paquetes requeridos junto con sus versiones
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>     Package Name         Version
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>+     ATK                  2.2.0
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>+     babl                 0.1.78
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>+     cairo                1.12.2
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>+     Fontconfig           2.12.4
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>+     freetype2            2.1.7
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>+     GDK-PixBuf           2.30.8
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>+     GEGL                 0.4.26
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>+     GIO
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>+     GLib                 2.56.2
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>+     glib-networking
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>+     GTK+                 2.24.32
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>+     HarfBuzz             0.9.19
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>+     libbzip2
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>+     libjpeg
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>+     liblzma              5.0.0
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>+     libmypaint           1.3.0
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>+     libpng               1.6.25
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>+     libpoppler-glib      0.50.0
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>+     librsvg              2.40.6
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>+     libtiff
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>+     Little CMS           2.8
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>+     mypaint-brushes-1.0
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>+     pangocairo           1.29.4
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>+     poppler-data         0.4.7
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>+     zlib
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>+     gexiv2               &gt;= 0.10.6
+</code></pre></div></p>
+<p>Resumen para la instalación rápida de todos ellos
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo apt update &amp;&amp; sudo apt install poppler-data mypaint-brushes libpoppler-glib-dev liblzma5 libjpeg62-turbo glib-networking fontconfig libfreetype6 libglib2.0-0 gir1.2-glib-2.0 libcairo2 libgdk-pixbuf2.0-0 libharfbuzz-bin libpng16-16 lib64z1 libtiff-dev librsvg2-dev libpango1.0-0 liblcms2-2 libbz2-dev gtk+2.0 libatk1.0-0 libgexiv2-dev
+</code></pre></div></p>
+<p><strong>LIBRERÍA babl 0.1.78</strong><br />
+Esa versión sólo se encuentra en unstable, así que...</p>
+<ul>
+<li>Añado la siguiente línea a <code>/etc/apt/sources.list</code>
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>deb http://http.us.debian.org/debian unstable main non-free contrib
+</code></pre></div></li>
+<li>Para evitar problemas, en el fichero <code>/etc/apt/preferences.d/priorities</code> añado el siguiente contenido
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Package: *
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Pin: release a=stable
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Pin-Priority: 700
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Package: *
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>Pin: release a=unstable
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>Pin-Priority: 600
+</code></pre></div>
+     De esta manera, siempre que hagamos un <code>sudo apt install &lt;nombre-paquete&gt;</code>, por defecto lo hará de los que estén en rama <code>stable</code>, y no <code>unstable</code>. A no ser que le indiquemos lo contrario, claro. </li>
+<li>Con todo esto hecho, ya SÍ podremos instalar la versión que necesitamos de babl
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo apt install -t unstable libbabl-dev
+</code></pre></div>
+     Aunque antes de esto, tenemos que actualizar con la versión de unstable un paquete manualmente para que funcione
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo apt install -t unstable gcc-8-base
+</code></pre></div></li>
+</ul>
+<p>Con esto, ya tendríamos la librería a una versión que podemos usar
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>libbabl-dev:
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>  Installed: 1:0.1.82-1
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>  Candidate: 1:0.1.82-1
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>  Version table:
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a> *** 1:0.1.82-1 600
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        600 http://http.us.debian.org/debian unstable/main amd64 Packages
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>        100 /var/lib/dpkg/status
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>     0.1.62-1 700
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>        700 http://deb.debian.org/debian buster/main amd64 Packages
+</code></pre></div></p>
+<p><strong>LIBRERÍA GEGL 0.4.26</strong><br />
+Esa versión sólo se encuentra en unstable, así que...</p>
+<ul>
+<li><code>sudo apt install -t unstable libgegl-dev</code></li>
+<li><code>libgegl-dev:
+     Installed: 1:0.4.26-1
+     Candidate: 1:0.4.26-1
+     Version table:
+     *** 1:0.4.26-1 600
+          600 http://http.us.debian.org/debian unstable/main amd64 Packages
+          100 /var/lib/dpkg/status
+          0.4.12-2 700
+          700 http://deb.debian.org/debian buster/main amd64 Packages</code></li>
+</ul>
+<p><strong>LIBRERÍA libmypaint</strong><br />
+Por cierto warning a la hora de hacer el configure...
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>WARNING: libmypaint lower than version 1.4.0 is known to crash when
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>         parsing MyPaint 2 brushes. Please update.
+</code></pre></div>
+...Mejor que tengamos la versión de unstable</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo apt install -t unstable libmypaint-dev
+</code></pre></div>
+<h3 id="2-script-configure"><strong>2. Script configure</strong></h3>
+<blockquote>
+<p>Sobre la opción <code>--prefix</code> a la hora de hacer un <code>./configure</code>
+https://stackoverflow.com/questions/62340836/what-does-prefix-in-configure-script-do-when-building-a-software-in-linux</p>
+</blockquote>
+<p>En el propio directorio donde tenemos el código fuente, lo primero, es ejecutar <code>./configure</code>.  </p>
+<p>¿Qué hace este script? Pues lo que nos dice el fichero <code>INSTALL</code> propio de gimp como manual de compilación es lo siguiente...</p>
+<blockquote>
+<p>The `configure' script examines your system, and adapts GIMP to run on
+it.</p>
+</blockquote>
+<p>Básicamente lo que esto quiere decir, es que se toman ciertos valores de nuestro sistema en específico, y partiendo de eso, se nos genera un "Makefile personalizado". Éste, posteriormente, será el usado para la compilación. </p>
+<p>Esto es lo que nos dice el propio script <code>configure</code>...</p>
+<blockquote>
+<p>Guess values for system-dependent variables and create Makefiles.</p>
+</blockquote>
+<p>Una vez que ya tenemos una idea grosso modo de lo que hace este script, lo ejecutamos
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>./configure --disable-python --disable-gimp-console
+</code></pre></div></p>
+<blockquote>
+<ul>
+<li>Para prevenir ciertos errores que pueden aparecer     tras ejecutar este script...
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>sudo apt install gcc build-essential intltool
+</code></pre></div></li>
+<li><code>--disable-python</code> = deshabilita la compilación de ciertas extensiones python que no necesitaríamos </li>
+<li><code>--disable-gimp-console</code> = deshabilita la compilación del binario para la consola de gimp, que en principio tampoco es necesario</li>
+</ul>
+</blockquote>
+<p>Después de hacer esto, tendríamos un output bastante extenso del script, del cual realmente nos interesa sólo la siguiente parte...</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Building GIMP with prefix=/usr/local, datarootdir=${prefix}/share
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Desktop files install into ${datarootdir}
+</code></pre></div>
+<p><code>Prefix</code> es la opción que define dónde se moverán los binarios tras haberlos compilado y otros ficheros, cuando hagamos un <code>make install</code>. Esto pasará, claro está, después de haber hecho la compilación con <code>make</code>.</p>
+<p>Con gimp, tenemos la suerte de que por defecto <code>/usr/local</code> será el prefix, pero habrá otros binarios que queramos comparar en los que no tengamos esa suerte. Simplemente si esto pasa, será cuestión de pasar un parámetro de <code>prefix</code> en el momento de hacer un <code>configure</code>, para indicar el directorio raíz que queramos.</p>
+<p>Como último dato en este apartado, añadir que se nos ha generado nuestro "Makefile personalizado"</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>-rw-r--r--  1 vagrant vagrant    47922 Nov  3 05:08 Makefile
+</code></pre></div>
+<h3 id="3-compilacion"><strong>3. Compilación</strong></h3>
+<p>Ejecutamos <code>make</code>.  </p>
+<p>Esto lo que hará es, teniendo en cuenta el Makefile que se generó, compilar todo lo necesario en los directorios dentro del código fuente.</p>
+<p>Para un poco de información más detallada sobre esto, paso lo siguiente extraído del fichero <code>INSTALL</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>The `make&#39; command builds several things:
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a> - A bunch of public libraries in the directories starting with &#39;libgimp&#39;.
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a> - The plug-in programs in the &#39;plug-ins&#39; directory.
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a> - Some modules in the &#39;modules&#39; subdirectory.
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a> - The main GIMP program &#39;gimp-2.10&#39; in `app&#39;.
+</code></pre></div>
+<h3 id="4-instalacion"><strong>4. Instalación</strong></h3>
+<p>Ejecutamos <code>sudo make install</code>.</p>
+<blockquote>
+<p>Necesitamos sudo porque estamos moviendo ficheros a <code>/usr/local</code>, directorio cuyo propietario es root, y otros usuarios no tienen permiso de escritura</p>
+</blockquote>
+<p>Esto lo que hará es, mover todo lo compilado y generado al directorio raíz cuyo prefix hayamos establecido previamente.</p>
+<p>Para más información, el fichero <code>INSTALL</code> dice lo siguiente...
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>By default, `make install&#39; will install the package&#39;s files in
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>/usr/local/bin, /usr/local/lib, /usr/local/man, etc. 
+</code></pre></div></p>
+<p>Una vez que ya hemos instalado, muestro un resumen de <code>/usr/local</code> para que se vea la estructura que tenemos generada
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>/usr/local/
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>├── bin
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>├── etc
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>│   └── gimp
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>│       └── 2.0
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>├── games
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>├── include
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>│   └── gimp-2.0
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>│       ├── libgimp
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>│       ├── libgimpbase
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>│       ├── libgimpcolor
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>│       ├── libgimpconfig
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>│       ├── libgimpmath
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>│       ├── libgimpmodule
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>│       ├── libgimpthumb
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>│       └── libgimpwidgets
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>├── lib
+<a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>│   ├── gimp
+<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>│   │   └── 2.0
+<a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a>│   │       ├── environ
+<a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a>│   │       ├── interpreters
+<a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a>│   │       ├── modules
+<a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a>│   │       └── plug-ins
+<a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a>│   │           ├── align-layers
+<a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a>│   │           ├── animation-optimize
+<a id="__codelineno-15-26" name="__codelineno-15-26" href="#__codelineno-15-26"></a>│   │           ├── animation-play
+<a id="__codelineno-15-27" name="__codelineno-15-27" href="#__codelineno-15-27"></a>│   │           ├── blinds
+<a id="__codelineno-15-28" name="__codelineno-15-28" href="#__codelineno-15-28"></a>│   │           ├── blur
+<a id="__codelineno-15-29" name="__codelineno-15-29" href="#__codelineno-15-29"></a>│   │           ├── border-average
+<a id="__codelineno-15-30" name="__codelineno-15-30" href="#__codelineno-15-30"></a>│   │           ├── busy-dialog
+<a id="__codelineno-15-31" name="__codelineno-15-31" href="#__codelineno-15-31"></a>│   │           ├── cartoon
+<a id="__codelineno-15-32" name="__codelineno-15-32" href="#__codelineno-15-32"></a>│   │           ├── checkerboard
+<a id="__codelineno-15-33" name="__codelineno-15-33" href="#__codelineno-15-33"></a>│   │           ├── cml-explorer
+<a id="__codelineno-15-34" name="__codelineno-15-34" href="#__codelineno-15-34"></a>│   │           ├── color-cube-analyze
+<a id="__codelineno-15-35" name="__codelineno-15-35" href="#__codelineno-15-35"></a>│   │           ├── color-enhance
+<a id="__codelineno-15-36" name="__codelineno-15-36" href="#__codelineno-15-36"></a>│   │           ├── colorify
+<a id="__codelineno-15-37" name="__codelineno-15-37" href="#__codelineno-15-37"></a>│   │           ├── colormap-remap
+<a id="__codelineno-15-38" name="__codelineno-15-38" href="#__codelineno-15-38"></a>│   │           ├── compose
+<a id="__codelineno-15-39" name="__codelineno-15-39" href="#__codelineno-15-39"></a>│   │           ├── contrast-retinex
+<a id="__codelineno-15-40" name="__codelineno-15-40" href="#__codelineno-15-40"></a>│   │           ├── crop-zealous
+<a id="__codelineno-15-41" name="__codelineno-15-41" href="#__codelineno-15-41"></a>│   │           ├── curve-bend
+<a id="__codelineno-15-42" name="__codelineno-15-42" href="#__codelineno-15-42"></a>│   │           ├── decompose
+<a id="__codelineno-15-43" name="__codelineno-15-43" href="#__codelineno-15-43"></a>│   │           ├── depth-merge
+<a id="__codelineno-15-44" name="__codelineno-15-44" href="#__codelineno-15-44"></a>│   │           ├── despeckle
+<a id="__codelineno-15-45" name="__codelineno-15-45" href="#__codelineno-15-45"></a>│   │           ├── destripe
+<a id="__codelineno-15-46" name="__codelineno-15-46" href="#__codelineno-15-46"></a>│   │           ├── edge-dog
+<a id="__codelineno-15-47" name="__codelineno-15-47" href="#__codelineno-15-47"></a>│   │           ├── emboss
+<a id="__codelineno-15-48" name="__codelineno-15-48" href="#__codelineno-15-48"></a>│   │           ├── file-bmp
+<a id="__codelineno-15-49" name="__codelineno-15-49" href="#__codelineno-15-49"></a>│   │           ├── file-cel
+<a id="__codelineno-15-50" name="__codelineno-15-50" href="#__codelineno-15-50"></a>│   │           ├── file-compressor
+<a id="__codelineno-15-51" name="__codelineno-15-51" href="#__codelineno-15-51"></a>│   │           ├── file-csource
+<a id="__codelineno-15-52" name="__codelineno-15-52" href="#__codelineno-15-52"></a>│   │           ├── file-darktable
+<a id="__codelineno-15-53" name="__codelineno-15-53" href="#__codelineno-15-53"></a>│   │           ├── file-dds
+<a id="__codelineno-15-54" name="__codelineno-15-54" href="#__codelineno-15-54"></a>│   │           ├── file-desktop-link
+<a id="__codelineno-15-55" name="__codelineno-15-55" href="#__codelineno-15-55"></a>│   │           ├── file-dicom
+<a id="__codelineno-15-56" name="__codelineno-15-56" href="#__codelineno-15-56"></a>│   │           ├── file-faxg3
+<a id="__codelineno-15-57" name="__codelineno-15-57" href="#__codelineno-15-57"></a>│   │           ├── file-fits
+<a id="__codelineno-15-58" name="__codelineno-15-58" href="#__codelineno-15-58"></a>│   │           ├── file-fli
+<a id="__codelineno-15-59" name="__codelineno-15-59" href="#__codelineno-15-59"></a>│   │           ├── file-gbr
+<a id="__codelineno-15-60" name="__codelineno-15-60" href="#__codelineno-15-60"></a>│   │           ├── file-gegl
+<a id="__codelineno-15-61" name="__codelineno-15-61" href="#__codelineno-15-61"></a>│   │           ├── file-gif-load
+<a id="__codelineno-15-62" name="__codelineno-15-62" href="#__codelineno-15-62"></a>│   │           ├── file-gif-save
+<a id="__codelineno-15-63" name="__codelineno-15-63" href="#__codelineno-15-63"></a>│   │           ├── file-gih
+<a id="__codelineno-15-64" name="__codelineno-15-64" href="#__codelineno-15-64"></a>│   │           ├── file-glob
+<a id="__codelineno-15-65" name="__codelineno-15-65" href="#__codelineno-15-65"></a>│   │           ├── file-header
+<a id="__codelineno-15-66" name="__codelineno-15-66" href="#__codelineno-15-66"></a>│   │           ├── file-html-table
+<a id="__codelineno-15-67" name="__codelineno-15-67" href="#__codelineno-15-67"></a>│   │           ├── file-ico
+<a id="__codelineno-15-68" name="__codelineno-15-68" href="#__codelineno-15-68"></a>│   │           ├── file-jpeg
+<a id="__codelineno-15-69" name="__codelineno-15-69" href="#__codelineno-15-69"></a>│   │           ├── file-pat
+<a id="__codelineno-15-70" name="__codelineno-15-70" href="#__codelineno-15-70"></a>│   │           ├── file-pcx
+<a id="__codelineno-15-71" name="__codelineno-15-71" href="#__codelineno-15-71"></a>│   │           ├── file-pdf-load
+<a id="__codelineno-15-72" name="__codelineno-15-72" href="#__codelineno-15-72"></a>│   │           ├── file-pdf-save
+<a id="__codelineno-15-73" name="__codelineno-15-73" href="#__codelineno-15-73"></a>│   │           ├── file-pix
+<a id="__codelineno-15-74" name="__codelineno-15-74" href="#__codelineno-15-74"></a>│   │           ├── file-png
+<a id="__codelineno-15-75" name="__codelineno-15-75" href="#__codelineno-15-75"></a>│   │           ├── file-pnm
+<a id="__codelineno-15-76" name="__codelineno-15-76" href="#__codelineno-15-76"></a>│   │           ├── file-psd
+<a id="__codelineno-15-77" name="__codelineno-15-77" href="#__codelineno-15-77"></a>│   │           ├── file-psp
+<a id="__codelineno-15-78" name="__codelineno-15-78" href="#__codelineno-15-78"></a>│   │           ├── file-raw-data
+<a id="__codelineno-15-79" name="__codelineno-15-79" href="#__codelineno-15-79"></a>│   │           ├── file-raw-placeholder
+<a id="__codelineno-15-80" name="__codelineno-15-80" href="#__codelineno-15-80"></a>│   │           ├── file-rawtherapee
+<a id="__codelineno-15-81" name="__codelineno-15-81" href="#__codelineno-15-81"></a>│   │           ├── file-sgi
+<a id="__codelineno-15-82" name="__codelineno-15-82" href="#__codelineno-15-82"></a>│   │           ├── file-sunras
+<a id="__codelineno-15-83" name="__codelineno-15-83" href="#__codelineno-15-83"></a>│   │           ├── file-svg
+<a id="__codelineno-15-84" name="__codelineno-15-84" href="#__codelineno-15-84"></a>│   │           ├── file-tga
+<a id="__codelineno-15-85" name="__codelineno-15-85" href="#__codelineno-15-85"></a>│   │           ├── file-tiff
+<a id="__codelineno-15-86" name="__codelineno-15-86" href="#__codelineno-15-86"></a>│   │           ├── file-xbm
+<a id="__codelineno-15-87" name="__codelineno-15-87" href="#__codelineno-15-87"></a>│   │           ├── file-xmc
+<a id="__codelineno-15-88" name="__codelineno-15-88" href="#__codelineno-15-88"></a>│   │           ├── file-xwd
+<a id="__codelineno-15-89" name="__codelineno-15-89" href="#__codelineno-15-89"></a>│   │           ├── film
+<a id="__codelineno-15-90" name="__codelineno-15-90" href="#__codelineno-15-90"></a>│   │           ├── filter-pack
+<a id="__codelineno-15-91" name="__codelineno-15-91" href="#__codelineno-15-91"></a>│   │           ├── flame
+<a id="__codelineno-15-92" name="__codelineno-15-92" href="#__codelineno-15-92"></a>│   │           ├── fractal-explorer
+<a id="__codelineno-15-93" name="__codelineno-15-93" href="#__codelineno-15-93"></a>│   │           ├── fractal-trace
+<a id="__codelineno-15-94" name="__codelineno-15-94" href="#__codelineno-15-94"></a>│   │           ├── gfig
+<a id="__codelineno-15-95" name="__codelineno-15-95" href="#__codelineno-15-95"></a>│   │           ├── gimpressionist
+<a id="__codelineno-15-96" name="__codelineno-15-96" href="#__codelineno-15-96"></a>│   │           ├── goat-exercise
+<a id="__codelineno-15-97" name="__codelineno-15-97" href="#__codelineno-15-97"></a>│   │           ├── gradient-flare
+<a id="__codelineno-15-98" name="__codelineno-15-98" href="#__codelineno-15-98"></a>│   │           ├── gradient-map
+<a id="__codelineno-15-99" name="__codelineno-15-99" href="#__codelineno-15-99"></a>│   │           ├── grid
+<a id="__codelineno-15-100" name="__codelineno-15-100" href="#__codelineno-15-100"></a>│   │           ├── guillotine
+<a id="__codelineno-15-101" name="__codelineno-15-101" href="#__codelineno-15-101"></a>│   │           ├── help
+<a id="__codelineno-15-102" name="__codelineno-15-102" href="#__codelineno-15-102"></a>│   │           ├── hot
+<a id="__codelineno-15-103" name="__codelineno-15-103" href="#__codelineno-15-103"></a>│   │           ├── ifs-compose
+<a id="__codelineno-15-104" name="__codelineno-15-104" href="#__codelineno-15-104"></a>│   │           ├── imagemap
+<a id="__codelineno-15-105" name="__codelineno-15-105" href="#__codelineno-15-105"></a>│   │           ├── jigsaw
+<a id="__codelineno-15-106" name="__codelineno-15-106" href="#__codelineno-15-106"></a>│   │           ├── lighting
+<a id="__codelineno-15-107" name="__codelineno-15-107" href="#__codelineno-15-107"></a>│   │           ├── mail
+<a id="__codelineno-15-108" name="__codelineno-15-108" href="#__codelineno-15-108"></a>│   │           ├── map-object
+<a id="__codelineno-15-109" name="__codelineno-15-109" href="#__codelineno-15-109"></a>│   │           ├── max-rgb
+<a id="__codelineno-15-110" name="__codelineno-15-110" href="#__codelineno-15-110"></a>│   │           ├── metadata-editor
+<a id="__codelineno-15-111" name="__codelineno-15-111" href="#__codelineno-15-111"></a>│   │           ├── metadata-viewer
+<a id="__codelineno-15-112" name="__codelineno-15-112" href="#__codelineno-15-112"></a>│   │           ├── nl-filter
+<a id="__codelineno-15-113" name="__codelineno-15-113" href="#__codelineno-15-113"></a>│   │           ├── pagecurl
+<a id="__codelineno-15-114" name="__codelineno-15-114" href="#__codelineno-15-114"></a>│   │           ├── photocopy
+<a id="__codelineno-15-115" name="__codelineno-15-115" href="#__codelineno-15-115"></a>│   │           ├── plugin-browser
+<a id="__codelineno-15-116" name="__codelineno-15-116" href="#__codelineno-15-116"></a>│   │           ├── print
+<a id="__codelineno-15-117" name="__codelineno-15-117" href="#__codelineno-15-117"></a>│   │           ├── procedure-browser
+<a id="__codelineno-15-118" name="__codelineno-15-118" href="#__codelineno-15-118"></a>│   │           ├── qbist
+<a id="__codelineno-15-119" name="__codelineno-15-119" href="#__codelineno-15-119"></a>│   │           ├── sample-colorize
+<a id="__codelineno-15-120" name="__codelineno-15-120" href="#__codelineno-15-120"></a>│   │           ├── screenshot
+<a id="__codelineno-15-121" name="__codelineno-15-121" href="#__codelineno-15-121"></a>│   │           ├── script-fu
+<a id="__codelineno-15-122" name="__codelineno-15-122" href="#__codelineno-15-122"></a>│   │           ├── selection-to-path
+<a id="__codelineno-15-123" name="__codelineno-15-123" href="#__codelineno-15-123"></a>│   │           ├── sharpen
+<a id="__codelineno-15-124" name="__codelineno-15-124" href="#__codelineno-15-124"></a>│   │           ├── smooth-palette
+<a id="__codelineno-15-125" name="__codelineno-15-125" href="#__codelineno-15-125"></a>│   │           ├── softglow
+<a id="__codelineno-15-126" name="__codelineno-15-126" href="#__codelineno-15-126"></a>│   │           ├── sparkle
+<a id="__codelineno-15-127" name="__codelineno-15-127" href="#__codelineno-15-127"></a>│   │           ├── sphere-designer
+<a id="__codelineno-15-128" name="__codelineno-15-128" href="#__codelineno-15-128"></a>│   │           ├── tile
+<a id="__codelineno-15-129" name="__codelineno-15-129" href="#__codelineno-15-129"></a>│   │           ├── tile-small
+<a id="__codelineno-15-130" name="__codelineno-15-130" href="#__codelineno-15-130"></a>│   │           ├── unit-editor
+<a id="__codelineno-15-131" name="__codelineno-15-131" href="#__codelineno-15-131"></a>│   │           ├── van-gogh-lic
+<a id="__codelineno-15-132" name="__codelineno-15-132" href="#__codelineno-15-132"></a>│   │           ├── warp
+<a id="__codelineno-15-133" name="__codelineno-15-133" href="#__codelineno-15-133"></a>│   │           ├── wavelet-decompose
+<a id="__codelineno-15-134" name="__codelineno-15-134" href="#__codelineno-15-134"></a>│   │           └── web-browser
+<a id="__codelineno-15-135" name="__codelineno-15-135" href="#__codelineno-15-135"></a>│   ├── pkgconfig
+<a id="__codelineno-15-136" name="__codelineno-15-136" href="#__codelineno-15-136"></a>│   ├── python2.7
+<a id="__codelineno-15-137" name="__codelineno-15-137" href="#__codelineno-15-137"></a>│   │   ├── dist-packages
+<a id="__codelineno-15-138" name="__codelineno-15-138" href="#__codelineno-15-138"></a>│   │   └── site-packages
+<a id="__codelineno-15-139" name="__codelineno-15-139" href="#__codelineno-15-139"></a>│   ├── python3.7
+<a id="__codelineno-15-140" name="__codelineno-15-140" href="#__codelineno-15-140"></a>│   │   └── dist-packages
+<a id="__codelineno-15-141" name="__codelineno-15-141" href="#__codelineno-15-141"></a>│   └── python3.8
+<a id="__codelineno-15-142" name="__codelineno-15-142" href="#__codelineno-15-142"></a>│       └── dist-packages
+<a id="__codelineno-15-143" name="__codelineno-15-143" href="#__codelineno-15-143"></a>├── libexec
+<a id="__codelineno-15-144" name="__codelineno-15-144" href="#__codelineno-15-144"></a>├── man -&gt; share/man
+<a id="__codelineno-15-145" name="__codelineno-15-145" href="#__codelineno-15-145"></a>├── sbin
+<a id="__codelineno-15-146" name="__codelineno-15-146" href="#__codelineno-15-146"></a>├── share
+<a id="__codelineno-15-147" name="__codelineno-15-147" href="#__codelineno-15-147"></a>│   ├── aclocal
+<a id="__codelineno-15-148" name="__codelineno-15-148" href="#__codelineno-15-148"></a>│   ├── applications
+<a id="__codelineno-15-149" name="__codelineno-15-149" href="#__codelineno-15-149"></a>│   ├── ca-certificates
+<a id="__codelineno-15-150" name="__codelineno-15-150" href="#__codelineno-15-150"></a>│   ├── fonts
+<a id="__codelineno-15-151" name="__codelineno-15-151" href="#__codelineno-15-151"></a>│   ├── gimp
+<a id="__codelineno-15-152" name="__codelineno-15-152" href="#__codelineno-15-152"></a>│   │   └── 2.0
+<a id="__codelineno-15-153" name="__codelineno-15-153" href="#__codelineno-15-153"></a>│   │       ├── brushes
+<a id="__codelineno-15-154" name="__codelineno-15-154" href="#__codelineno-15-154"></a>│   │       │   ├── Basic
+<a id="__codelineno-15-155" name="__codelineno-15-155" href="#__codelineno-15-155"></a>│   │       │   ├── Fun
+<a id="__codelineno-15-156" name="__codelineno-15-156" href="#__codelineno-15-156"></a>│   │       │   ├── gimp-obsolete-files
+<a id="__codelineno-15-157" name="__codelineno-15-157" href="#__codelineno-15-157"></a>│   │       │   ├── Legacy
+<a id="__codelineno-15-158" name="__codelineno-15-158" href="#__codelineno-15-158"></a>│   │       │   ├── Media
+<a id="__codelineno-15-159" name="__codelineno-15-159" href="#__codelineno-15-159"></a>│   │       │   ├── Sketch
+<a id="__codelineno-15-160" name="__codelineno-15-160" href="#__codelineno-15-160"></a>│   │       │   ├── Splatters
+<a id="__codelineno-15-161" name="__codelineno-15-161" href="#__codelineno-15-161"></a>│   │       │   └── Texture
+<a id="__codelineno-15-162" name="__codelineno-15-162" href="#__codelineno-15-162"></a>│   │       ├── dynamics
+<a id="__codelineno-15-163" name="__codelineno-15-163" href="#__codelineno-15-163"></a>│   │       │   ├── Basic
+<a id="__codelineno-15-164" name="__codelineno-15-164" href="#__codelineno-15-164"></a>│   │       │   └── FX
+<a id="__codelineno-15-165" name="__codelineno-15-165" href="#__codelineno-15-165"></a>│   │       ├── file-raw
+<a id="__codelineno-15-166" name="__codelineno-15-166" href="#__codelineno-15-166"></a>│   │       ├── fonts
+<a id="__codelineno-15-167" name="__codelineno-15-167" href="#__codelineno-15-167"></a>│   │       ├── fractalexplorer
+<a id="__codelineno-15-168" name="__codelineno-15-168" href="#__codelineno-15-168"></a>│   │       ├── gfig
+<a id="__codelineno-15-169" name="__codelineno-15-169" href="#__codelineno-15-169"></a>│   │       ├── gflare
+<a id="__codelineno-15-170" name="__codelineno-15-170" href="#__codelineno-15-170"></a>│   │       ├── gimpressionist
+<a id="__codelineno-15-171" name="__codelineno-15-171" href="#__codelineno-15-171"></a>│   │       │   ├── Brushes
+<a id="__codelineno-15-172" name="__codelineno-15-172" href="#__codelineno-15-172"></a>│   │       │   ├── Paper
+<a id="__codelineno-15-173" name="__codelineno-15-173" href="#__codelineno-15-173"></a>│   │       │   └── Presets
+<a id="__codelineno-15-174" name="__codelineno-15-174" href="#__codelineno-15-174"></a>│   │       ├── gradients
+<a id="__codelineno-15-175" name="__codelineno-15-175" href="#__codelineno-15-175"></a>│   │       │   └── gimp-obsolete-files
+<a id="__codelineno-15-176" name="__codelineno-15-176" href="#__codelineno-15-176"></a>│   │       ├── icons
+<a id="__codelineno-15-177" name="__codelineno-15-177" href="#__codelineno-15-177"></a>│   │       │   ├── Color
+<a id="__codelineno-15-178" name="__codelineno-15-178" href="#__codelineno-15-178"></a>│   │       │   │   ├── 24x24
+<a id="__codelineno-15-179" name="__codelineno-15-179" href="#__codelineno-15-179"></a>│   │       │   │   │   └── apps
+<a id="__codelineno-15-180" name="__codelineno-15-180" href="#__codelineno-15-180"></a>│   │       │   │   ├── 64x64
+<a id="__codelineno-15-181" name="__codelineno-15-181" href="#__codelineno-15-181"></a>│   │       │   │   │   └── apps
+<a id="__codelineno-15-182" name="__codelineno-15-182" href="#__codelineno-15-182"></a>│   │       │   │   └── scalable
+<a id="__codelineno-15-183" name="__codelineno-15-183" href="#__codelineno-15-183"></a>│   │       │   │       └── apps
+<a id="__codelineno-15-184" name="__codelineno-15-184" href="#__codelineno-15-184"></a>│   │       │   ├── hicolor
+<a id="__codelineno-15-185" name="__codelineno-15-185" href="#__codelineno-15-185"></a>│   │       │   ├── Legacy
+<a id="__codelineno-15-186" name="__codelineno-15-186" href="#__codelineno-15-186"></a>│   │       │   │   ├── 128x128
+<a id="__codelineno-15-187" name="__codelineno-15-187" href="#__codelineno-15-187"></a>│   │       │   │   │   └── apps
+<a id="__codelineno-15-188" name="__codelineno-15-188" href="#__codelineno-15-188"></a>│   │       │   │   ├── 12x12
+<a id="__codelineno-15-189" name="__codelineno-15-189" href="#__codelineno-15-189"></a>│   │       │   │   │   └── apps
+<a id="__codelineno-15-190" name="__codelineno-15-190" href="#__codelineno-15-190"></a>│   │       │   │   ├── 16x16
+<a id="__codelineno-15-191" name="__codelineno-15-191" href="#__codelineno-15-191"></a>│   │       │   │   │   └── apps
+<a id="__codelineno-15-192" name="__codelineno-15-192" href="#__codelineno-15-192"></a>│   │       │   │   ├── 18x18
+<a id="__codelineno-15-193" name="__codelineno-15-193" href="#__codelineno-15-193"></a>│   │       │   │   │   └── apps
+<a id="__codelineno-15-194" name="__codelineno-15-194" href="#__codelineno-15-194"></a>│   │       │   │   ├── 192x192
+<a id="__codelineno-15-195" name="__codelineno-15-195" href="#__codelineno-15-195"></a>│   │       │   │   │   └── apps
+<a id="__codelineno-15-196" name="__codelineno-15-196" href="#__codelineno-15-196"></a>│   │       │   │   ├── 20x20
+<a id="__codelineno-15-197" name="__codelineno-15-197" href="#__codelineno-15-197"></a>│   │       │   │   │   └── apps
+<a id="__codelineno-15-198" name="__codelineno-15-198" href="#__codelineno-15-198"></a>│   │       │   │   ├── 22x22
+<a id="__codelineno-15-199" name="__codelineno-15-199" href="#__codelineno-15-199"></a>│   │       │   │   │   ├── apps
+<a id="__codelineno-15-200" name="__codelineno-15-200" href="#__codelineno-15-200"></a>│   │       │   │   │   └── tools
+<a id="__codelineno-15-201" name="__codelineno-15-201" href="#__codelineno-15-201"></a>│   │       │   │   ├── 24x24
+<a id="__codelineno-15-202" name="__codelineno-15-202" href="#__codelineno-15-202"></a>│   │       │   │   │   └── apps
+<a id="__codelineno-15-203" name="__codelineno-15-203" href="#__codelineno-15-203"></a>│   │       │   │   ├── 256x256
+<a id="__codelineno-15-204" name="__codelineno-15-204" href="#__codelineno-15-204"></a>│   │       │   │   │   └── apps
+<a id="__codelineno-15-205" name="__codelineno-15-205" href="#__codelineno-15-205"></a>│   │       │   │   ├── 32x32
+<a id="__codelineno-15-206" name="__codelineno-15-206" href="#__codelineno-15-206"></a>│   │       │   │   │   └── apps
+<a id="__codelineno-15-207" name="__codelineno-15-207" href="#__codelineno-15-207"></a>│   │       │   │   ├── 48x48
+<a id="__codelineno-15-208" name="__codelineno-15-208" href="#__codelineno-15-208"></a>│   │       │   │   │   └── apps
+<a id="__codelineno-15-209" name="__codelineno-15-209" href="#__codelineno-15-209"></a>│   │       │   │   ├── 64x64
+<a id="__codelineno-15-210" name="__codelineno-15-210" href="#__codelineno-15-210"></a>│   │       │   │   │   └── apps
+<a id="__codelineno-15-211" name="__codelineno-15-211" href="#__codelineno-15-211"></a>│   │       │   │   └── 96x96
+<a id="__codelineno-15-212" name="__codelineno-15-212" href="#__codelineno-15-212"></a>│   │       │   │       └── apps
+<a id="__codelineno-15-213" name="__codelineno-15-213" href="#__codelineno-15-213"></a>│   │       │   ├── Symbolic
+<a id="__codelineno-15-214" name="__codelineno-15-214" href="#__codelineno-15-214"></a>│   │       │   │   ├── 24x24
+<a id="__codelineno-15-215" name="__codelineno-15-215" href="#__codelineno-15-215"></a>│   │       │   │   │   └── apps
+<a id="__codelineno-15-216" name="__codelineno-15-216" href="#__codelineno-15-216"></a>│   │       │   │   ├── 64x64
+<a id="__codelineno-15-217" name="__codelineno-15-217" href="#__codelineno-15-217"></a>│   │       │   │   │   └── apps
+<a id="__codelineno-15-218" name="__codelineno-15-218" href="#__codelineno-15-218"></a>│   │       │   │   └── scalable
+<a id="__codelineno-15-219" name="__codelineno-15-219" href="#__codelineno-15-219"></a>│   │       │   │       └── apps
+<a id="__codelineno-15-220" name="__codelineno-15-220" href="#__codelineno-15-220"></a>│   │       │   ├── Symbolic-High-Contrast
+<a id="__codelineno-15-221" name="__codelineno-15-221" href="#__codelineno-15-221"></a>│   │       │   │   ├── 24x24
+<a id="__codelineno-15-222" name="__codelineno-15-222" href="#__codelineno-15-222"></a>│   │       │   │   │   └── apps
+<a id="__codelineno-15-223" name="__codelineno-15-223" href="#__codelineno-15-223"></a>│   │       │   │   ├── 64x64
+<a id="__codelineno-15-224" name="__codelineno-15-224" href="#__codelineno-15-224"></a>│   │       │   │   │   └── apps
+<a id="__codelineno-15-225" name="__codelineno-15-225" href="#__codelineno-15-225"></a>│   │       │   │   └── scalable
+<a id="__codelineno-15-226" name="__codelineno-15-226" href="#__codelineno-15-226"></a>│   │       │   │       └── apps
+<a id="__codelineno-15-227" name="__codelineno-15-227" href="#__codelineno-15-227"></a>│   │       │   ├── Symbolic-Inverted
+<a id="__codelineno-15-228" name="__codelineno-15-228" href="#__codelineno-15-228"></a>│   │       │   │   ├── 24x24
+<a id="__codelineno-15-229" name="__codelineno-15-229" href="#__codelineno-15-229"></a>│   │       │   │   │   └── apps
+<a id="__codelineno-15-230" name="__codelineno-15-230" href="#__codelineno-15-230"></a>│   │       │   │   ├── 64x64
+<a id="__codelineno-15-231" name="__codelineno-15-231" href="#__codelineno-15-231"></a>│   │       │   │   │   └── apps
+<a id="__codelineno-15-232" name="__codelineno-15-232" href="#__codelineno-15-232"></a>│   │       │   │   └── scalable
+<a id="__codelineno-15-233" name="__codelineno-15-233" href="#__codelineno-15-233"></a>│   │       │   │       └── apps
+<a id="__codelineno-15-234" name="__codelineno-15-234" href="#__codelineno-15-234"></a>│   │       │   └── Symbolic-Inverted-High-Contrast
+<a id="__codelineno-15-235" name="__codelineno-15-235" href="#__codelineno-15-235"></a>│   │       │       ├── 24x24
+<a id="__codelineno-15-236" name="__codelineno-15-236" href="#__codelineno-15-236"></a>│   │       │       │   └── apps
+<a id="__codelineno-15-237" name="__codelineno-15-237" href="#__codelineno-15-237"></a>│   │       │       ├── 64x64
+<a id="__codelineno-15-238" name="__codelineno-15-238" href="#__codelineno-15-238"></a>│   │       │       │   └── apps
+<a id="__codelineno-15-239" name="__codelineno-15-239" href="#__codelineno-15-239"></a>│   │       │       └── scalable
+<a id="__codelineno-15-240" name="__codelineno-15-240" href="#__codelineno-15-240"></a>│   │       │           └── apps
+<a id="__codelineno-15-241" name="__codelineno-15-241" href="#__codelineno-15-241"></a>│   │       ├── images
+<a id="__codelineno-15-242" name="__codelineno-15-242" href="#__codelineno-15-242"></a>│   │       ├── menus
+<a id="__codelineno-15-243" name="__codelineno-15-243" href="#__codelineno-15-243"></a>│   │       ├── palettes
+<a id="__codelineno-15-244" name="__codelineno-15-244" href="#__codelineno-15-244"></a>│   │       ├── patterns
+<a id="__codelineno-15-245" name="__codelineno-15-245" href="#__codelineno-15-245"></a>│   │       │   ├── Animal
+<a id="__codelineno-15-246" name="__codelineno-15-246" href="#__codelineno-15-246"></a>│   │       │   ├── Fabric
+<a id="__codelineno-15-247" name="__codelineno-15-247" href="#__codelineno-15-247"></a>│   │       │   ├── Food
+<a id="__codelineno-15-248" name="__codelineno-15-248" href="#__codelineno-15-248"></a>│   │       │   ├── Legacy
+<a id="__codelineno-15-249" name="__codelineno-15-249" href="#__codelineno-15-249"></a>│   │       │   ├── Paper
+<a id="__codelineno-15-250" name="__codelineno-15-250" href="#__codelineno-15-250"></a>│   │       │   ├── Plant
+<a id="__codelineno-15-251" name="__codelineno-15-251" href="#__codelineno-15-251"></a>│   │       │   ├── Sky
+<a id="__codelineno-15-252" name="__codelineno-15-252" href="#__codelineno-15-252"></a>│   │       │   ├── Stone
+<a id="__codelineno-15-253" name="__codelineno-15-253" href="#__codelineno-15-253"></a>│   │       │   ├── Water
+<a id="__codelineno-15-254" name="__codelineno-15-254" href="#__codelineno-15-254"></a>│   │       │   └── Wood
+<a id="__codelineno-15-255" name="__codelineno-15-255" href="#__codelineno-15-255"></a>│   │       ├── scripts
+<a id="__codelineno-15-256" name="__codelineno-15-256" href="#__codelineno-15-256"></a>│   │       │   └── images
+<a id="__codelineno-15-257" name="__codelineno-15-257" href="#__codelineno-15-257"></a>│   │       ├── tags
+<a id="__codelineno-15-258" name="__codelineno-15-258" href="#__codelineno-15-258"></a>│   │       ├── themes
+<a id="__codelineno-15-259" name="__codelineno-15-259" href="#__codelineno-15-259"></a>│   │       │   ├── Dark
+<a id="__codelineno-15-260" name="__codelineno-15-260" href="#__codelineno-15-260"></a>│   │       │   │   └── ui
+<a id="__codelineno-15-261" name="__codelineno-15-261" href="#__codelineno-15-261"></a>│   │       │   ├── Gray
+<a id="__codelineno-15-262" name="__codelineno-15-262" href="#__codelineno-15-262"></a>│   │       │   │   └── ui
+<a id="__codelineno-15-263" name="__codelineno-15-263" href="#__codelineno-15-263"></a>│   │       │   ├── Light
+<a id="__codelineno-15-264" name="__codelineno-15-264" href="#__codelineno-15-264"></a>│   │       │   │   └── ui
+<a id="__codelineno-15-265" name="__codelineno-15-265" href="#__codelineno-15-265"></a>│   │       │   └── System
+<a id="__codelineno-15-266" name="__codelineno-15-266" href="#__codelineno-15-266"></a>│   │       ├── tips
+<a id="__codelineno-15-267" name="__codelineno-15-267" href="#__codelineno-15-267"></a>│   │       ├── tool-presets
+<a id="__codelineno-15-268" name="__codelineno-15-268" href="#__codelineno-15-268"></a>│   │       │   ├── Crop
+<a id="__codelineno-15-269" name="__codelineno-15-269" href="#__codelineno-15-269"></a>│   │       │   ├── FX
+<a id="__codelineno-15-270" name="__codelineno-15-270" href="#__codelineno-15-270"></a>│   │       │   ├── Paint
+<a id="__codelineno-15-271" name="__codelineno-15-271" href="#__codelineno-15-271"></a>│   │       │   ├── Selection
+<a id="__codelineno-15-272" name="__codelineno-15-272" href="#__codelineno-15-272"></a>│   │       │   └── Sketch
+<a id="__codelineno-15-273" name="__codelineno-15-273" href="#__codelineno-15-273"></a>│   │       └── ui
+<a id="__codelineno-15-274" name="__codelineno-15-274" href="#__codelineno-15-274"></a>│   │           └── plug-ins
+<a id="__codelineno-15-275" name="__codelineno-15-275" href="#__codelineno-15-275"></a>│   ├── gtk-doc
+<a id="__codelineno-15-276" name="__codelineno-15-276" href="#__codelineno-15-276"></a>│   │   └── html
+<a id="__codelineno-15-277" name="__codelineno-15-277" href="#__codelineno-15-277"></a>│   │       ├── libgimp
+<a id="__codelineno-15-278" name="__codelineno-15-278" href="#__codelineno-15-278"></a>│   │       ├── libgimpbase
+<a id="__codelineno-15-279" name="__codelineno-15-279" href="#__codelineno-15-279"></a>│   │       ├── libgimpcolor
+<a id="__codelineno-15-280" name="__codelineno-15-280" href="#__codelineno-15-280"></a>│   │       ├── libgimpconfig
+<a id="__codelineno-15-281" name="__codelineno-15-281" href="#__codelineno-15-281"></a>│   │       ├── libgimpmath
+<a id="__codelineno-15-282" name="__codelineno-15-282" href="#__codelineno-15-282"></a>│   │       ├── libgimpmodule
+<a id="__codelineno-15-283" name="__codelineno-15-283" href="#__codelineno-15-283"></a>│   │       ├── libgimpthumb
+<a id="__codelineno-15-284" name="__codelineno-15-284" href="#__codelineno-15-284"></a>│   │       └── libgimpwidgets
+<a id="__codelineno-15-285" name="__codelineno-15-285" href="#__codelineno-15-285"></a>│   ├── icons
+<a id="__codelineno-15-286" name="__codelineno-15-286" href="#__codelineno-15-286"></a>│   │   └── hicolor
+<a id="__codelineno-15-287" name="__codelineno-15-287" href="#__codelineno-15-287"></a>│   │       ├── 16x16
+<a id="__codelineno-15-288" name="__codelineno-15-288" href="#__codelineno-15-288"></a>│   │       │   └── apps
+<a id="__codelineno-15-289" name="__codelineno-15-289" href="#__codelineno-15-289"></a>│   │       ├── 22x22
+<a id="__codelineno-15-290" name="__codelineno-15-290" href="#__codelineno-15-290"></a>│   │       │   └── apps
+<a id="__codelineno-15-291" name="__codelineno-15-291" href="#__codelineno-15-291"></a>│   │       ├── 24x24
+<a id="__codelineno-15-292" name="__codelineno-15-292" href="#__codelineno-15-292"></a>│   │       │   └── apps
+<a id="__codelineno-15-293" name="__codelineno-15-293" href="#__codelineno-15-293"></a>│   │       ├── 256x256
+<a id="__codelineno-15-294" name="__codelineno-15-294" href="#__codelineno-15-294"></a>│   │       │   └── apps
+<a id="__codelineno-15-295" name="__codelineno-15-295" href="#__codelineno-15-295"></a>│   │       ├── 32x32
+<a id="__codelineno-15-296" name="__codelineno-15-296" href="#__codelineno-15-296"></a>│   │       │   └── apps
+<a id="__codelineno-15-297" name="__codelineno-15-297" href="#__codelineno-15-297"></a>│   │       └── 48x48
+<a id="__codelineno-15-298" name="__codelineno-15-298" href="#__codelineno-15-298"></a>│   │           └── apps
+<a id="__codelineno-15-299" name="__codelineno-15-299" href="#__codelineno-15-299"></a>│   ├── locale
+<a id="__codelineno-15-300" name="__codelineno-15-300" href="#__codelineno-15-300"></a>│   │   ├── am
+<a id="__codelineno-15-301" name="__codelineno-15-301" href="#__codelineno-15-301"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-302" name="__codelineno-15-302" href="#__codelineno-15-302"></a>│   │   ├── ar
+<a id="__codelineno-15-303" name="__codelineno-15-303" href="#__codelineno-15-303"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-304" name="__codelineno-15-304" href="#__codelineno-15-304"></a>│   │   ├── ast
+<a id="__codelineno-15-305" name="__codelineno-15-305" href="#__codelineno-15-305"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-306" name="__codelineno-15-306" href="#__codelineno-15-306"></a>│   │   ├── az
+<a id="__codelineno-15-307" name="__codelineno-15-307" href="#__codelineno-15-307"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-308" name="__codelineno-15-308" href="#__codelineno-15-308"></a>│   │   ├── be
+<a id="__codelineno-15-309" name="__codelineno-15-309" href="#__codelineno-15-309"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-310" name="__codelineno-15-310" href="#__codelineno-15-310"></a>│   │   ├── bg
+<a id="__codelineno-15-311" name="__codelineno-15-311" href="#__codelineno-15-311"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-312" name="__codelineno-15-312" href="#__codelineno-15-312"></a>│   │   ├── br
+<a id="__codelineno-15-313" name="__codelineno-15-313" href="#__codelineno-15-313"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-314" name="__codelineno-15-314" href="#__codelineno-15-314"></a>│   │   ├── bs
+<a id="__codelineno-15-315" name="__codelineno-15-315" href="#__codelineno-15-315"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-316" name="__codelineno-15-316" href="#__codelineno-15-316"></a>│   │   ├── ca
+<a id="__codelineno-15-317" name="__codelineno-15-317" href="#__codelineno-15-317"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-318" name="__codelineno-15-318" href="#__codelineno-15-318"></a>│   │   ├── ca@valencia
+<a id="__codelineno-15-319" name="__codelineno-15-319" href="#__codelineno-15-319"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-320" name="__codelineno-15-320" href="#__codelineno-15-320"></a>│   │   ├── cs
+<a id="__codelineno-15-321" name="__codelineno-15-321" href="#__codelineno-15-321"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-322" name="__codelineno-15-322" href="#__codelineno-15-322"></a>│   │   ├── csb
+<a id="__codelineno-15-323" name="__codelineno-15-323" href="#__codelineno-15-323"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-324" name="__codelineno-15-324" href="#__codelineno-15-324"></a>│   │   ├── da
+<a id="__codelineno-15-325" name="__codelineno-15-325" href="#__codelineno-15-325"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-326" name="__codelineno-15-326" href="#__codelineno-15-326"></a>│   │   ├── de
+<a id="__codelineno-15-327" name="__codelineno-15-327" href="#__codelineno-15-327"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-328" name="__codelineno-15-328" href="#__codelineno-15-328"></a>│   │   ├── dz
+<a id="__codelineno-15-329" name="__codelineno-15-329" href="#__codelineno-15-329"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-330" name="__codelineno-15-330" href="#__codelineno-15-330"></a>│   │   ├── el
+<a id="__codelineno-15-331" name="__codelineno-15-331" href="#__codelineno-15-331"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-332" name="__codelineno-15-332" href="#__codelineno-15-332"></a>│   │   ├── en_CA
+<a id="__codelineno-15-333" name="__codelineno-15-333" href="#__codelineno-15-333"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-334" name="__codelineno-15-334" href="#__codelineno-15-334"></a>│   │   ├── en_GB
+<a id="__codelineno-15-335" name="__codelineno-15-335" href="#__codelineno-15-335"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-336" name="__codelineno-15-336" href="#__codelineno-15-336"></a>│   │   ├── eo
+<a id="__codelineno-15-337" name="__codelineno-15-337" href="#__codelineno-15-337"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-338" name="__codelineno-15-338" href="#__codelineno-15-338"></a>│   │   ├── es
+<a id="__codelineno-15-339" name="__codelineno-15-339" href="#__codelineno-15-339"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-340" name="__codelineno-15-340" href="#__codelineno-15-340"></a>│   │   ├── et
+<a id="__codelineno-15-341" name="__codelineno-15-341" href="#__codelineno-15-341"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-342" name="__codelineno-15-342" href="#__codelineno-15-342"></a>│   │   ├── eu
+<a id="__codelineno-15-343" name="__codelineno-15-343" href="#__codelineno-15-343"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-344" name="__codelineno-15-344" href="#__codelineno-15-344"></a>│   │   ├── fa
+<a id="__codelineno-15-345" name="__codelineno-15-345" href="#__codelineno-15-345"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-346" name="__codelineno-15-346" href="#__codelineno-15-346"></a>│   │   ├── fi
+<a id="__codelineno-15-347" name="__codelineno-15-347" href="#__codelineno-15-347"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-348" name="__codelineno-15-348" href="#__codelineno-15-348"></a>│   │   ├── fr
+<a id="__codelineno-15-349" name="__codelineno-15-349" href="#__codelineno-15-349"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-350" name="__codelineno-15-350" href="#__codelineno-15-350"></a>│   │   ├── ga
+<a id="__codelineno-15-351" name="__codelineno-15-351" href="#__codelineno-15-351"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-352" name="__codelineno-15-352" href="#__codelineno-15-352"></a>│   │   ├── gd
+<a id="__codelineno-15-353" name="__codelineno-15-353" href="#__codelineno-15-353"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-354" name="__codelineno-15-354" href="#__codelineno-15-354"></a>│   │   ├── gl
+<a id="__codelineno-15-355" name="__codelineno-15-355" href="#__codelineno-15-355"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-356" name="__codelineno-15-356" href="#__codelineno-15-356"></a>│   │   ├── gu
+<a id="__codelineno-15-357" name="__codelineno-15-357" href="#__codelineno-15-357"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-358" name="__codelineno-15-358" href="#__codelineno-15-358"></a>│   │   ├── he
+<a id="__codelineno-15-359" name="__codelineno-15-359" href="#__codelineno-15-359"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-360" name="__codelineno-15-360" href="#__codelineno-15-360"></a>│   │   ├── hi
+<a id="__codelineno-15-361" name="__codelineno-15-361" href="#__codelineno-15-361"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-362" name="__codelineno-15-362" href="#__codelineno-15-362"></a>│   │   ├── hr
+<a id="__codelineno-15-363" name="__codelineno-15-363" href="#__codelineno-15-363"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-364" name="__codelineno-15-364" href="#__codelineno-15-364"></a>│   │   ├── hu
+<a id="__codelineno-15-365" name="__codelineno-15-365" href="#__codelineno-15-365"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-366" name="__codelineno-15-366" href="#__codelineno-15-366"></a>│   │   ├── id
+<a id="__codelineno-15-367" name="__codelineno-15-367" href="#__codelineno-15-367"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-368" name="__codelineno-15-368" href="#__codelineno-15-368"></a>│   │   ├── is
+<a id="__codelineno-15-369" name="__codelineno-15-369" href="#__codelineno-15-369"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-370" name="__codelineno-15-370" href="#__codelineno-15-370"></a>│   │   ├── it
+<a id="__codelineno-15-371" name="__codelineno-15-371" href="#__codelineno-15-371"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-372" name="__codelineno-15-372" href="#__codelineno-15-372"></a>│   │   ├── ja
+<a id="__codelineno-15-373" name="__codelineno-15-373" href="#__codelineno-15-373"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-374" name="__codelineno-15-374" href="#__codelineno-15-374"></a>│   │   ├── ka
+<a id="__codelineno-15-375" name="__codelineno-15-375" href="#__codelineno-15-375"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-376" name="__codelineno-15-376" href="#__codelineno-15-376"></a>│   │   ├── kk
+<a id="__codelineno-15-377" name="__codelineno-15-377" href="#__codelineno-15-377"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-378" name="__codelineno-15-378" href="#__codelineno-15-378"></a>│   │   ├── km
+<a id="__codelineno-15-379" name="__codelineno-15-379" href="#__codelineno-15-379"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-380" name="__codelineno-15-380" href="#__codelineno-15-380"></a>│   │   ├── kn
+<a id="__codelineno-15-381" name="__codelineno-15-381" href="#__codelineno-15-381"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-382" name="__codelineno-15-382" href="#__codelineno-15-382"></a>│   │   ├── ko
+<a id="__codelineno-15-383" name="__codelineno-15-383" href="#__codelineno-15-383"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-384" name="__codelineno-15-384" href="#__codelineno-15-384"></a>│   │   ├── ky
+<a id="__codelineno-15-385" name="__codelineno-15-385" href="#__codelineno-15-385"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-386" name="__codelineno-15-386" href="#__codelineno-15-386"></a>│   │   ├── lt
+<a id="__codelineno-15-387" name="__codelineno-15-387" href="#__codelineno-15-387"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-388" name="__codelineno-15-388" href="#__codelineno-15-388"></a>│   │   ├── lv
+<a id="__codelineno-15-389" name="__codelineno-15-389" href="#__codelineno-15-389"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-390" name="__codelineno-15-390" href="#__codelineno-15-390"></a>│   │   ├── mk
+<a id="__codelineno-15-391" name="__codelineno-15-391" href="#__codelineno-15-391"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-392" name="__codelineno-15-392" href="#__codelineno-15-392"></a>│   │   ├── ml
+<a id="__codelineno-15-393" name="__codelineno-15-393" href="#__codelineno-15-393"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-394" name="__codelineno-15-394" href="#__codelineno-15-394"></a>│   │   ├── mr
+<a id="__codelineno-15-395" name="__codelineno-15-395" href="#__codelineno-15-395"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-396" name="__codelineno-15-396" href="#__codelineno-15-396"></a>│   │   ├── ms
+<a id="__codelineno-15-397" name="__codelineno-15-397" href="#__codelineno-15-397"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-398" name="__codelineno-15-398" href="#__codelineno-15-398"></a>│   │   ├── my
+<a id="__codelineno-15-399" name="__codelineno-15-399" href="#__codelineno-15-399"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-400" name="__codelineno-15-400" href="#__codelineno-15-400"></a>│   │   ├── nb
+<a id="__codelineno-15-401" name="__codelineno-15-401" href="#__codelineno-15-401"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-402" name="__codelineno-15-402" href="#__codelineno-15-402"></a>│   │   ├── nds
+<a id="__codelineno-15-403" name="__codelineno-15-403" href="#__codelineno-15-403"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-404" name="__codelineno-15-404" href="#__codelineno-15-404"></a>│   │   ├── ne
+<a id="__codelineno-15-405" name="__codelineno-15-405" href="#__codelineno-15-405"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-406" name="__codelineno-15-406" href="#__codelineno-15-406"></a>│   │   ├── nl
+<a id="__codelineno-15-407" name="__codelineno-15-407" href="#__codelineno-15-407"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-408" name="__codelineno-15-408" href="#__codelineno-15-408"></a>│   │   ├── nn
+<a id="__codelineno-15-409" name="__codelineno-15-409" href="#__codelineno-15-409"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-410" name="__codelineno-15-410" href="#__codelineno-15-410"></a>│   │   ├── oc
+<a id="__codelineno-15-411" name="__codelineno-15-411" href="#__codelineno-15-411"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-412" name="__codelineno-15-412" href="#__codelineno-15-412"></a>│   │   ├── pa
+<a id="__codelineno-15-413" name="__codelineno-15-413" href="#__codelineno-15-413"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-414" name="__codelineno-15-414" href="#__codelineno-15-414"></a>│   │   ├── pl
+<a id="__codelineno-15-415" name="__codelineno-15-415" href="#__codelineno-15-415"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-416" name="__codelineno-15-416" href="#__codelineno-15-416"></a>│   │   ├── pt
+<a id="__codelineno-15-417" name="__codelineno-15-417" href="#__codelineno-15-417"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-418" name="__codelineno-15-418" href="#__codelineno-15-418"></a>│   │   ├── pt_BR
+<a id="__codelineno-15-419" name="__codelineno-15-419" href="#__codelineno-15-419"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-420" name="__codelineno-15-420" href="#__codelineno-15-420"></a>│   │   ├── ro
+<a id="__codelineno-15-421" name="__codelineno-15-421" href="#__codelineno-15-421"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-422" name="__codelineno-15-422" href="#__codelineno-15-422"></a>│   │   ├── ru
+<a id="__codelineno-15-423" name="__codelineno-15-423" href="#__codelineno-15-423"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-424" name="__codelineno-15-424" href="#__codelineno-15-424"></a>│   │   ├── rw
+<a id="__codelineno-15-425" name="__codelineno-15-425" href="#__codelineno-15-425"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-426" name="__codelineno-15-426" href="#__codelineno-15-426"></a>│   │   ├── si
+<a id="__codelineno-15-427" name="__codelineno-15-427" href="#__codelineno-15-427"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-428" name="__codelineno-15-428" href="#__codelineno-15-428"></a>│   │   ├── sk
+<a id="__codelineno-15-429" name="__codelineno-15-429" href="#__codelineno-15-429"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-430" name="__codelineno-15-430" href="#__codelineno-15-430"></a>│   │   ├── sl
+<a id="__codelineno-15-431" name="__codelineno-15-431" href="#__codelineno-15-431"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-432" name="__codelineno-15-432" href="#__codelineno-15-432"></a>│   │   ├── sr
+<a id="__codelineno-15-433" name="__codelineno-15-433" href="#__codelineno-15-433"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-434" name="__codelineno-15-434" href="#__codelineno-15-434"></a>│   │   ├── sr@latin
+<a id="__codelineno-15-435" name="__codelineno-15-435" href="#__codelineno-15-435"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-436" name="__codelineno-15-436" href="#__codelineno-15-436"></a>│   │   ├── sv
+<a id="__codelineno-15-437" name="__codelineno-15-437" href="#__codelineno-15-437"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-438" name="__codelineno-15-438" href="#__codelineno-15-438"></a>│   │   ├── ta
+<a id="__codelineno-15-439" name="__codelineno-15-439" href="#__codelineno-15-439"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-440" name="__codelineno-15-440" href="#__codelineno-15-440"></a>│   │   ├── te
+<a id="__codelineno-15-441" name="__codelineno-15-441" href="#__codelineno-15-441"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-442" name="__codelineno-15-442" href="#__codelineno-15-442"></a>│   │   ├── th
+<a id="__codelineno-15-443" name="__codelineno-15-443" href="#__codelineno-15-443"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-444" name="__codelineno-15-444" href="#__codelineno-15-444"></a>│   │   ├── tr
+<a id="__codelineno-15-445" name="__codelineno-15-445" href="#__codelineno-15-445"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-446" name="__codelineno-15-446" href="#__codelineno-15-446"></a>│   │   ├── tt
+<a id="__codelineno-15-447" name="__codelineno-15-447" href="#__codelineno-15-447"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-448" name="__codelineno-15-448" href="#__codelineno-15-448"></a>│   │   ├── uk
+<a id="__codelineno-15-449" name="__codelineno-15-449" href="#__codelineno-15-449"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-450" name="__codelineno-15-450" href="#__codelineno-15-450"></a>│   │   ├── vi
+<a id="__codelineno-15-451" name="__codelineno-15-451" href="#__codelineno-15-451"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-452" name="__codelineno-15-452" href="#__codelineno-15-452"></a>│   │   ├── xh
+<a id="__codelineno-15-453" name="__codelineno-15-453" href="#__codelineno-15-453"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-454" name="__codelineno-15-454" href="#__codelineno-15-454"></a>│   │   ├── yi
+<a id="__codelineno-15-455" name="__codelineno-15-455" href="#__codelineno-15-455"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-456" name="__codelineno-15-456" href="#__codelineno-15-456"></a>│   │   ├── zh_CN
+<a id="__codelineno-15-457" name="__codelineno-15-457" href="#__codelineno-15-457"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-458" name="__codelineno-15-458" href="#__codelineno-15-458"></a>│   │   ├── zh_HK
+<a id="__codelineno-15-459" name="__codelineno-15-459" href="#__codelineno-15-459"></a>│   │   │   └── LC_MESSAGES
+<a id="__codelineno-15-460" name="__codelineno-15-460" href="#__codelineno-15-460"></a>│   │   └── zh_TW
+<a id="__codelineno-15-461" name="__codelineno-15-461" href="#__codelineno-15-461"></a>│   │       └── LC_MESSAGES
+<a id="__codelineno-15-462" name="__codelineno-15-462" href="#__codelineno-15-462"></a>│   ├── man
+<a id="__codelineno-15-463" name="__codelineno-15-463" href="#__codelineno-15-463"></a>│   │   ├── man1
+<a id="__codelineno-15-464" name="__codelineno-15-464" href="#__codelineno-15-464"></a>│   │   └── man5
+<a id="__codelineno-15-465" name="__codelineno-15-465" href="#__codelineno-15-465"></a>│   └── metainfo
+<a id="__codelineno-15-466" name="__codelineno-15-466" href="#__codelineno-15-466"></a>└── src
+<a id="__codelineno-15-467" name="__codelineno-15-467" href="#__codelineno-15-467"></a>
+<a id="__codelineno-15-468" name="__codelineno-15-468" href="#__codelineno-15-468"></a>465 directories
+</code></pre></div></p>
+<p>He usado la orden...
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>tree -d /usr/local/
+</code></pre></div>
+...sólo mostrando directorios, porque ya es suficientemente largo el output como para mostrar ficheros también. </p>
+<p>Pero para que nos hagamos una idea, aquí tenemos nuestros binarios ejecutables generados, por ejemplo:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>vagrant@mimaquina:/usr/local/bin$ ls -la 
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>total 52496
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>drwxr-xr-x  2 root root     4096 Nov  3 06:00 .
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>drwxr-xr-x 11 root root     4096 Nov  3 05:49 ..
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>lrwxrwxrwx  1 root root        9 Nov  3 06:00 gimp -&gt; gimp-2.10
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>-rwxr-xr-x  1 root root 53624584 Nov  3 06:00 gimp-2.10
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>-rwxr-xr-x  1 root root    50760 Nov  3 06:00 gimp-test-clipboard-2.0
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>-rwxr-xr-x  1 root root    67328 Nov  3 06:00 gimptool-2.0
+</code></pre></div></p>
+<p>Hasta aquí, podemos considerar que tenemos gimp instalado.</p>
+<h2 id="tercera-parte">Tercera parte</h2>
+<h3 id="desinstalacion"><strong>Desinstalación</strong></h3>
+<p>No viene explícitamente dicho en ningún documento dentro del código fuente, o al menos yo no lo encontré donde lo dice, pero para la desinstalación tenemos disponible la opción <code>uninstall</code>.</p>
+<p>Esto lo sé por 2 razones:
+* Puedo ejecutar un <code>sudo make uninstall</code> y ver que efectivamente, ha funcionado 
+* En el fichero Makefile generado personalizado para nuestra instalación, tenemos declarada una fase <code>uninstall</code>...
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>am__uninstall_files_from_dir = { \
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>test -z &quot;$$files&quot; \
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>|| { test ! -d &quot;$$dir&quot; &amp;&amp; test ! -f &quot;$$dir&quot; &amp;&amp; test ! -r &quot;$$dir&quot;; } \
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>|| { echo &quot; ( cd &#39;$$dir&#39; &amp;&amp; rm -f&quot; $$files &quot;)&quot;; \
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>     $(am__cd) &quot;$$dir&quot; &amp;&amp; rm -f $$files; }; \
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>}
+</code></pre></div>
+     Entiendo que es ese el bloque de código que lo define, ya que está borrando, pero hay otras partes en el código completo que también mencionan el <code>uninstall</code></p>
+<p>Por todo esto, puedo estar bastante seguro de que eso va a funcionar.</p>
+<p>Efectivamente, si lo ejecuto funciona, y borra lo correspondiente del raíz <code>/usr/local</code>.</p>
+<p>Por ejemplo, nos damos cuenta de que ya no tenemos los binarios...
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>vagrant@mimaquina:~/gimp-2.10.22$ ls -la /usr/local/bin/
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>total 8
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>drwxr-xr-x  2 root root 4096 Nov  3 06:15 .
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>drwxr-xr-x 11 root root 4096 Nov  3 05:49 ..
+</code></pre></div></p>
+<p>Eso sí, es importante anotar que la estructura de directorios que previamente generó en <code>/usr/local</code> la mantiene, <strong>sólo borra ficheros</strong>.  </p>
+<p>¿Por qué hace esto? Sinceramente no lo sé, supongo que para futuras instalaciones, no tener que volver a generar toda la estructura de directorios y ahorrar así algo de tiempo.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tabs", "navigation.sections"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+        
+          <script src="../../javascripts/asciinema-player.min.js"></script>
+        
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
