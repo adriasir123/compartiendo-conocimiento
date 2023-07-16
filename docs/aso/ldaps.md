@@ -2,7 +2,9 @@
 
 ## 1. Enunciado
 
-Configura el servidor LDAP de alfa para que utilice el protocolo ldaps:// a la vez que el ldap:// utilizando el certificado x509 de la práctica de https o solicitando el correspondiente a través de gestiona. Realiza las modificaciones adecuadas en los clientes ldap de alfa para que todas las consultas se realicen por defecto utilizando ldaps://
+Configurar el servidor LDAP para que utilice tanto el protocolo `ldaps://` como `ldap://` con certificados x509.
+
+Configurar los clientes LDAP para que usen `ldaps://` por defecto.
 
 ## 2. Server
 
@@ -126,13 +128,15 @@ exit
 
 ### 2.4 Configuración LDAP
 
-Añado la siguiente línea:
+Dejo la sección de TLS así:
 
 ```shell
 sudo nano /etc/ldap/ldap.conf
 ```
 
 ```shell
+# TLS certificates (needed for GnuTLS)
+#TLS_CACERT	/etc/ssl/certs/ca-certificates.crt
 TLS_REQCERT never
 ```
 
@@ -170,35 +174,59 @@ ldapsearch -x -b "dc=adrianj,dc=gonzalonazareno,dc=org" -H ldaps://
 
 ![ldapsconsulta](https://i.imgur.com/7uADl24.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## 3. Clientedebian
 
-### 3.1 Configuración
+### 3.1 Requisitos
 
-Reemplazo las siguientes líneas:
+```shell
+sudo apt install libldap-common
+```
+
+### 3.2 Configuración
+
+Dejo `/etc/ldap/ldap.conf` así:
+
+```shell
+sudo nano /etc/ldap/ldap.conf
+```
+
+```shell
+#
+# LDAP Defaults
+#
+
+# See ldap.conf(5) for details
+# This file should be world readable but not world writable.
+
+BASE	dc=adrianj,dc=gonzalonazareno,dc=org
+URI	ldaps://server.adrianj.gonzalonazareno.org:636
+
+#SIZELIMIT	12
+#TIMELIMIT	15
+#DEREF	        never
+
+# TLS certificates (needed for GnuTLS)
+#TLS_CACERT	/etc/ssl/certs/ca-certificates.crt
+TLS_REQCERT never
+```
+
+En `/etc/nslcd.conf` dejo la URI así:
 
 ```shell
 sudo nano /etc/nslcd.conf
 ```
 
 ```shell
+uri ldaps://server.adrianj.gonzalonazareno.org/
+```
+
+Y la sección de SSL así:
+
+```shell
 # SSL options
-ssl start_tls
+#ssl start_tls
 tls_reqcert never
-# tls_cacertfile /etc/ssl/certs/ca-certificates.crt
+#tls_cacertfile /etc/ssl/certs/ca-certificates.crt
 ```
 
 Reinicio:
@@ -207,26 +235,19 @@ Reinicio:
 sudo systemctl restart nslcd
 ```
 
+### 3.3 Comprobaciones
 
+Pruebo que una consulta mediante `ldaps://` y sin root funciona:
 
+```shell
+ldapsearch -x -b "dc=adrianj,dc=gonzalonazareno,dc=org" "objectclass=posixAccount"
+```
 
+![ldapsconsultacliente](https://i.imgur.com/C3uCbGI.png)
 
+!!! info
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    Recordemos que no he escrito `ldaps://` en la consulta porque ya no es necesario. Las consultas se autocompletan con la información de `/etc/ldap/ldap.conf`
 
 
 
